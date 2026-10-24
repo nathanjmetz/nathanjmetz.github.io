@@ -45,3 +45,10 @@
     if (empty) empty.hidden = shown > 0;
   });
 })();
+
+// The front page heading shows the reader's own today, even between morning updates.
+(function todayHeading() {
+  var h = document.querySelector(".front-head h1");
+  if (!h) return;
+  h.textContent = new Date().toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" });
+})();

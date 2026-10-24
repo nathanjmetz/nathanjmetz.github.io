@@ -124,7 +124,13 @@ def build(out=OUT, now=None, data_dir=DATA_DIR):
 
     topics = [prepare(t, now, data_dir) for t in TOPICS]
     stamps = [t["updated"] for t in topics if t["updated"]]
-    site = {"topics": topics, "updated": max(stamps) if stamps else None, "year": now.year}
+    site = {
+        "topics": topics,
+        "updated": max(stamps) if stamps else None,
+        "built": now.isoformat(),
+        "today": fmt_day(now.isoformat()),
+        "year": now.year,
+    }
 
     # ignore_errors: macOS drives can leave "._" shadow files mid-delete
     shutil.rmtree(out, ignore_errors=True)

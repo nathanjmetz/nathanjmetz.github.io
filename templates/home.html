@@ -1,7 +1,21 @@
 {% extends "base.html" %}
 {% from "_macros.html" import story, game_card %}
 {% block main %}
-<h1 class="sr-only">Nathan's Daily</h1>
+<header class="front-head">
+  <h1>{{ site.today }}</h1>
+  <p class="lede">Updated {{ site.built | time }} ET</p>
+</header>
+
+<section class="ai-tile" aria-labelledby="h-ai">
+  <div>
+    <p class="kicker" style="--team: var(--ink-2); --team-dark: var(--ink-2)">AI</p>
+    <h2 id="h-ai">AI wiki</h2>
+    <p class="tile-note">A sample for now, kept in Claude while it takes shape. It moves here when daily updates start.</p>
+  </div>
+  <a class="button quiet" href="https://claude.ai/artifact/P4w5axKFmma8ifeeTDYcB4">Open the sample</a>
+</section>
+
+<h2 class="section-title">Sports</h2>
 <div class="topics">
   {% for t in site.topics %}
   <section class="topic-card" style="--team: {{ t.color }}; --team-dark: {{ t.color_dark }}" aria-labelledby="h-{{ t.slug }}">
