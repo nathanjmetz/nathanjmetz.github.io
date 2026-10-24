@@ -843,16 +843,19 @@ const OPTIONS = {
 
 // From in-use/ in the shared rulebook. Tool names only.
 const ACTIVE = [
-  ["Backends and databases", "backend-database", { Brawn: "Supabase, Sign in with Apple", Personal: "", TLC: "Supabase, Base44" }],
+  ["Backends and databases", "backend-database", { Brawn: "Supabase, with Apple, Google and Microsoft sign-in", Personal: "", TLC: "Supabase, Base44" }],
   ["Hosting", null, { Brawn: "Vercel", Personal: "GitHub Pages", TLC: "Vercel" }],
-  ["App frameworks", null, { Brawn: "React, Vite, Tailwind", Personal: "Python, Jinja", TLC: "Next.js, React" }],
+  ["App frameworks", null, { Brawn: "React, Vite, Next.js, Tailwind", Personal: "Python, Jinja", TLC: "Next.js, React" }],
   ["iPhone apps", null, { Brawn: "Capacitor", Personal: "", TLC: "" }],
   ["Payments", null, { Brawn: "RevenueCat", Personal: "", TLC: "" }],
   ["AI inside apps", null, { Brawn: "", Personal: "", TLC: "Anthropic SDK, Vercel AI SDK" }],
+  ["AI for images and speech", null, { Brawn: "Nano Banana (Gemini), Whisper", Personal: "", TLC: "" }],
+  ["Maps", null, { Brawn: "MapLibre, PMTiles", Personal: "", TLC: "" }],
   ["Scheduled jobs", null, { Brawn: "", Personal: "GitHub Actions", TLC: "GitHub Actions (about 20)" }],
-  ["Testing", null, { Brawn: "Vitest", Personal: "pytest", TLC: "Vitest, Playwright" }],
+  ["Alerts", null, { Brawn: "Web push, iPhone notifications", Personal: "", TLC: "Web push" }],
+  ["Testing", null, { Brawn: "Vitest, Playwright, PGlite", Personal: "pytest", TLC: "Vitest, Playwright" }],
   ["3D and motion", null, { Brawn: "Three.js, GSAP, Motion", Personal: "", TLC: "Motion" }],
-  ["Reading files and scans", null, { Brawn: "", Personal: "", TLC: "Tesseract OCR, pdf-lib, sharp" }],
+  ["Reading files and images", null, { Brawn: "sharp, html-to-image", Personal: "", TLC: "Tesseract OCR, pdf-lib, sharp" }],
 ];
 
 // Rule (Nathan to confirm): "should" = in use or chosen soon AND hard to switch, or touches money, sign-in or people's data.
@@ -867,6 +870,7 @@ const LEARN = {
     ["Hosting", null, ["Brawn", "Personal", "TLC"], "Vercel and GitHub Pages work well and are easy to switch, so there's no rush."],
     ["Testing tools", null, ["Brawn", "TLC"], "Already in place on both sides. Knowing more would help, but nothing depends on it."],
     ["3D and motion", null, ["Brawn"], "Opens new looks for Brawn screens."],
+    ["Maps", null, ["Brawn"], "Rift County and the Lilly hub both draw maps with MapLibre. Knowing the other options helps if needs or costs change."],
   ],
 };
 
@@ -1130,7 +1134,7 @@ function viewActive() {
         <section class="panel"><h2>Should know</h2><p>You use it or will choose soon, and it's hard to switch or touches money, sign-in or people's data.</p>${learnList(LEARN.should)}</section>
         <section class="panel"><h2>Could know</h2><p>Close to what you do and would open options, but nothing depends on it yet.</p>${learnList(LEARN.could)}</section>
       </div>
-      <p class="stub-note">Brawn and TLC come from the Mac Studio's project folders. The Mac mini hasn't added its list yet, so Brawn may be missing things. The "should" and "could" rule is a first draft for you to change.</p>`,
+      <p class="stub-note">Built from both Macs' project folders on Oct 24, 2026, tool names only. The "should" and "could" rule is a first draft for you to change.</p>`,
     rail: railFacts([["Areas", ACTIVE.length], ["Should know", LEARN.should.length], ["Could know", LEARN.could.length], ["Updated", fmtDate(UPDATED)]]),
   };
 }
