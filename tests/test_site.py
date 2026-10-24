@@ -81,6 +81,14 @@ def test_filter_rules():
     assert not fetch.keep(item("Indiana basketball and football"), src)  # hits "never"
 
 
+def test_nd_football_skips_high_schools_named_notre_dame():
+    src = source(ND, "Google News")
+    item = lambda t: {"title": t, "tags": [], "summary": "", "link": "https://x.test"}
+    assert not fetch.keep(item("H.S. FOOTBALL: Geedy's hat trick shocks Notre Dame, upsets homecoming night"), src)
+    assert not fetch.keep(item("Green Bay Notre Dame cheers West football team on the way to game"), src)
+    assert fetch.keep(item("Notre Dame football: Do the Irish play today?"), src)
+
+
 def test_google_news_for_iu_skips_other_iu_campuses():
     src = source(IU, "Google News")
     item = {"title": "IU Northwest men's basketball targets 2026-27 season", "tags": [], "summary": "", "link": "https://x.test"}

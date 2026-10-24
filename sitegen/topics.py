@@ -20,8 +20,12 @@ OTHER_SPORTS = [
     r"\btrack and field\b", r"\bwrestling\b",
 ]
 
+# High schools named Notre Dame turn up in "Notre Dame" searches.
+HIGH_SCHOOL = [r"\bH\.\s?S\.", r"homecoming", r"Notre Dame (Academy|High|College Prep|Prep)\b",
+               r"Green Bay Notre Dame"]
+
 # College football has no exhibitions, so "exhibition" means another sport.
-NOT_FOOTBALL = [r"basketball", r"\bexhibition\b", r"women's"] + OTHER_SPORTS
+NOT_FOOTBALL = [r"basketball", r"\bexhibition\b", r"women's"] + OTHER_SPORTS + HIGH_SCHOOL
 
 # Words that only show up in basketball stories.
 HOOPS_WORDS = [r"basketball", r"\bhoops\b", r"DeVries", r"\bexhibition\b",

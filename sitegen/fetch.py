@@ -234,9 +234,13 @@ def update_topic(topic, now):
             status[source["name"]] = {"ok": False, "error": str(exc)[:200]}
             print(f"  ! {source['name']}: {exc}", file=sys.stderr)
 
+    # Re-check saved stories too, so a tightened filter takes effect at once.
+    by_name = {s["name"]: s for s in topic["sources"]}
+    saved_news = [i for i in saved.get("news", []) if i["source"] in by_name and keep(i, by_name[i["source"]])]
+
     rank = {s["name"]: n for n, s in enumerate(topic["sources"])}
     limits = {s["name"]: s["limit"] for s in topic["sources"] if s.get("limit")}
-    news = merge_news(saved.get("news", []), fresh, now, rank, limits)
+    news = merge_news(saved_news, fresh, now, rank, limits)
 
     schedule, schedule_ok = saved.get("schedule"), True
     if topic.get("espn"):
