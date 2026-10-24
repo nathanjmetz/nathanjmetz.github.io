@@ -1,0 +1,7 @@
+# macOS drive shadow files
+._*
+.DS_Store
+# build output (GitHub builds it fresh)
+_site/
+__pycache__/
+.pytest_cache/

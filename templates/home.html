@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% from "_macros.html" import story, game_card %}
+{% block main %}
+<h1 class="sr-only">Nathan's Daily</h1>
+<div class="topics">
+  {% for t in site.topics %}
+  <section class="topic-card" style="--team: {{ t.color }}; --team-dark: {{ t.color_dark }}" aria-labelledby="h-{{ t.slug }}">
+    <header class="topic-head">
+      <p class="kicker">{{ t.kicker }}</p>
+      <h2 id="h-{{ t.slug }}"><a href="/{{ t.slug }}/">{{ t.name }}</a></h2>
+      {% if t.schedule.record %}<p class="record">{{ t.schedule.record }}</p>{% endif %}
+    </header>
+
+    {% if t.next_game or t.last_game %}
+    <div class="games">
+      {% if t.last_game %}{{ game_card(t.last_game, "Last game", "/" ~ t.slug ~ "/schedule/") }}{% endif %}
+      {% if t.next_game %}{{ game_card(t.next_game, "Next game" if t.next_game.state != "live" else "Playing now", "/" ~ t.slug ~ "/schedule/") }}{% endif %}
+    </div>
+    {% endif %}
+
+    {% if t.headlines %}
+    <div class="headlines">
+      {% for item in t.headlines %}{{ story(item, show_summary=loop.first) }}{% endfor %}
+    </div>
+    {% else %}
+    <p class="empty">No stories in the last two weeks. New ones will show up with tomorrow morning's update.</p>
+    {% endif %}
+
+    <p class="topic-links">
+      <a class="button" href="/{{ t.slug }}/">All {{ t.news | length }} stories</a>
+      {% if t.espn %}<a class="button quiet" href="/{{ t.slug }}/schedule/">Season schedule</a>{% endif %}
+    </p>
+  </section>
+  {% endfor %}
+</div>
+{% endblock %}

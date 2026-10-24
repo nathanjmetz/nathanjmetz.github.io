@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}{{ topic.name }} schedule · Nathan's Daily{% endblock %}
+{% block description %}The {{ topic.name }} {{ topic.schedule.season or "" }} schedule and results.{% endblock %}
+{% block main %}
+<div class="page" style="--team: {{ topic.color }}; --team-dark: {{ topic.color_dark }}">
+  <header class="page-head">
+    <p class="kicker"><a href="/{{ topic.slug }}/">{{ topic.name }}</a></p>
+    <h1>{{ topic.schedule.season or "" }} Schedule</h1>
+    <p class="lede">
+      {% if topic.schedule.record %}Record {{ topic.schedule.record }} · {% endif %}{{ topic.schedule.games | length }} games · Times are Eastern
+    </p>
+  </header>
+
+  {% if topic.schedule.games %}
+  <ol class="schedule">
+    {% for g in topic.schedule.games %}
+    {% set r = g | result %}
+    <li class="sched-row{% if topic.next_game and g.id == topic.next_game.id %} is-next{% endif %}{% if g.state == 'final' %} is-done{% endif %}">
+      <a href="{{ g.link or topic.espn_url }}">
+        <span class="sched-date">
+          <time datetime="{{ g.date }}">{{ g.date | short_day }}</time>
+          {% if topic.next_game and g.id == topic.next_game.id %}<span class="tag">Next</span>{% endif %}
+        </span>
+        <span class="sched-opp">
+          <strong>{{ g | game_line }}</strong>
+          <span class="sched-place">{{ g.venue or "" }}{% if g.city %}{% if g.venue %} · {% endif %}{{ g.city }}{% endif %}{% if g.site == "neutral" %} · Neutral site{% endif %}{% if g.season_type and g.season_type != "Regular Season" %} · {{ g.season_type }}{% endif %}</span>
+        </span>
+        <span class="sched-result">
+          {% if r %}
+          <span class="{% if g.won %}is-win{% elif g.state == 'final' %}is-loss{% endif %}">{{ r }}</span>
+          {% else %}
+          {{ g.date | time + " ET" if g.time_set else "Time TBA" }}{% if g.tv %}<span class="sched-tv">{{ g.tv | join(", ") }}</span>{% endif %}
+          {% endif %}
+        </span>
+      </a>
+    </li>
+    {% endfor %}
+  </ol>
+  <p class="cite">Schedule and scores from <a href="{{ topic.espn_url }}">ESPN</a>. Each game opens its ESPN game page.</p>
+  {% else %}
+  <p class="empty">The schedule isn't posted yet. You can check <a href="{{ topic.espn_url }}">ESPN</a> in the meantime.</p>
+  {% endif %}
+</div>
+{% endblock %}

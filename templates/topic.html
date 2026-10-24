@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% from "_macros.html" import story, game_card %}
+{% block title %}{{ topic.name }} · Nathan's Daily{% endblock %}
+{% block description %}The latest {{ topic.name }} news from {{ topic.sources | length }} sources, updated every morning.{% endblock %}
+{% block main %}
+<div class="page" style="--team: {{ topic.color }}; --team-dark: {{ topic.color_dark }}">
+  <header class="page-head">
+    <p class="kicker">{{ topic.kicker }}</p>
+    <h1>{{ topic.name }}</h1>
+    <p class="lede">{{ topic.news | length }} stories from the last two weeks{% if topic.schedule.record %} · {{ topic.schedule.season }} record {{ topic.schedule.record }}{% endif %}</p>
+  </header>
+
+  {% if topic.espn %}
+  <div class="games games-wide">
+    {% if topic.last_game %}{{ game_card(topic.last_game, "Last game", "/" ~ topic.slug ~ "/schedule/") }}{% endif %}
+    {% if topic.next_game %}{{ game_card(topic.next_game, "Next game" if topic.next_game.state != "live" else "Playing now", "/" ~ topic.slug ~ "/schedule/") }}{% endif %}
+    <a class="game game-more" href="/{{ topic.slug }}/schedule/">
+      <span class="game-label">Season</span>
+      <span class="game-opp">Full schedule</span>
+      <span class="game-when">{{ topic.schedule.games | length }} games{% if topic.schedule.season %} · {{ topic.schedule.season }}{% endif %}</span>
+    </a>
+  </div>
+  {% endif %}
+
+  {% if topic.news %}
+  <div class="filters" role="group" aria-label="Show stories from" hidden>
+    <button type="button" class="chip" aria-pressed="true" data-filter="">All <span>{{ topic.news | length }}</span></button>
+    {% for s in topic.sources if s.shown %}
+    <button type="button" class="chip" aria-pressed="false" data-filter="{{ s.name }}">{{ s.name }} <span>{{ s.shown }}</span></button>
+    {% endfor %}
+  </div>
+
+  {% for day in topic.days %}
+  <section class="day" aria-label="{{ day.label }}">
+    <h2 class="day-label">{{ day.label }}</h2>
+    <div class="story-grid">
+      {% for item in day["items"] %}{{ story(item) }}{% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+  <p class="empty" data-filter-empty hidden>No stories from this source right now.</p>
+  {% else %}
+  <p class="empty">No stories in the last two weeks. New ones will show up with tomorrow morning's update.</p>
+  {% endif %}
+
+  <section class="sources" aria-labelledby="h-sources">
+    <h2 id="h-sources">Where these stories come from</h2>
+    <ul class="source-list">
+      {% for s in topic.sources %}
+      <li>
+        <a href="{{ s.home }}">{{ s.name }}</a>
+        <span class="source-kind">{{ s.kind }}</span>
+        {% if not s.ok %}<span class="source-down">Couldn't reach it this morning</span>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>
+{% endblock %}

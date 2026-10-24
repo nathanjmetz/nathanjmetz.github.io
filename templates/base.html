@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Nathan's Daily{% endblock %}</title>
+  <meta name="description" content="{% block description %}Daily news on Notre Dame football, IU basketball, and more, with every story linked to its source.{% endblock %}">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231b1b1b'/><text x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='700' fill='%23f7f5f0' text-anchor='middle'>N</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,650&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="masthead">
+    <div class="wrap masthead-row">
+      <a class="brand" href="/">Nathan's Daily</a>
+      <nav aria-label="Topics">
+        <ul class="nav">
+          {% for t in site.topics %}
+          <li><a href="/{{ t.slug }}/" style="--team: {{ t.color }}; --team-dark: {{ t.color_dark }}"{% if page == t.slug %} aria-current="page"{% endif %}>{{ t.short }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    {% block main %}{% endblock %}
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-row">
+      <p>Every headline links to the original story. Game info comes from ESPN.</p>
+      {% if site.updated %}<p>Last updated {{ site.updated | stamp }}. Updates every morning.</p>{% endif %}
+    </div>
+  </footer>
+  <script src="/static/site.js" defer></script>
+</body>
+</html>

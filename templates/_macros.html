@@ -1,0 +1,23 @@
+{% macro story(item, show_summary=true) %}
+<article class="story" data-source="{{ item.source }}">
+  <h3 class="story-title"><a href="{{ item.link }}">{{ item.title }}</a></h3>
+  {% if show_summary and item.summary %}<p class="story-summary">{{ item.summary }}</p>{% endif %}
+  <p class="meta">
+    <span class="source">{{ item.outlet or item.source }}</span>
+    <time datetime="{{ item.published }}">{{ item.published | short_day }}, {{ item.published | time }}</time>
+  </p>
+</article>
+{% endmacro %}
+
+{% macro game_card(game, label, href) %}
+<a class="game" href="{{ href }}">
+  <span class="game-label">{{ label }}</span>
+  <span class="game-opp">{{ game | game_line }}</span>
+  {% set r = game | result %}
+  {% if r %}
+  <span class="game-result{% if game.won %} is-win{% elif game.state == 'final' %} is-loss{% endif %}">{{ r }}</span>
+  {% else %}
+  <span class="game-when">{{ game | kickoff }}{% if game.tv %} · {{ game.tv | join(', ') }}{% endif %}</span>
+  {% endif %}
+</a>
+{% endmacro %}
