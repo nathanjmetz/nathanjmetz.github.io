@@ -6,11 +6,11 @@
 - Sports update every morning at 6:17 AM Eastern (GitHub Actions, free on a public repo).
 
 ## What's next
+- Record Nathan's "why" on the 22 building-area boxes when he says it (approved 2026-10-24 with the why blank).
 - More topics: Nathan will name them.
 - Refresh the wiki by hand when Nathan asks: check sources still load, update fast-moving entries (funding, people, laws, prices), add items to "What's new".
 - More public front-page tiles (ideas offered: Fishers weather, Colts and Pacers, local headlines).
 - Brawn user numbers stay off the public site (private). Brawn runs on Vercel team Brawn LLC and Supabase project brawn-LIVE (NJM org), per the Mac mini, 2026-10-24.
 
 ## Waiting on Nathan
-- OK or change the 22 draft "Nathan's way" boxes (one per building area and side). Their "why" is blank until he says it.
 - Run `/exchange` on the Mac mini (one FYI reply waiting there).
