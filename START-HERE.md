@@ -2,7 +2,7 @@
 
 ## What's live
 - https://nathanjmetz.github.io — front page with the date, an AI tile and a Sports section (Notre Dame football and IU basketball: news pages and season schedules).
-- https://nathanjmetz.github.io/ai/ — AI wiki, starter edition: 18 sections, 50 entries, 86 checked sources, glossary, timeline, search, "Where I'm active", and draft "Nathan's way" boxes.
+- https://nathanjmetz.github.io/ai/ — AI wiki, starter edition: 18 sections, 50 entries, 86 checked sources, glossary, timeline, search, "Where I'm active", and approved "Nathan's way" boxes.
 - Sports update every morning at 6:17 AM Eastern (GitHub Actions, free on a public repo).
 
 ## What's next
@@ -12,5 +12,4 @@
 - Brawn's numbers: waiting on the Mac mini to say which accounts Brawn runs on.
 
 ## Waiting on Nathan
-- OK the two draft Supabase boxes in the wiki.
 - Run `/exchange` on the Mac mini (two notes waiting there).
