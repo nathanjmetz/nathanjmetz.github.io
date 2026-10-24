@@ -6,6 +6,8 @@ so they give the same answer every time.
 
 import json
 import re
+import shutil
+import subprocess
 from datetime import datetime, timedelta, timezone
 from html.parser import HTMLParser
 from pathlib import Path
@@ -219,7 +221,7 @@ def test_every_link_goes_somewhere_real(built):
     for page in out.rglob("*.html"):
         for href in links_in(page):
             assert href and href != "#", f"empty link on {page}"
-            if href.startswith("http") or href == "#main":  # #main is the skip link
+            if href.startswith("http") or (href.startswith("#") and len(href) > 1):  # in-page jumps
                 continue
             target = out / href.lstrip("/")
             assert target.exists() or (target / "index.html").exists(), f"{href} on {page}"
@@ -230,6 +232,21 @@ def test_schedule_shows_results_and_next_game(built):
     html = (out / "nd-football" / "schedule" / "index.html").read_text()
     assert "W 41–13" in html and "L 24–28" in html
     assert html.count('class="tag">Next') == 1
+
+
+@pytest.mark.skipif(shutil.which("node") is None, reason="node not installed")
+def test_wiki_references_all_resolve():
+    root = Path(__file__).parent.parent
+    run = subprocess.run(["node", str(root / "tests" / "wikicheck.js"), str(root / "ai" / "index.html")],
+                         capture_output=True, text=True)
+    assert run.returncode == 0, run.stdout + run.stderr
+
+
+def test_build_includes_the_wiki(built):
+    out, _ = built
+    page = (out / "ai" / "index.html").read_text()
+    assert page.startswith("<!doctype html>") and "Nathan's AI Wiki" in page
+    assert 'href="/ai/"' in (out / "index.html").read_text()
 
 
 def test_empty_topic_says_so(tmp_path):

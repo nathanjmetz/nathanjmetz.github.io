@@ -1,0 +1,1281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nathan's AI Wiki</title>
+<meta name="description" content="AI explained plainly, every claim sourced, plus what Brawn, Personal and TLC use.">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: a reference-library shell. Category shelf on the left, the article in a
+   reading column, sources and page outline on the right. Collapses to one column. */
+:root {
+  --bg: #f4f6f5;
+  --surface: #ffffff;
+  --ink: #16201d;
+  --ink-2: #4b5a55;
+  --ink-3: #5a6863;
+  --rule: #d9e0dd;
+  --accent: #0d6b5a;
+  --accent-soft: #e1efea;
+  --mark: #fff1b8;
+  --focus: #1c5fd6;
+  --brawn: #b4470f;
+  --tlc: #1f56c4;
+  --personal: #7a6400;
+
+  --read: "Literata", Georgia, "Times New Roman", serif;
+  --ui: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --s-1: clamp(.78rem, .76rem + .1vw, .84rem);
+  --s0: clamp(.92rem, .9rem + .12vw, 1rem);
+  --s1: clamp(1.05rem, 1rem + .25vw, 1.2rem);
+  --s2: clamp(1.3rem, 1.15rem + .6vw, 1.65rem);
+  --s3: clamp(1.8rem, 1.45rem + 1.5vw, 2.8rem);
+  --radius: 8px;
+  --bar: 56px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1514; --surface: #161e1c; --ink: #e5ece9; --ink-2: #a9b7b2; --ink-3: #8d9b96;
+    --rule: #2a3532; --accent: #5cc8b0; --accent-soft: #19302b; --mark: #4a4114; --focus: #7ea7ff; --brawn: #f08a4b; --tlc: #7ea7ff; --personal: #d9bf4a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1514; --surface: #161e1c; --ink: #e5ece9; --ink-2: #a9b7b2; --ink-3: #8d9b96;
+  --rule: #2a3532; --accent: #5cc8b0; --accent-soft: #19302b; --mark: #4a4114; --focus: #7ea7ff; --brawn: #f08a4b; --tlc: #7ea7ff; --personal: #d9bf4a;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; }
+body { background: var(--bg); color: var(--ink); font: 400 var(--s0)/1.55 var(--ui); }
+a { color: var(--accent); text-underline-offset: 3px; }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+h1, h2, h3 { text-wrap: balance; }
+
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--surface); }
+
+/* ---------- top bar ---------- */
+.bar {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 8;
+  background: var(--surface); border-bottom: 1px solid var(--rule);
+}
+.bar-in {
+  height: var(--bar); display: flex; align-items: center; gap: 12px;
+  max-width: 1680px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.brand { font: 700 var(--s1)/1 var(--read); color: var(--ink); text-decoration: none; white-space: nowrap; }
+.brand span { color: var(--accent); }
+.search-btn {
+  margin-left: auto; display: flex; align-items: center; gap: 10px;
+  min-width: 0; width: min(28rem, 100%); height: 40px; padding: 0 12px;
+  border: 1px solid var(--rule); border-radius: 999px; background: var(--bg);
+  color: var(--ink-3); cursor: text; text-align: left;
+  transition: border-color .15s ease-out;
+}
+.search-btn:hover { border-color: var(--ink-3); }
+.search-btn .label { flex: 1; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+kbd { font: 500 .72rem/1 var(--mono); border: 1px solid var(--rule); border-bottom-width: 2px; border-radius: 4px; padding: 3px 5px; color: var(--ink-3); background: var(--surface); }
+.home-link { margin-left: auto; color: var(--ink-2); font-size: var(--s-1); font-weight: 500; text-decoration: none; white-space: nowrap; }
+.home-link:hover { color: var(--accent); text-decoration: underline; }
+.home-link + .search-btn { margin-left: 0; }
+.menu-btn { display: none; height: 40px; padding: 0 12px; border-radius: 8px; border: 1px solid var(--rule); background: var(--surface); cursor: pointer; font-weight: 500; }
+
+.sample {
+  background: var(--accent-soft); color: var(--ink);
+  font-size: var(--s-1);
+}
+.sample p { margin: 0; max-width: 1680px; margin-inline: auto; padding-block: 8px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+/* ---------- shell ---------- */
+.shell {
+  max-width: 1680px; margin: 0 auto;
+  display: grid; grid-template-columns: 16.5rem minmax(0, 1fr) 15.5rem; gap: clamp(20px, 2.5vw, 48px);
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.nav {
+  position: sticky; top: calc(var(--bar) + env(safe-area-inset-top, 0px)); align-self: start;
+  max-height: calc(100vh - var(--bar) - env(safe-area-inset-top, 0px)); overflow-y: auto;
+  padding: 20px 4px 24px 0; scrollbar-width: thin;
+}
+.nav h2 { font: 600 .72rem/1 var(--ui); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); margin: 18px 10px 8px; }
+.nav h2:first-child { margin-top: 0; }
+.nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1px; }
+.nav a {
+  display: flex; justify-content: space-between; gap: 8px; align-items: baseline;
+  padding: 7px 10px; border-radius: 6px; color: var(--ink-2); text-decoration: none; font-size: var(--s-1); font-weight: 500;
+  transition: background-color .15s ease-out, color .15s ease-out;
+}
+.nav a:hover { background: var(--surface); color: var(--ink); }
+.nav a[aria-current="page"] { background: var(--accent-soft); color: var(--ink); }
+.nav a .n { font: 400 .72rem/1 var(--mono); color: var(--ink-3); }
+
+main { min-width: 0; padding-top: 28px; }
+/* Article pages: keep the side panel next to the reading column on wide screens. */
+.shell.reading { grid-template-columns: 16.5rem minmax(0, 46rem) 15.5rem; justify-content: center; }
+.rail {
+  position: sticky; top: calc(var(--bar) + env(safe-area-inset-top, 0px)); align-self: start;
+  max-height: calc(100vh - var(--bar) - env(safe-area-inset-top, 0px)); overflow-y: auto;
+  padding: 28px 0 24px; font-size: var(--s-1); scrollbar-width: thin;
+}
+.rail h2 { font: 600 .72rem/1 var(--ui); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 10px; }
+.rail section + section { margin-top: 28px; }
+.rail ol, .rail ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.rail a { color: var(--ink-2); text-decoration: none; }
+.rail a:hover { color: var(--accent); text-decoration: underline; }
+.rail .facts div { display: flex; justify-content: space-between; gap: 8px; padding-block: 6px; border-bottom: 1px solid var(--rule); }
+.rail .facts dt { color: var(--ink-3); }
+.rail .facts dd { margin: 0; font-family: var(--mono); font-size: .78rem; text-align: right; }
+
+/* ---------- shared bits ---------- */
+.crumbs { font-size: var(--s-1); color: var(--ink-3); display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.crumbs a { color: var(--ink-3); }
+.kicker { font: 600 .74rem/1 var(--ui); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin: 0 0 10px; }
+h1.title { font: 700 var(--s3)/1.08 var(--read); letter-spacing: -.015em; margin: 0; max-width: 22ch; }
+.lede { font: 400 var(--s1)/1.5 var(--read); color: var(--ink-2); margin: 14px 0 0; max-width: 62ch; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 16px; font-size: var(--s-1); color: var(--ink-3); }
+.meta b { font-weight: 500; color: var(--ink-2); }
+.pill { font: 500 .72rem/1 var(--mono); padding: 4px 7px; border-radius: 4px; background: var(--accent-soft); color: var(--ink-2); }
+.pill.stub { background: var(--mark); color: var(--ink); }
+
+/* ---------- article ---------- */
+.article { max-width: 44rem; }
+.oneline {
+  margin: 26px 0 0; padding: 14px 16px; border-left: 3px solid var(--accent); background: var(--surface);
+  border-radius: 0 var(--radius) var(--radius) 0; font-size: var(--s0);
+}
+.oneline strong { display: block; font: 600 .72rem/1 var(--ui); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 6px; }
+.prose { font: 400 var(--s1)/1.7 var(--read); }
+.prose h2 { font: 700 var(--s2)/1.2 var(--read); margin: 38px 0 10px; scroll-margin-top: calc(var(--bar) + 20px); }
+.prose p { margin: 0 0 14px; max-width: 66ch; }
+.prose ol { padding-left: 1.4em; margin: 0 0 14px; }
+.prose li { margin-bottom: 8px; }
+.prose a.wl { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; }
+.prose a.wl:hover { color: var(--accent); }
+.cite {
+  font: 500 .66em/1 var(--mono); vertical-align: super; margin-left: 1px;
+  border: 0; background: var(--accent-soft); color: var(--accent); border-radius: 3px; padding: 2px 4px; cursor: pointer;
+}
+.cite:hover { background: var(--accent); color: var(--surface); }
+.stub-note { margin-top: 24px; padding: 14px 16px; border: 1px dashed var(--rule); border-radius: var(--radius); color: var(--ink-2); font-size: var(--s0); max-width: 66ch; }
+
+.sources { margin-top: 44px; max-width: 44rem; }
+.sources h2 { font: 700 var(--s2)/1.2 var(--read); margin: 0 0 6px; }
+.sources > p { margin: 0 0 14px; color: var(--ink-3); font-size: var(--s-1); }
+.sources ol { list-style: none; margin: 0; padding: 0; counter-reset: s; }
+.sources li {
+  counter-increment: s; display: grid; grid-template-columns: 2.2rem minmax(0, 1fr); gap: 2px 8px;
+  padding: 12px 10px; border-top: 1px solid var(--rule); border-radius: 6px; transition: background-color .6s ease-out;
+}
+.sources li::before { content: counter(s); font: 500 .8rem/1.6 var(--mono); color: var(--accent); grid-row: span 2; }
+.sources li a { font-weight: 500; overflow-wrap: anywhere; }
+.sources li span { grid-column: 2; font-size: var(--s-1); color: var(--ink-3); }
+.sources li.flash { background: var(--mark); transition: none; }
+
+.related { margin-top: 36px; max-width: 44rem; }
+.related h2 { font: 600 .74rem/1 var(--ui); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 10px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips a { padding: 8px 12px; border: 1px solid var(--rule); border-radius: 999px; background: var(--surface); color: var(--ink); text-decoration: none; font-size: var(--s-1); transition: border-color .15s ease-out; }
+.chips a:hover { border-color: var(--accent); }
+
+.pager { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 40px; max-width: 44rem; }
+.pager a { display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--surface); text-decoration: none; color: var(--ink); min-width: 0; }
+.pager a:hover { border-color: var(--accent); }
+.pager a.next { text-align: right; grid-column: 2; }
+.pager small { color: var(--ink-3); font-size: var(--s-1); }
+.pager strong { font: 600 var(--s0)/1.3 var(--read); }
+
+/* ---------- Nathan's way boxes ---------- */
+.way { margin: 18px 0 0; padding: 14px 16px; background: var(--surface); border: 1px solid var(--rule); border-left: 4px solid var(--src); border-radius: 0 var(--radius) var(--radius) 0; max-width: 66ch; font-size: var(--s0); }
+.way[data-src="Brawn"] { --src: var(--brawn); }
+.way[data-src="TLC"] { --src: var(--tlc); }
+.way[data-src="Personal"] { --src: var(--personal); }
+.way-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 8px; }
+.src-tag { font: 600 .7rem/1 var(--ui); letter-spacing: .08em; text-transform: uppercase; color: var(--src); border: 1.5px solid var(--src); border-radius: 4px; padding: 4px 6px; }
+.src-tag[data-src="Brawn"] { --src: var(--brawn); }
+.src-tag[data-src="TLC"] { --src: var(--tlc); }
+.src-tag[data-src="Personal"] { --src: var(--personal); }
+.way p { margin: 4px 0 0; }
+.way b { font-weight: 600; }
+.ways-title { font: 700 var(--s2)/1.2 var(--read); margin: 38px 0 4px; }
+.ways-note { margin: 0; color: var(--ink-3); font-size: var(--s-1); max-width: 66ch; }
+
+/* ---------- comparison table ---------- */
+.compare-wrap { overflow-x: auto; margin: 18px 0 0; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--surface); }
+.compare { border-collapse: collapse; width: 100%; min-width: 36rem; font-size: var(--s-1); }
+.compare th, .compare td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--rule); }
+.compare thead th { font: 600 .72rem/1.2 var(--ui); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); background: var(--bg); }
+.compare tbody th { font: 600 var(--s0)/1.3 var(--read); white-space: nowrap; }
+.compare tr:last-child > * { border-bottom: 0; }
+.compare .used { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+
+/* ---------- where I'm active ---------- */
+.active-wrap { overflow-x: auto; margin-top: 26px; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--surface); }
+.active { border-collapse: collapse; width: 100%; min-width: 34rem; font-size: var(--s-1); }
+.active th, .active td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--rule); }
+.active thead th { background: var(--bg); }
+.active tbody th { font: 600 var(--s0)/1.3 var(--read); }
+.active tbody th a { color: var(--ink); }
+.active td.none { color: var(--ink-3); }
+.active tr:last-child > * { border-bottom: 0; }
+.learn { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: 16px; margin-top: 28px; }
+.learn ol { margin: 0; padding-left: 1.2em; display: flex; flex-direction: column; gap: 12px; }
+.learn li strong { font: 600 var(--s0)/1.3 var(--read); }
+.learn li p { margin: 2px 0 0; color: var(--ink-2); font-size: var(--s-1); }
+.learn .tags { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 4px; }
+
+/* ---------- lists of entries ---------- */
+.entry-list { list-style: none; margin: 28px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr)); gap: 12px; }
+.entry-list a {
+  display: flex; flex-direction: column; gap: 6px; height: 100%;
+  padding: 16px 18px; background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius);
+  text-decoration: none; color: var(--ink); transition: border-color .15s ease-out;
+}
+.entry-list a:hover { border-color: var(--accent); }
+.entry-list strong { font: 600 var(--s1)/1.3 var(--read); }
+.entry-list p { margin: 0; color: var(--ink-2); font-size: var(--s-1); }
+.entry-list .foot { margin-top: auto; padding-top: 6px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; font-size: .74rem; color: var(--ink-3); }
+
+/* ---------- home ---------- */
+.home-head { padding-bottom: 8px; }
+.home-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: 16px; margin-top: 28px; }
+.panel { background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius); padding: 18px 20px; min-width: 0; }
+.panel h2 { font: 700 var(--s1)/1.2 var(--read); margin: 0 0 4px; }
+.panel > p { margin: 0 0 12px; color: var(--ink-3); font-size: var(--s-1); }
+.path { list-style: none; margin: 0; padding: 0; counter-reset: p; display: flex; flex-direction: column; }
+.path li { counter-increment: p; border-top: 1px solid var(--rule); }
+.path a { display: grid; grid-template-columns: 2rem 1fr; padding: 10px 0; color: var(--ink); text-decoration: none; }
+.path a::before { content: counter(p); font: 500 .85rem/1.5 var(--mono); color: var(--accent); }
+.path a:hover span { text-decoration: underline; }
+.today-item { border-top: 1px solid var(--rule); padding: 12px 0; }
+.today-item h3 { font: 600 var(--s0)/1.35 var(--read); margin: 4px 0; }
+.today-item p { margin: 0; font-size: var(--s-1); color: var(--ink-2); }
+.today-item .ex { font: 500 .7rem/1 var(--mono); color: var(--ink-3); }
+
+.shelf-title { font: 700 var(--s2)/1.2 var(--read); margin: 44px 0 0; }
+.shelf { list-style: none; margin: 16px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15.5rem), 1fr)); gap: 10px; }
+.shelf a {
+  display: flex; flex-direction: column; gap: 4px; height: 100%;
+  padding: 14px 16px; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--surface);
+  text-decoration: none; color: var(--ink); transition: border-color .15s ease-out;
+}
+.shelf a:hover { border-color: var(--accent); }
+.shelf strong { font: 600 var(--s0)/1.3 var(--read); }
+.shelf span { font-size: var(--s-1); color: var(--ink-3); }
+.shelf .n { font-family: var(--mono); font-size: .72rem; }
+
+/* ---------- glossary + timeline ---------- */
+.letters { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 22px; }
+.letters button { min-width: 34px; height: 34px; border: 1px solid var(--rule); background: var(--surface); border-radius: 6px; cursor: pointer; font: 500 .8rem/1 var(--mono); }
+.letters button:hover { border-color: var(--accent); }
+.gloss { margin: 24px 0 0; max-width: 52rem; }
+.gloss div { display: grid; grid-template-columns: minmax(8rem, 13rem) minmax(0, 1fr); gap: 4px 20px; padding: 12px 0; border-top: 1px solid var(--rule); scroll-margin-top: calc(var(--bar) + 16px); }
+.gloss dt { font: 600 var(--s0)/1.4 var(--read); }
+.gloss dd { margin: 0; color: var(--ink-2); }
+.gloss dd a { white-space: nowrap; }
+
+.timeline { list-style: none; margin: 28px 0 0; padding: 0; max-width: 50rem; border-left: 2px solid var(--rule); }
+.timeline li { position: relative; padding: 0 0 22px 22px; }
+.timeline li::before { content: ""; position: absolute; left: -6px; top: 6px; width: 10px; height: 10px; border-radius: 50%; background: var(--surface); border: 2px solid var(--accent); }
+.timeline .yr { font: 500 .85rem/1.4 var(--mono); color: var(--accent); }
+.timeline h2 { font: 600 var(--s1)/1.3 var(--read); margin: 2px 0 4px; }
+.timeline p { margin: 0; color: var(--ink-2); }
+.timeline .src { font-size: var(--s-1); margin-top: 4px; }
+
+/* ---------- search dialog ---------- */
+.palette[hidden] { display: none; }
+.palette { position: fixed; inset: 0; z-index: 20; background: color-mix(in srgb, var(--ink) 35%, transparent); display: flex; justify-content: center; align-items: flex-start; padding: calc(8vh + env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) 16px max(16px, env(safe-area-inset-left, 0px)); }
+.palette-box { width: min(40rem, 100%); background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,.25); overflow: hidden; display: flex; flex-direction: column; max-height: 76vh; animation: pop .16s ease-out; }
+@keyframes pop { from { opacity: 0; transform: translateY(-6px) scale(.99); } }
+.palette input { border: 0; border-bottom: 1px solid var(--rule); padding: 16px 18px; font: 400 var(--s1)/1.3 var(--ui); background: transparent; color: var(--ink); outline: none; }
+.palette ul { list-style: none; margin: 0; padding: 6px; overflow-y: auto; }
+.palette li a { display: flex; flex-direction: column; gap: 2px; padding: 10px 12px; border-radius: 8px; text-decoration: none; color: var(--ink); }
+.palette li a small { color: var(--ink-3); font-size: var(--s-1); }
+.palette li a mark { background: var(--mark); color: inherit; border-radius: 2px; }
+.palette li[aria-selected="true"] a { background: var(--accent-soft); }
+.palette .hint { padding: 10px 16px; border-top: 1px solid var(--rule); font-size: .74rem; color: var(--ink-3); display: flex; gap: 14px; flex-wrap: wrap; }
+.palette .none { padding: 18px; color: var(--ink-3); }
+
+/* ---------- responsive ---------- */
+@media (max-width: 1180px) {
+  .shell, .shell.reading { grid-template-columns: 15rem minmax(0, 1fr); }
+  .rail { position: static; max-height: none; grid-column: 2; padding-top: 0; }
+  .rail .toc { display: none; }
+}
+@media (max-width: 860px) {
+  .shell, .shell.reading { grid-template-columns: minmax(0, 1fr); }
+  .rail { grid-column: 1; }
+  .menu-btn { display: inline-flex; align-items: center; }
+  .search-btn kbd { display: none; }
+  .nav {
+    position: fixed; z-index: 15; top: calc(var(--bar) + env(safe-area-inset-top, 0px)); left: 0; bottom: 0; max-height: none;
+    width: min(20rem, 86vw); background: var(--surface); border-right: 1px solid var(--rule);
+    padding: 16px 12px calc(24px + env(safe-area-inset-bottom, 0px)) max(12px, env(safe-area-inset-left, 0px));
+    transform: translateX(-102%); transition: transform .22s ease-out; visibility: hidden;
+  }
+  body.nav-open .nav { transform: none; visibility: visible; }
+  .scrim { position: fixed; inset: 0; z-index: 14; background: color-mix(in srgb, var(--ink) 30%, transparent); }
+  .gloss div { grid-template-columns: 1fr; }
+  .pager { grid-template-columns: 1fr; }
+  .pager a.next { grid-column: 1; }
+}
+@media (max-width: 640px) {
+  .home-link { display: none; }
+  .search-btn { margin-left: auto !important; }
+}
+@media (max-width: 480px) {
+  .search-btn { width: 40px; flex: none; padding: 0; justify-content: center; }
+  .search-btn .label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: .18s; }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-in">
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Browse</button>
+    <a class="brand" href="#home">Nathan's <span>AI</span> Wiki</a>
+    <a class="home-link" href="/">Nathan's Daily</a>
+    <button class="search-btn" id="search-btn" type="button" aria-haspopup="dialog">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <span class="label">Search the wiki</span><kbd>/</kbd>
+    </button>
+  </div>
+</header>
+<section class="sample" aria-label="About this edition"><p><strong>Starter edition.</strong> Entries are short starter versions, and daily updates aren't on yet. Every source link was checked on Oct 24, 2026. "Nathan's way" boxes marked Draft aren't final until Nathan OKs them.</p></section>
+
+<div class="shell" id="shell">
+  <nav class="nav" id="nav" aria-label="Wiki sections"></nav>
+  <main id="main" tabindex="-1"></main>
+  <aside class="rail" id="rail" aria-label="About this page"></aside>
+</div>
+<div class="scrim" id="scrim" hidden></div>
+
+<div class="palette" id="palette" hidden role="dialog" aria-modal="true" aria-label="Search the wiki">
+  <div class="palette-box">
+    <input id="q" type="search" placeholder="Search entries, terms and dates" autocomplete="off" aria-controls="results" aria-label="Search">
+    <ul id="results" role="listbox" aria-label="Results"></ul>
+    <div class="hint"><span><kbd>↑</kbd> <kbd>↓</kbd> move</span><span><kbd>Enter</kbd> open</span><span><kbd>Esc</kbd> close</span></div>
+  </div>
+</div>
+
+<script>
+const UPDATED = "2026-10-24";
+
+const CATS = [
+  { id: "active", name: "Where I'm active", blurb: "What Brawn, Personal and TLC use, and what to learn next.", group: "My building", page: true },
+  { id: "backends", name: "Backends and databases", blurb: "Where an app keeps its data and checks who's signed in.", group: "My building" },
+  { id: "start", name: "Start here", blurb: "What AI is, how it learns, and where to begin.", group: "Basics" },
+  { id: "how", name: "How AI works", blurb: "Training, tokens, transformers and reasoning, in plain words.", group: "Basics" },
+  { id: "glossary", name: "Glossary", blurb: "Every term in the wiki, each linked to where it's explained.", group: "Basics", page: true },
+  { id: "models", name: "Models and companies", blurb: "Claude, ChatGPT, Gemini, Llama and the labs behind them.", group: "The field" },
+  { id: "tools", name: "AI tools", blurb: "Chat assistants, coding tools, image makers and more.", group: "The field" },
+  { id: "agents", name: "Agents and automation", blurb: "AI that takes actions for you, and the plumbing behind it.", group: "The field" },
+  { id: "building", name: "Building with AI", blurb: "Prompts, your own documents, testing and cost.", group: "The field" },
+  { id: "research", name: "Research and breakthroughs", blurb: "Landmark papers, test scores and AI in science.", group: "The field" },
+  { id: "robots", name: "Robots and the physical world", blurb: "Self-driving cars, humanoid robots and drones.", group: "The field" },
+  { id: "chips", name: "Chips, data centers and energy", blurb: "The hardware AI runs on and the power it uses.", group: "The field" },
+  { id: "fields", name: "AI in each field", blurb: "Faith and ministry, healthcare, education and more.", group: "Where it lands" },
+  { id: "safety", name: "Safety", blurb: "Keeping AI honest, under control and hard to misuse.", group: "Where it lands" },
+  { id: "society", name: "AI and society", blurb: "Jobs, fake media, copyright and everyday life.", group: "Where it lands" },
+  { id: "law", name: "Laws and rules", blurb: "How governments are setting limits.", group: "Where it lands" },
+  { id: "business", name: "Business and money", blurb: "How AI companies earn and spend. News, not advice.", group: "Where it lands" },
+  { id: "people", name: "People", blurb: "The researchers and leaders who shaped AI.", group: "Where it lands" },
+  { id: "debates", name: "The big debates", blurb: "Open questions, with both sides and their sources.", group: "Where it lands" },
+  { id: "today", name: "Today in AI", blurb: "A daily brief, plus the full timeline by date.", group: "Daily", page: true },
+  { id: "timeline", name: "Timeline", blurb: "AI history from 1950 to now, every step sourced.", group: "Daily", page: true },
+];
+
+// Text marks: [n] cites source n. {{entry-id|words}} links to another entry.
+const S = {
+  aiindex: { t: "Artificial Intelligence Index Report 2025", pub: "Stanford HAI", type: "Report", url: "https://hai.stanford.edu/ai-index/2025-ai-index-report" },
+  brit: { t: "Artificial intelligence", pub: "Encyclopaedia Britannica", type: "Reference", url: "https://www.britannica.com/technology/artificial-intelligence" },
+  backprop: { t: "Learning representations by back-propagating errors (Rumelhart, Hinton, Williams, 1986)", pub: "Nature", type: "Paper", url: "https://www.nature.com/articles/323533a0" },
+  chinchilla: { t: "Training Compute-Optimal Large Language Models (Hoffmann et al., 2022)", pub: "arXiv", type: "Paper", url: "https://arxiv.org/abs/2203.15556" },
+  turing50: { t: "Computing Machinery and Intelligence (Turing, 1950)", pub: "Mind, Oxford Academic", type: "Paper", url: "https://academic.oup.com/mind/article/LIX/236/433/986238" },
+  dartmouth: { t: "A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence (1955)", pub: "AI Magazine", type: "Paper", url: "https://ojs.aaai.org/aimagazine/index.php/aimagazine/article/view/1904" },
+  alexnet: { t: "ImageNet Classification with Deep Convolutional Neural Networks (Krizhevsky, Sutskever, Hinton, 2012)", pub: "NeurIPS", type: "Paper", url: "https://papers.nips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html" },
+  attention: { t: "Attention Is All You Need (Vaswani et al., 2017)", pub: "arXiv", type: "Paper", url: "https://arxiv.org/abs/1706.03762" },
+  chatgpt: { t: "Introducing ChatGPT", pub: "OpenAI", type: "Official", url: "https://openai.com/index/chatgpt/" },
+  anthco: { t: "Company", pub: "Anthropic", type: "Official", url: "https://www.anthropic.com/company" },
+  anthclaude: { t: "Introducing Claude", pub: "Anthropic", type: "Official", url: "https://www.anthropic.com/news/introducing-claude" },
+  cai: { t: "Constitutional AI: Harmlessness from AI Feedback (Bai et al., 2022)", pub: "arXiv", type: "Paper", url: "https://arxiv.org/abs/2212.08073" },
+  openaiwiki: { t: "OpenAI", pub: "Wikipedia", type: "Reference", url: "https://en.wikipedia.org/wiki/OpenAI" },
+  gdm: { t: "Google DeepMind: Bringing together two world-class AI teams", pub: "Google", type: "Official", url: "https://blog.google/technology/ai/april-ai-update/" },
+  gemini: { t: "Introducing Gemini", pub: "Google", type: "Official", url: "https://blog.google/technology/ai/google-gemini-ai/" },
+  llama1: { t: "LLaMA: Open and Efficient Foundation Language Models (Touvron et al., 2023)", pub: "arXiv", type: "Paper", url: "https://arxiv.org/abs/2302.13971" },
+  llama: { t: "Llama", pub: "Meta", type: "Official", url: "https://www.llama.com/" },
+  osaid: { t: "The Open Source AI Definition 1.0", pub: "Open Source Initiative", type: "Official", url: "https://opensource.org/ai/open-source-ai-definition" },
+  r1: { t: "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning (2025)", pub: "arXiv", type: "Paper", url: "https://arxiv.org/abs/2501.12948" },
+  threeb: { t: "Neural networks (video series)", pub: "3Blue1Brown", type: "Lesson", url: "https://www.3blue1brown.com/topics/neural-networks" },
+  dl2015: { t: "Deep learning (LeCun, Bengio, Hinton, 2015)", pub: "Nature", type: "Paper", url: "https://www.nature.com/articles/nature14539" },
+  illus: { t: "The Illustrated Transformer", pub: "Jay Alammar", type: "Lesson", url: "https://jalammar.github.io/illustrated-transformer/" },
+  ctx: { t: "Context windows", pub: "Anthropic docs", type: "Official", url: "https://docs.anthropic.com/en/docs/build-with-claude/context-windows" },
+  gloss: { t: "Glossary", pub: "Anthropic docs", type: "Official", url: "https://docs.anthropic.com/en/docs/about-claude/glossary" },
+  instruct: { t: "Training language models to follow instructions with human feedback (Ouyang et al., 2022)", pub: "arXiv", type: "Paper", url: "https://arxiv.org/abs/2203.02155" },
+  cot: { t: "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models (Wei et al., 2022)", pub: "arXiv", type: "Paper", url: "https://arxiv.org/abs/2201.11903" },
+  o1card: { t: "OpenAI o1 System Card (2024)", pub: "arXiv", type: "Paper", url: "https://arxiv.org/abs/2412.16720" },
+  gpt4: { t: "GPT-4 Technical Report (2023)", pub: "arXiv", type: "Paper", url: "https://arxiv.org/abs/2303.08774" },
+  copilot: { t: "Introducing GitHub Copilot: your AI pair programmer", pub: "GitHub", type: "Official", url: "https://github.blog/news-insights/product-news/introducing-github-copilot-ai-pair-programmer/" },
+  claudecode: { t: "Claude Code", pub: "Anthropic", type: "Official", url: "https://www.anthropic.com/claude-code" },
+  swebench: { t: "SWE-bench: Can Language Models Resolve Real-World GitHub Issues? (Jimenez et al., 2023)", pub: "arXiv", type: "Paper", url: "https://arxiv.org/abs/2310.06770" },
+  ddpm: { t: "Denoising Diffusion Probabilistic Models (Ho, Jain, Abbeel, 2020)", pub: "arXiv", type: "Paper", url: "https://arxiv.org/abs/2006.11239" },
+  agents: { t: "Building effective agents", pub: "Anthropic", type: "Official", url: "https://www.anthropic.com/research/building-effective-agents" },
+  mcpnews: { t: "Introducing the Model Context Protocol", pub: "Anthropic", type: "Official", url: "https://www.anthropic.com/news/model-context-protocol" },
+  mcp: { t: "Model Context Protocol", pub: "modelcontextprotocol.io", type: "Official", url: "https://modelcontextprotocol.io/" },
+  cu: { t: "Introducing computer use, a new Claude 3.5 Sonnet, and Claude 3.5 Haiku", pub: "Anthropic", type: "Official", url: "https://www.anthropic.com/news/3-5-models-and-computer-use" },
+  prompt: { t: "Prompt engineering overview", pub: "Anthropic docs", type: "Official", url: "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview" },
+  gpt3: { t: "Language Models are Few-Shot Learners (Brown et al., 2020)", pub: "arXiv", type: "Paper", url: "https://arxiv.org/abs/2005.14165" },
+  rag: { t: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (Lewis et al., 2020)", pub: "arXiv", type: "Paper", url: "https://arxiv.org/abs/2005.11401" },
+  evals: { t: "Define success criteria and build evaluations", pub: "Anthropic docs", type: "Official", url: "https://docs.anthropic.com/en/docs/test-and-evaluate/develop-tests" },
+  pricing: { t: "Pricing", pub: "Anthropic", type: "Official", url: "https://www.anthropic.com/pricing" },
+  antiqua: { t: "Antiqua et Nova: Note on the relationship between artificial intelligence and human intelligence (2025)", pub: "Dicastery for the Doctrine of the Faith, Vatican", type: "Official", url: "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20250128_antiqua-et-nova_en.html" },
+  romecall: { t: "Rome Call for AI Ethics", pub: "RenAIssance Foundation", type: "Official", url: "https://www.romecall.org/" },
+  erlc: { t: "Artificial Intelligence: An Evangelical Statement of Principles (2019)", pub: "ERLC", type: "Official", url: "https://erlc.com/resource-library/statements/artificial-intelligence-an-evangelical-statement-of-principles/" },
+  fda: { t: "Artificial Intelligence-Enabled Medical Devices", pub: "U.S. Food and Drug Administration", type: "Official", url: "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-enabled-medical-devices" },
+  hipaa: { t: "Health Information Privacy", pub: "U.S. Dept. of Health and Human Services", type: "Official", url: "https://www.hhs.gov/hipaa/index.html" },
+  unesco: { t: "Guidance for generative AI in education and research", pub: "UNESCO", type: "Official", url: "https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research" },
+  af2: { t: "Highly accurate protein structure prediction with AlphaFold (Jumper et al., 2021)", pub: "Nature", type: "Paper", url: "https://www.nature.com/articles/s41586-021-03819-2" },
+  afdb: { t: "AlphaFold Protein Structure Database", pub: "EMBL-EBI", type: "Official", url: "https://alphafold.ebi.ac.uk/" },
+  nobelchem: { t: "The Nobel Prize in Chemistry 2024", pub: "NobelPrize.org", type: "Official", url: "https://www.nobelprize.org/prizes/chemistry/2024/summary/" },
+  mmlu: { t: "Measuring Massive Multitask Language Understanding (Hendrycks et al., 2020)", pub: "arXiv", type: "Paper", url: "https://arxiv.org/abs/2009.03300" },
+  kaplan: { t: "Scaling Laws for Neural Language Models (Kaplan et al., 2020)", pub: "arXiv", type: "Paper", url: "https://arxiv.org/abs/2001.08361" },
+  sae: { t: "J3016: Taxonomy and Definitions for Terms Related to Driving Automation Systems", pub: "SAE International", type: "Standard", url: "https://www.sae.org/standards/content/j3016_202104/" },
+  waymo: { t: "Waymo", pub: "Waymo", type: "Official", url: "https://waymo.com/" },
+  atlas: { t: "Atlas", pub: "Boston Dynamics", type: "Official", url: "https://bostondynamics.com/atlas/" },
+  cuda: { t: "CUDA Zone", pub: "NVIDIA", type: "Official", url: "https://developer.nvidia.com/cuda-zone" },
+  iea: { t: "Energy and AI (2025)", pub: "International Energy Agency", type: "Report", url: "https://www.iea.org/reports/energy-and-ai" },
+  specgame: { t: "Specification gaming: the flip side of AI ingenuity", pub: "Google DeepMind", type: "Official", url: "https://deepmind.google/discover/blog/specification-gaming-the-flip-side-of-ai-ingenuity/" },
+  mono: { t: "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet (2024)", pub: "Transformer Circuits (Anthropic)", type: "Paper", url: "https://transformer-circuits.pub/2024/scaling-monosemanticity/" },
+  halsurvey: { t: "Survey of Hallucination in Natural Language Generation (Ji et al., 2023)", pub: "arXiv", type: "Paper", url: "https://arxiv.org/abs/2202.03629" },
+  mata: { t: "Mata v. Avianca, Inc.", pub: "Wikipedia", type: "Reference", url: "https://en.wikipedia.org/wiki/Mata_v._Avianca,_Inc." },
+  wef: { t: "The Future of Jobs Report 2025", pub: "World Economic Forum", type: "Report", url: "https://www.weforum.org/publications/the-future-of-jobs-report-2025/" },
+  c2pa: { t: "Coalition for Content Provenance and Authenticity", pub: "C2PA", type: "Official", url: "https://c2pa.org/" },
+  usco: { t: "Copyright and Artificial Intelligence", pub: "U.S. Copyright Office", type: "Official", url: "https://www.copyright.gov/ai/" },
+  nytcase: { t: "The New York Times v. Microsoft and OpenAI", pub: "Wikipedia", type: "Reference", url: "https://en.wikipedia.org/wiki/The_New_York_Times_v._Microsoft_and_OpenAI" },
+  euact: { t: "Regulation (EU) 2024/1689 (the AI Act)", pub: "EUR-Lex", type: "Law", url: "https://eur-lex.europa.eu/eli/reg/2024/1689/oj" },
+  nist: { t: "AI Risk Management Framework", pub: "NIST", type: "Official", url: "https://www.nist.gov/itl/ai-risk-management-framework" },
+  turingaward: { t: "A.M. Turing Award", pub: "ACM", type: "Official", url: "https://amturing.acm.org/" },
+  hintonacm: { t: "Geoffrey E Hinton, A.M. Turing Award 2018", pub: "ACM", type: "Official", url: "https://amturing.acm.org/award_winners/hinton_4791679.cfm" },
+  nobelphys: { t: "The Nobel Prize in Physics 2024", pub: "NobelPrize.org", type: "Official", url: "https://www.nobelprize.org/prizes/physics/2024/summary/" },
+  imagenet: { t: "ImageNet", pub: "image-net.org", type: "Official", url: "https://image-net.org/" },
+  feifei: { t: "Fei-Fei Li", pub: "Stanford HAI", type: "Official", url: "https://hai.stanford.edu/people/fei-fei-li" },
+  levels: { t: "Levels of AGI for Operationalizing Progress on the Path to AGI (Morris et al., 2023)", pub: "arXiv", type: "Paper", url: "https://arxiv.org/abs/2311.02462" },
+  ntia: { t: "Dual-Use Foundation Models with Widely Available Model Weights (2024)", pub: "NTIA", type: "Report", url: "https://www.ntia.gov/issues/artificial-intelligence/open-model-weights-report" },
+  eliza: { t: "ELIZA: A Computer Program for the Study of Natural Language Communication (Weizenbaum, 1966)", pub: "Communications of the ACM", type: "Paper", url: "https://dl.acm.org/doi/10.1145/365153.365168" },
+  deepblue: { t: "Deep Blue", pub: "IBM", type: "Official", url: "https://www.ibm.com/history/deep-blue" },
+  supabase: { t: "Supabase docs", pub: "Supabase", type: "Official", url: "https://supabase.com/docs" },
+  rls: { t: "Row Level Security", pub: "Supabase docs", type: "Official", url: "https://supabase.com/docs/guides/database/postgres/row-level-security" },
+  firebase: { t: "Firebase documentation", pub: "Google", type: "Official", url: "https://firebase.google.com/docs" },
+  firestore: { t: "Cloud Firestore", pub: "Firebase docs", type: "Official", url: "https://firebase.google.com/docs/firestore" },
+  neon: { t: "Neon documentation", pub: "Neon", type: "Official", url: "https://neon.com/docs/introduction" },
+  neonbranch: { t: "Branching", pub: "Neon docs", type: "Official", url: "https://neon.com/docs/introduction/branching" },
+  convex: { t: "Convex docs", pub: "Convex", type: "Official", url: "https://docs.convex.dev/" },
+  pocketbase: { t: "PocketBase docs", pub: "PocketBase", type: "Official", url: "https://pocketbase.io/docs/" },
+  base44: { t: "Base44", pub: "Base44", type: "Official", url: "https://base44.com/" },
+  alphago: { t: "AlphaGo", pub: "Google DeepMind", type: "Official", url: "https://deepmind.google/research/breakthroughs/alphago/" },
+};
+
+const E = [
+  // ---- my building
+  { id: "backend-database", cat: "backends", title: "Backends and databases", one: "The backend is the part of an app you never see: it stores the data, checks who's signed in, and decides who may see what.",
+    src: ["supabase", "rls", "firebase", "firestore", "neon", "neonbranch", "convex", "pocketbase", "base44"], related: ["tokens", "what-it-costs"],
+    compare: "backend-database",
+    body: [
+      ["What a backend does", "Every app that remembers anything needs one. It holds the database, signs people in, stores files like photos, and enforces the rules about who can read or change each record. Supabase, for example, bundles all of those on top of a standard Postgres database [1]."],
+      ["The two big families", "Most options fall into two camps. Postgres-based services (Supabase, Neon) store data in tables, the long-standing industry standard, which makes it easier to move to another host later [1][5]. Document databases like Google's Firestore store data as nested records, which suits fast-changing mobile apps but is harder to move off [4]."],
+      ["All-in-one or pieces", "Supabase and Firebase give you a database, sign-in and file storage in one place [1][3]. Neon is only the database, so you add sign-in from somewhere else; in return it can copy a whole database in seconds for safe testing [6]. Convex goes further the other way: your server code and the database live together, and screens update live on their own [7]. PocketBase is one small program you run on your own server [8]. Builders like Base44 hide the backend entirely, which is fastest to start and hardest to leave [9]."],
+      ["How they compete", "They compete on three things: how fast you can start, what it costs as you grow, and how hard it is to leave. Who can see what is the part that bites. Supabase relies on row-level security rules you write yourself, and a missing rule can leave a table open to the internet [2]."],
+    ] },
+  // ---- start
+  { id: "what-is-ai", cat: "start", title: "What is AI?", one: "AI is software that learns patterns from examples instead of following only rules a person wrote.",
+    src: ["brit", "aiindex"], related: ["how-ai-learns", "agi", "history"],
+    body: [
+      ["The short version", "Most software follows steps a person wrote down. AI systems learn from large piles of examples, like text, photos or game moves, and use the patterns they find to make a good guess about something new [1]."],
+      ["Narrow and general AI", "Every AI in use today is narrow: it is good at some tasks and poor at others. \"General\" AI, often called {{agi|AGI}}, would match a person across most tasks. Experts disagree about when, or whether, that will happen [2]."],
+      ["Where you already meet it", "Spam filters, map directions, photo search, voice assistants and chat tools like {{anthropic-claude|Claude}} and {{openai-chatgpt|ChatGPT}} all use AI [1]."],
+    ] },
+  { id: "how-ai-learns", cat: "start", title: "How AI learns", one: "A model learns by guessing, checking how wrong it was, and adjusting itself a tiny bit, over and over, billions of times.",
+    src: ["backprop", "chinchilla"], related: ["neural-networks", "training-finetuning", "tokens"],
+    body: [
+      ["Guess, check, adjust", "A new model starts out guessing at random. In training it sees an example, makes a guess, and measures how far off it was. A method called backpropagation then nudges the model's internal numbers, called parameters, so the next guess is a little better [1]."],
+      ["Why it takes so much data", "Each nudge is tiny, so models need a huge number of examples. Large language models are trained on trillions of {{tokens|tokens}}, which are pieces of words [2]."],
+      ["After training", "Once training ends, the model's numbers are fixed. Using the model to answer questions is called inference. A chat assistant doesn't learn from your conversation in the moment; it only changes when its makers train a new version."],
+    ] },
+  { id: "history", cat: "start", title: "A short history of AI", one: "From Alan Turing's 1950 question to ChatGPT in 2022: seventy years of big hopes, slow winters and sudden leaps.",
+    src: ["turing50", "dartmouth", "alexnet", "attention", "chatgpt"], related: ["alan-turing", "transformers", "geoffrey-hinton"],
+    body: [
+      ["The 1950s: asking the question", "In 1950 {{alan-turing|Alan Turing}} asked whether machines can think, and suggested a test for it [1]. The name \"artificial intelligence\" comes from a 1955 proposal for a summer workshop at Dartmouth College, held in 1956 [2]."],
+      ["The winters", "Early hopes ran far ahead of what computers could do. Money and interest dried up twice, in the 1970s and again in the late 1980s. People call these stretches \"AI winters.\""],
+      ["2012: deep learning takes off", "In 2012 a neural network called AlexNet won a major image-recognition contest by a wide margin. It was trained on graphics chips built for video games [3]. That result started the deep learning boom."],
+      ["2017 to now", "The {{transformers|transformer}} design, published in 2017, made it practical to train very large language models [4]. OpenAI's ChatGPT, released in November 2022, brought those models to the public [5]. The {{t-timeline|timeline}} has every step."],
+    ] },
+  { id: "where-to-begin", cat: "start", title: "Where to begin", one: "Read these five entries in order and you'll follow most conversations about AI.",
+    src: [], related: [],
+    path: ["what-is-ai", "how-ai-learns", "tokens", "transformers", "hallucinations"],
+    body: [
+      ["A reading path", "Each one takes about two minutes. Together they cover what AI is, how it learns, what it reads, the design behind today's assistants, and the mistake every user should know about."],
+    ] },
+
+  // ---- models
+  { id: "anthropic-claude", cat: "models", title: "Anthropic and Claude", one: "Anthropic is an AI safety company founded in 2021. Its model family is called Claude.",
+    src: ["anthco", "anthclaude", "cai"], related: ["openai-chatgpt", "alignment", "mcp"],
+    body: [
+      ["The company", "Anthropic was founded in 2021 by a group that included siblings Dario and Daniela Amodei. It describes itself as an AI safety and research company [1]."],
+      ["Claude", "Anthropic released the first Claude model to the public in March 2023 [2]. Claude models come in sizes named Haiku, Sonnet and Opus, from fastest to most capable. Claude is offered as an app, through an API for builders, and as the coding tool {{coding-assistants|Claude Code}}."],
+      ["What it's known for", "Anthropic trains Claude with a method it calls Constitutional AI, where the model is guided by a written list of principles instead of only by human ratings [3]. It also created the {{mcp|Model Context Protocol}}."],
+    ] },
+  { id: "openai-chatgpt", cat: "models", title: "OpenAI and ChatGPT", one: "OpenAI started as a nonprofit lab in 2015 and made ChatGPT, the assistant that brought AI to the public in 2022.",
+    src: ["openaiwiki", "chatgpt", "gpt4"], related: ["anthropic-claude", "google-gemini", "reasoning-models"],
+    body: [
+      ["The company", "OpenAI was founded in 2015 as a nonprofit research lab. It later added a for-profit arm to raise the money needed to train large models [1]."],
+      ["GPT and ChatGPT", "GPT stands for \"generative pre-trained transformer.\" ChatGPT, released November 30, 2022, was built on top of those models and tuned to hold a conversation [2]. GPT-4 followed in March 2023 and could read images as well as text [3]."],
+    ] },
+  { id: "google-gemini", cat: "models", title: "Google DeepMind and Gemini", one: "Google DeepMind is Google's main AI lab. Gemini is its model family.",
+    src: ["gdm", "gemini", "alphago"], related: ["alphafold", "openai-chatgpt"],
+    body: [
+      ["The lab", "In April 2023 Google merged its two AI groups, Google Brain and DeepMind, into one lab called Google DeepMind [1]. DeepMind had already built AlphaGo, which beat world Go champion Lee Sedol in 2016 [3], and {{alphafold|AlphaFold}}."],
+      ["Gemini", "Google announced Gemini in December 2023 as a model built from the start to handle text, images, audio and video [2]. It powers Google's assistant and appears across Google products."],
+    ] },
+  { id: "meta-llama", cat: "models", title: "Meta and Llama", one: "Llama is Meta's family of models whose weights anyone can download and run.",
+    src: ["llama1", "llama"], related: ["open-weight", "open-vs-closed"],
+    body: [
+      ["What Meta released", "Meta first released LLaMA to researchers in February 2023 [1]. Later versions were released more widely under Meta's own license [2]."],
+      ["Why it matters", "Because the model's numbers (its \"weights\") can be downloaded, people can run Llama on their own computers and adapt it. That makes it one of the best-known {{open-weight|open-weight models}}."],
+    ] },
+  { id: "open-weight", cat: "models", title: "Open-weight models", one: "Models whose trained numbers are published so anyone can download, run and change them.",
+    src: ["osaid", "r1"], related: ["meta-llama", "open-vs-closed"], stub: true,
+    body: [
+      ["Open weights vs. open source", "\"Open weights\" means you can download the model. \"Open source\" is stricter: the Open Source Initiative's definition also asks for enough detail about the training data and code to rebuild it [1]. Many models called open are open-weight only."],
+      ["Well-known examples", "Meta's Llama, Mistral's models, and models from Chinese labs such as DeepSeek and Alibaba's Qwen. DeepSeek-R1, released in January 2025, was a widely noticed open-weight {{reasoning-models|reasoning model}} [2]."],
+    ] },
+
+  // ---- how
+  { id: "neural-networks", cat: "how", title: "Neural networks", one: "Layers of simple math units, loosely inspired by the brain, that together learn to turn inputs into answers.",
+    src: ["dl2015", "threeb"], related: ["how-ai-learns", "transformers"],
+    body: [
+      ["The idea", "A neural network passes numbers through layers of small units. Each unit multiplies its inputs by weights, adds them up, and passes the result on. Training sets the weights [1]."],
+      ["Why \"deep\"", "Deep learning just means a network with many layers. More layers let the network build up from simple patterns, like edges in a photo, to complex ones, like faces [1]. 3Blue1Brown's video series is one of the clearest visual explanations [2]."],
+    ] },
+  { id: "transformers", cat: "how", title: "Transformers", one: "The 2017 design behind almost every modern language model, built around a step called attention.",
+    src: ["attention", "illus"], related: ["tokens", "history", "neural-networks"],
+    body: [
+      ["Attention", "The key step in a transformer lets each word look at every other word in the passage and decide which ones matter for its meaning. In \"the trophy didn't fit in the case because it was too big,\" attention helps the model work out that \"it\" means the trophy [2]."],
+      ["Why it won", "Older designs read text one word at a time. Transformers handle a whole passage at once, which suits the graphics chips used for training and made much larger models practical [1]. GPT, Claude, Gemini and Llama are all transformers."],
+    ] },
+  { id: "tokens", cat: "how", title: "Tokens and context windows", one: "Models read text in small pieces called tokens. The context window is how many tokens a model can hold in view at once.",
+    src: ["gloss", "ctx"], related: ["what-it-costs", "rag"],
+    body: [
+      ["Tokens", "A token is a word or a piece of a word. Models read, write and are priced in tokens [1]."],
+      ["The context window", "The context window is the model's working memory for one conversation: your messages, any files you add, and its own replies. When a chat goes past it, the oldest parts fall out of view [2]."],
+    ] },
+  { id: "training-finetuning", cat: "how", title: "Training and fine-tuning", one: "A model first learns from a huge pile of text, then gets smaller, targeted lessons that shape how it behaves.",
+    src: ["instruct", "cai"], related: ["how-ai-learns", "alignment"],
+    body: [
+      ["Pre-training", "First the model reads an enormous amount of text and learns to predict the next word. This is the expensive part."],
+      ["Fine-tuning", "Then it is trained further on a smaller, chosen set of examples. A common method, reinforcement learning from human feedback (RLHF), has people rank the model's answers so it learns which ones they prefer [1]. Anthropic's Constitutional AI swaps much of that human ranking for a written set of principles [2]."],
+    ] },
+  { id: "reasoning-models", cat: "how", title: "Reasoning models", one: "Models trained to work a problem through step by step before they answer.",
+    src: ["cot", "o1card", "r1"], related: ["transformers", "benchmarks"],
+    body: [
+      ["Thinking out loud", "Researchers found in 2022 that asking a model to show its steps made it better at math and logic problems [1]."],
+      ["Built in", "Reasoning models are trained to do this on their own. OpenAI's o1, released in 2024, was one of the first widely used examples [2]. DeepSeek-R1 showed in early 2025 that the method could be reproduced in an open-weight model [3]."],
+    ] },
+  { id: "multimodal", cat: "how", title: "Multimodal AI", one: "AI that works with more than text: images, audio and video too.",
+    src: ["gpt4", "gemini"], related: ["image-generators", "google-gemini"], stub: true,
+    body: [
+      ["What it means", "A multimodal model can take in a photo or a voice clip and answer about it. GPT-4 accepted images in 2023 [1], and Google built Gemini to handle several kinds of input from the start [2]."],
+    ] },
+
+  // ---- tools
+  { id: "chat-assistants", cat: "tools", title: "Chat assistants", one: "Apps like Claude, ChatGPT and Gemini that you talk to in plain language.",
+    src: ["chatgpt", "anthclaude", "gemini"], related: ["anthropic-claude", "openai-chatgpt", "hallucinations"], stub: true,
+    body: [
+      ["The main ones", "ChatGPT from OpenAI [1], Claude from Anthropic [2], and Gemini from Google [3]. Each has a free tier and paid plans with stronger models."],
+    ] },
+  { id: "coding-assistants", cat: "tools", title: "Coding assistants", one: "AI tools that write, explain and fix software, from autocomplete to agents that run whole tasks.",
+    src: ["copilot", "claudecode", "swebench"], related: ["what-is-agent", "benchmarks"],
+    body: [
+      ["From autocomplete to agents", "GitHub Copilot, announced in 2021, suggested the next lines of code as a programmer typed [1]. Newer tools such as Claude Code work as {{what-is-agent|agents}}: they read a whole project, run commands and make changes across many files [2]."],
+      ["How they're measured", "SWE-bench tests coding tools on real bug reports taken from open-source projects, and checks whether the fix actually works [3]."],
+    ] },
+  { id: "image-generators", cat: "tools", title: "Image generators", one: "Tools that turn a text description into a picture.",
+    src: ["ddpm"], related: ["multimodal", "deepfakes", "copyright"], stub: true,
+    body: [
+      ["How most of them work", "Most use a method called diffusion: start with random noise and remove it step by step until a picture matching the description appears [1]."],
+    ] },
+
+  // ---- agents
+  { id: "what-is-agent", cat: "agents", title: "What is an AI agent?", one: "An AI model working in a loop: it plans, uses tools, checks the result and keeps going until the job is done.",
+    src: ["agents"], related: ["mcp", "computer-use", "coding-assistants"],
+    body: [
+      ["Chat vs. agent", "A chat assistant answers once and waits. An agent is given a goal and tools, such as search, files or a web browser. It decides what to do next, looks at what happened, and repeats [1]."],
+      ["Keep it simple", "Anthropic's guide for builders recommends starting with the simplest setup that works, and adding agent loops only when a task truly needs them [1]."],
+    ] },
+  { id: "mcp", cat: "agents", title: "Model Context Protocol (MCP)", one: "An open standard for connecting AI apps to outside tools and data, introduced by Anthropic in November 2024.",
+    src: ["mcpnews", "mcp"], related: ["what-is-agent", "anthropic-claude"],
+    body: [
+      ["The problem it solves", "Without a standard, every AI app needs its own custom connection to every tool. MCP gives them one shared way to connect, so a tool built once works with many apps [1]."],
+      ["The comparison people use", "The project's own site compares MCP to a USB-C port for AI applications [2]."],
+    ] },
+  { id: "computer-use", cat: "agents", title: "Computer use", one: "AI that operates a computer screen the way a person does: looking, clicking and typing.",
+    src: ["cu"], related: ["what-is-agent"], stub: true,
+    body: [
+      ["What it is", "In October 2024 Anthropic released a test version of Claude that could look at screenshots, move the cursor, click and type [1]. It lets an agent use programs that have no other way to connect."],
+    ] },
+
+  // ---- building
+  { id: "prompting", cat: "building", title: "Prompting basics", one: "How you ask matters. Clear, specific requests with examples get better answers.",
+    src: ["prompt", "gpt3"], related: ["rag", "evals"],
+    body: [
+      ["What works", "Say exactly what you want and who it's for. Give the background the model can't guess. Show an example of a good answer. For harder tasks, ask it to work through steps first [1]."],
+      ["Why examples help", "The 2020 paper that introduced GPT-3 showed that a few examples inside the request, called \"few-shot\" prompting, can teach a model a new task without retraining it [2]."],
+    ] },
+  { id: "rag", cat: "building", title: "Retrieval (RAG)", one: "Look up the right documents first, then hand them to the model to answer from.",
+    src: ["rag"], related: ["hallucinations", "tokens"],
+    body: [
+      ["How it works", "Retrieval-augmented generation, or RAG, searches your own documents for the passages that match a question and puts them in front of the model along with the question [1]."],
+      ["Why use it", "The model can answer from your material instead of memory, and it can point to where the answer came from. This wiki will work the same way: every daily entry is written from fetched sources, and cites them."],
+    ] },
+  { id: "evals", cat: "building", title: "Testing AI (evals)", one: "Checks that measure whether an AI feature does its job, run every time something changes.",
+    src: ["evals"], related: ["benchmarks", "prompting"], stub: true,
+    body: [
+      ["Why they matter", "Small wording changes can quietly make answers worse. An eval is a set of test questions with known good answers, scored automatically, so you notice [1]."],
+    ] },
+  { id: "what-it-costs", cat: "building", title: "What AI costs to run", one: "Most AI services charge by the token, with output tokens costing more than input.",
+    src: ["pricing"], related: ["tokens", "business-models"], stub: true,
+    body: [
+      ["How pricing works", "Builders pay per million tokens read and written. Bigger models cost more per token [1]. A daily job that writes a few wiki entries costs far less than a busy chat app."],
+    ] },
+
+  // ---- research
+  { id: "alphafold", cat: "research", title: "AlphaFold", one: "DeepMind's system that predicts the 3D shape of proteins, a 50-year-old problem in biology.",
+    src: ["af2", "afdb", "nobelchem"], related: ["google-gemini", "benchmarks"],
+    body: [
+      ["The problem", "A protein's shape decides what it does in the body. Working out that shape in a lab can take months or years."],
+      ["The result", "AlphaFold 2 predicted protein shapes with accuracy close to lab methods [1]. Its public database now holds predicted structures for over 200 million proteins [2]."],
+      ["The Nobel", "Demis Hassabis and John Jumper of Google DeepMind shared the 2024 Nobel Prize in Chemistry for AlphaFold, with David Baker for protein design [3]."],
+    ] },
+  { id: "benchmarks", cat: "research", title: "Benchmarks", one: "Standard tests used to compare AI models. Useful, but easy to over-read.",
+    src: ["mmlu", "swebench", "aiindex"], related: ["evals", "coding-assistants"],
+    body: [
+      ["Common ones", "MMLU asks multiple-choice questions across 57 subjects, from law to medicine [1]. SWE-bench gives models real software bugs to fix [2]."],
+      ["The catch", "Top models now score near the ceiling on many older tests, so new, harder ones keep appearing. Stanford's AI Index tracks this each year [3]."],
+    ] },
+  { id: "scaling-laws", cat: "research", title: "Scaling laws", one: "The finding that models get better in a predictable way as you add data, size and computing power.",
+    src: ["kaplan", "chinchilla"], related: ["gpus", "datacenters-energy"],
+    body: [
+      ["The finding", "In 2020 OpenAI researchers showed that a model's error drops smoothly as it gets bigger and trains on more data [1]."],
+      ["The refinement", "In 2022 DeepMind's \"Chinchilla\" paper showed many models were too big for the data they had seen, and that training on more data was a better use of the same budget [2]."],
+    ] },
+
+  // ---- robots
+  { id: "self-driving", cat: "robots", title: "Self-driving cars", one: "Cars that drive themselves, sorted into levels from 0 (none) to 5 (anywhere, no driver).",
+    src: ["sae", "waymo"], related: ["humanoid-robots"],
+    body: [
+      ["The levels", "The industry standard, SAE J3016, sorts driving automation into six levels. Levels 0 to 2 still need a human driving; levels 4 and 5 don't [1]."],
+      ["Where it stands", "Waymo runs paid rides with no one in the driver's seat in several U.S. cities [2]."],
+    ] },
+  { id: "humanoid-robots", cat: "robots", title: "Humanoid robots", one: "Robots built in a human shape so they can work in spaces made for people.",
+    src: ["atlas"], related: ["self-driving"], stub: true,
+    body: [
+      ["Who's building them", "Several companies are building them. Boston Dynamics, maker of the Atlas robot, is among the best known [1]."],
+    ] },
+
+  // ---- chips
+  { id: "gpus", cat: "chips", title: "GPUs and AI chips", one: "Chips that do thousands of small math problems at once, which is exactly what AI training needs.",
+    src: ["alexnet", "cuda"], related: ["datacenters-energy", "scaling-laws"],
+    body: [
+      ["Why graphics chips", "GPUs were built to draw video game graphics, which means lots of simple math in parallel. Neural networks need the same kind of math. AlexNet's 2012 win was trained on two of them [1]."],
+      ["NVIDIA", "NVIDIA's CUDA software made its chips easy to program for this work [2], one reason it leads the AI chip market."],
+    ] },
+  { id: "datacenters-energy", cat: "chips", title: "Data centers and power use", one: "AI runs in huge buildings full of chips, and they use a growing share of the world's electricity.",
+    src: ["iea"], related: ["gpus", "scaling-laws"],
+    body: [
+      ["The numbers", "The International Energy Agency estimated data centers used about 1.5% of the world's electricity in 2024, and expects that demand to more than double by 2030, with AI the main driver [1]."],
+    ] },
+
+  // ---- fields
+  { id: "faith-ministry", cat: "fields", title: "Faith and ministry", one: "How churches and faith groups are using AI, and what their leaders have said about it.",
+    src: ["antiqua", "romecall", "erlc"], related: ["hallucinations", "privacy-health"],
+    body: [
+      ["What leaders have said", "In January 2025 the Vatican published Antiqua et Nova, a note on how AI relates to human intelligence. It stresses that AI should serve people and not replace human relationships [1]. The Rome Call for AI Ethics, first signed in 2020, asks for AI that is transparent and fair [2]. In 2019 the Southern Baptist ERLC published an evangelical statement of principles on AI [3]."],
+      ["Common uses", "Sermon and Bible-study research, translation, church communications and office work."],
+      ["Common cautions", "Pastoral care depends on real relationships. Prayer requests and counseling notes are private. Any fact or quote an AI gives should be checked, because AI can {{hallucinations|make things up}}."],
+    ] },
+  { id: "privacy-health", cat: "fields", title: "Healthcare and senior care", one: "AI helps read scans and write notes. Patient privacy rules still apply to every tool.",
+    src: ["fda", "hipaa"], related: ["faith-ministry", "hallucinations"],
+    body: [
+      ["Approved devices", "The U.S. FDA keeps a public list of AI-enabled medical devices it has authorized. Most read medical images like X-rays and scans [1]."],
+      ["Privacy", "Patient information is protected by HIPAA in the U.S. A tool that handles it must meet those rules [2]."],
+    ] },
+  { id: "education", cat: "fields", title: "Education", one: "AI as tutor, writing helper and cheating worry, all at once.",
+    src: ["unesco"], related: ["jobs"], stub: true,
+    body: [
+      ["Guidance", "UNESCO's 2023 guidance urges schools to set age limits, protect student data and train teachers before adopting AI tools [1]."],
+    ] },
+
+  // ---- safety
+  { id: "alignment", cat: "safety", title: "Alignment", one: "Making sure an AI does what people actually intend, not just what they literally asked for.",
+    src: ["specgame", "instruct", "cai"], related: ["interpretability", "training-finetuning"],
+    body: [
+      ["The problem", "AI systems can find shortcuts that meet the letter of a goal and miss its point. DeepMind keeps a list of real examples, which it calls specification gaming [1]."],
+      ["Current methods", "Today's main tools are training on human feedback [2] and training against a written set of principles [3]. Researchers agree neither is a complete answer."],
+    ] },
+  { id: "interpretability", cat: "safety", title: "Interpretability", one: "Research into what is actually happening inside a model's numbers.",
+    src: ["mono"], related: ["alignment"], stub: true,
+    body: [
+      ["An example", "In 2024 Anthropic researchers found millions of \"features\" inside a Claude model, patterns that light up for specific ideas, like the Golden Gate Bridge, and showed they could turn them up or down [1]."],
+    ] },
+  { id: "hallucinations", cat: "safety", title: "Hallucinations", one: "When an AI states something false with full confidence.",
+    src: ["halsurvey", "mata", "rag"], related: ["rag", "prompting"],
+    body: [
+      ["Why it happens", "Language models are trained to produce likely-sounding text, not to check facts. When they don't know, they can still produce a fluent answer [1]."],
+      ["A real example", "In 2023 two New York lawyers were fined after filing a brief that cited court cases ChatGPT had invented [2]."],
+      ["How to guard against it", "Ask for sources and open them. Give the model the documents to work from (see {{rag|retrieval}}) [3]. This wiki shows a source for every claim for exactly this reason."],
+    ] },
+
+  // ---- society
+  { id: "jobs", cat: "society", title: "Jobs and work", one: "AI is expected to create some jobs, remove others and change most.",
+    src: ["wef"], related: ["education", "business-models"], stub: true,
+    body: [
+      ["What employers expect", "The World Economic Forum's 2025 survey of employers lists AI and big data as the fastest-growing skills, and expects AI to both create and displace jobs by 2030 [1]."],
+    ] },
+  { id: "deepfakes", cat: "society", title: "Deepfakes", one: "Fake photos, video or audio made with AI that look or sound real.",
+    src: ["c2pa"], related: ["image-generators", "copyright"], stub: true,
+    body: [
+      ["Telling what's real", "Tech and media companies formed C2PA to attach \"content credentials\" to images and video, a record of where a file came from and how it was edited [1]."],
+    ] },
+  { id: "copyright", cat: "society", title: "Copyright", one: "Who owns what AI makes, and whether training on others' work is allowed.",
+    src: ["usco", "nytcase"], related: ["image-generators", "eu-ai-act"],
+    body: [
+      ["Who owns AI output", "The U.S. Copyright Office is studying AI and copyright and has published reports on the question [1]."],
+      ["Training data in court", "In December 2023 The New York Times sued OpenAI and Microsoft, saying its articles were used to train AI without permission [2]. Cases like this will shape the rules."],
+    ] },
+
+  // ---- law
+  { id: "eu-ai-act", cat: "law", title: "The EU AI Act", one: "Europe's AI law, the first broad one anywhere. It sorts AI uses by risk.",
+    src: ["euact"], related: ["us-approach", "copyright"],
+    body: [
+      ["How it works", "The law bans a few uses outright, sets strict rules for high-risk uses like hiring or medical devices, and lighter rules for the rest. It took effect in 2024 and applies in stages over several years [1]."],
+    ] },
+  { id: "us-approach", cat: "law", title: "The U.S. approach", one: "The U.S. has relied mostly on voluntary guides, agency rules and state laws.",
+    src: ["nist"], related: ["eu-ai-act"], stub: true,
+    body: [
+      ["A voluntary framework", "NIST, a federal standards agency, publishes the AI Risk Management Framework, a voluntary guide many organizations follow [1]."],
+    ] },
+
+  // ---- business
+  { id: "business-models", cat: "business", title: "How AI companies make money", one: "Subscriptions for people, pay-per-use for builders, and large contracts with businesses.",
+    src: ["pricing", "aiindex"], related: ["what-it-costs", "datacenters-energy"], stub: true,
+    body: [
+      ["Three ways", "Monthly plans for the apps, per-token charges for builders using the API [1], and enterprise deals. Stanford's AI Index tracks how much money is flowing into AI each year [2]."],
+    ] },
+
+  // ---- people
+  { id: "alan-turing", cat: "people", title: "Alan Turing", one: "British mathematician who asked \"Can machines think?\" in 1950. Computing's top prize is named for him.",
+    src: ["turing50", "turingaward"], related: ["history", "geoffrey-hinton"],
+    body: [
+      ["The question", "In his 1950 paper Turing proposed the \"imitation game,\" now called the Turing test: if you can't tell a machine from a person by talking to it, does it matter whether it \"thinks\"? [1]"],
+      ["The award", "The A.M. Turing Award, given each year by the ACM, is often called the Nobel Prize of computing [2]."],
+    ] },
+  { id: "geoffrey-hinton", cat: "people", title: "Geoffrey Hinton", one: "A pioneer of neural networks, winner of the Turing Award and a Nobel Prize, and now a leading voice on AI risk.",
+    src: ["backprop", "hintonacm", "nobelphys", "alexnet"], related: ["neural-networks", "alan-turing", "fei-fei-li"],
+    body: [
+      ["The work", "Hinton co-wrote the 1986 paper that made backpropagation widely used [1], and co-led the team behind AlexNet in 2012 [4]."],
+      ["The honors", "He shared the 2018 Turing Award with Yoshua Bengio and Yann LeCun [2], and the 2024 Nobel Prize in Physics with John Hopfield [3]."],
+    ] },
+  { id: "fei-fei-li", cat: "people", title: "Fei-Fei Li", one: "The Stanford professor who built ImageNet, the photo collection that fueled the deep learning boom.",
+    src: ["imagenet", "feifei"], related: ["history", "geoffrey-hinton"], stub: true,
+    body: [
+      ["ImageNet", "Li led ImageNet, a collection of millions of labeled photos [1]. The yearly contest built on it is where AlexNet broke through in 2012. She co-directs Stanford's Human-Centered AI Institute [2]."],
+    ] },
+
+  // ---- debates
+  { id: "agi", cat: "debates", title: "When will AI match humans?", one: "\"AGI\" means AI as capable as people at most tasks. Nobody agrees on a definition, let alone a date.",
+    src: ["levels", "aiindex"], related: ["what-is-ai", "alignment"],
+    body: [
+      ["The definition problem", "Researchers at Google DeepMind proposed grading AGI in levels, like self-driving cars, rather than treating it as one finish line [1]."],
+      ["The timeline problem", "Forecasts range from a few years to never. The AI Index notes that models keep passing tests faster than experts predicted, while still failing at some simple tasks [2]."],
+    ] },
+  { id: "open-vs-closed", cat: "debates", title: "Open vs. closed models", one: "Should powerful models be downloadable by anyone, or kept behind a company's controls?",
+    src: ["ntia", "osaid"], related: ["open-weight", "meta-llama"],
+    body: [
+      ["The case for open", "Open models let researchers study them, let small groups build on them, and keep power from collecting in a few companies [1]. Groups like the Open Source Initiative argue that real openness also means sharing how a model was built [2]."],
+      ["The case for closed", "Once weights are public, safety limits can be removed and the release can't be taken back [1]. A 2024 U.S. government report weighed both sides and recommended watching for risks rather than restricting open models for now [1]."],
+    ] },
+];
+
+// Cards from the shared rulebook (choices/). Draft = waiting on Nathan's OK.
+const CHOICES = [
+  { topic: "backend-database", source: "Brawn", status: "draft", since: "2026-10-24", way: "Supabase for data and sign-in in the Brawn app.", why: "\"I am currently using super bass and nothing else. The reason is that I don't know any other options.\" (Nathan, Oct 24, 2026)", not: "None considered yet. The table above lists them." },
+  { topic: "backend-database", source: "TLC", status: "draft", since: "2026-10-24", way: "Supabase for data and sign-in in the Thriving Index. Base44's built-in backend for the In The Lead platform.", why: "\"I am currently using super bass and nothing else. The reason is that I don't know any other options.\" (Nathan, Oct 24, 2026)", not: "None considered yet." },
+];
+
+const OPTIONS = {
+  "backend-database": {
+    cols: ["What it is", "Best at", "Watch out for"],
+    rows: [
+      ["Supabase", "Postgres database with sign-in, file storage and live updates built in", "Fast start on a standard database you can take elsewhere", "You write the access rules yourself; a missed one leaves data open", ["Brawn", "TLC"]],
+      ["Firebase", "Google's app backend with a document database", "Mobile apps and live updates", "Harder to move off; costs grow with reads", []],
+      ["Neon", "Just a Postgres database, billed by use", "Copying a whole database in seconds for testing", "No sign-in or file storage included", []],
+      ["Convex", "Database and server code in one TypeScript system", "Screens that update live with little code", "Its own system, not standard Postgres", []],
+      ["PocketBase", "One small program with a database, sign-in and files", "Small projects at almost no cost", "You run and back up the server yourself", []],
+      ["Base44", "AI app builder with the backend built in", "Getting a working app fastest", "Hardest to leave; least control", ["TLC"]],
+    ],
+  },
+};
+
+// From in-use/ in the shared rulebook. Tool names only.
+const ACTIVE = [
+  ["Backends and databases", "backend-database", { Brawn: "Supabase, Sign in with Apple", Personal: "", TLC: "Supabase, Base44" }],
+  ["Hosting", null, { Brawn: "Vercel", Personal: "GitHub Pages", TLC: "Vercel" }],
+  ["App frameworks", null, { Brawn: "React, Vite, Tailwind", Personal: "Python, Jinja", TLC: "Next.js, React" }],
+  ["iPhone apps", null, { Brawn: "Capacitor", Personal: "", TLC: "" }],
+  ["Payments", null, { Brawn: "RevenueCat", Personal: "", TLC: "" }],
+  ["AI inside apps", null, { Brawn: "", Personal: "", TLC: "Anthropic SDK, Vercel AI SDK" }],
+  ["Scheduled jobs", null, { Brawn: "", Personal: "GitHub Actions", TLC: "GitHub Actions (about 20)" }],
+  ["Testing", null, { Brawn: "Vitest", Personal: "pytest", TLC: "Vitest, Playwright" }],
+  ["3D and motion", null, { Brawn: "Three.js, GSAP, Motion", Personal: "", TLC: "Motion" }],
+  ["Reading files and scans", null, { Brawn: "", Personal: "", TLC: "Tesseract OCR, pdf-lib, sharp" }],
+];
+
+// Rule (Nathan to confirm): "should" = in use or chosen soon AND hard to switch, or touches money, sign-in or people's data.
+const LEARN = {
+  should: [
+    ["Backends and databases", "backend-database", ["Brawn", "TLC"], "Used in two places, holds people's data and sign-in, and hard to switch later. You've only seen one option."],
+    ["App builders like Base44", null, ["TLC"], "The In The Lead platform depends on it, and builders are the hardest kind of tool to leave."],
+    ["Payments and subscriptions", null, ["Brawn"], "Touches money. RevenueCat is common, but App Store rules and fees shape the choice."],
+    ["AI inside apps: cost and choice of model", null, ["TLC"], "The Thriving Index calls AI on a schedule, and every call costs money per token."],
+  ],
+  could: [
+    ["Hosting", null, ["Brawn", "Personal", "TLC"], "Vercel and GitHub Pages work well and are easy to switch, so there's no rush."],
+    ["Testing tools", null, ["Brawn", "TLC"], "Already in place on both sides. Knowing more would help, but nothing depends on it."],
+    ["3D and motion", null, ["Brawn"], "Opens new looks for Brawn screens."],
+  ],
+};
+
+const GLOSSARY = [
+  ["AGI", "Artificial general intelligence: AI as capable as a person across most tasks.", "agi"],
+  ["Agent", "An AI model working in a loop with tools until a job is done.", "what-is-agent"],
+  ["Alignment", "Making an AI do what people actually intend.", "alignment"],
+  ["API", "A way for one program to use another. Builders reach AI models through an API.", "what-it-costs"],
+  ["Backpropagation", "The method that adjusts a network's numbers after each wrong guess.", "how-ai-learns"],
+  ["Benchmark", "A standard test used to compare models.", "benchmarks"],
+  ["Chain of thought", "Having a model work through steps before answering.", "reasoning-models"],
+  ["Context window", "How much text a model can hold in view at once.", "tokens"],
+  ["Deep learning", "Machine learning with neural networks that have many layers.", "neural-networks"],
+  ["Diffusion", "Making an image by removing noise step by step.", "image-generators"],
+  ["Fine-tuning", "Extra, targeted training after the main training.", "training-finetuning"],
+  ["GPU", "A chip that does many small math problems at once.", "gpus"],
+  ["Hallucination", "A confident answer that is false.", "hallucinations"],
+  ["Inference", "Using a trained model to produce an answer.", "how-ai-learns"],
+  ["LLM", "Large language model: a model trained on huge amounts of text.", "transformers"],
+  ["MCP", "Model Context Protocol: a standard for connecting AI apps to tools.", "mcp"],
+  ["Multimodal", "Working with text plus images, audio or video.", "multimodal"],
+  ["Neural network", "Layers of simple math units that learn from examples.", "neural-networks"],
+  ["Open weights", "A model whose trained numbers anyone can download.", "open-weight"],
+  ["Parameters", "The internal numbers a model adjusts while it learns.", "how-ai-learns"],
+  ["Prompt", "What you type to an AI: the request and its context.", "prompting"],
+  ["RAG", "Retrieval-augmented generation: look up documents, then answer from them.", "rag"],
+  ["RLHF", "Reinforcement learning from human feedback: people rank answers to train the model.", "training-finetuning"],
+  ["Token", "A word or piece of a word, the unit models read and are priced in.", "tokens"],
+  ["Transformer", "The 2017 design behind modern language models.", "transformers"],
+  ["Turing test", "Can a person tell a machine from a human by talking to it?", "alan-turing"],
+];
+
+const TIMELINE = [
+  ["1950", "Turing asks \"Can machines think?\"", "His paper proposes the imitation game, later called the Turing test.", "turing50", "alan-turing"],
+  ["1956", "The Dartmouth workshop", "A summer workshop, proposed in 1955, gives the field its name.", "dartmouth", "history"],
+  ["1966", "ELIZA", "Joseph Weizenbaum's program imitates a therapist, and people confide in it anyway.", "eliza", null],
+  ["1986", "Backpropagation catches on", "Rumelhart, Hinton and Williams show how to train networks with many layers.", "backprop", "how-ai-learns"],
+  ["1997", "Deep Blue beats Kasparov", "IBM's chess computer defeats the world champion in a six-game match.", "deepblue", null],
+  ["2012", "AlexNet", "A deep network trained on GPUs wins the ImageNet contest by a wide margin.", "alexnet", "gpus"],
+  ["2016", "AlphaGo beats Lee Sedol", "DeepMind's system wins at Go, a game long thought too hard for computers.", "alphago", "google-gemini"],
+  ["2017", "The transformer", "\"Attention Is All You Need\" introduces the design behind today's assistants.", "attention", "transformers"],
+  ["2020", "GPT-3 and AlphaFold 2", "GPT-3 shows few-shot learning; AlphaFold 2 cracks protein structure.", "gpt3", "alphafold"],
+  ["2022", "ChatGPT", "OpenAI releases ChatGPT on November 30.", "chatgpt", "openai-chatgpt"],
+  ["2023", "Claude, Llama and Gemini", "Anthropic, Meta and Google release their own model families.", "anthclaude", "anthropic-claude"],
+  ["2024", "The EU AI Act takes effect", "The first broad AI law, applied in stages.", "euact", "eu-ai-act"],
+  ["2024", "AI wins two Nobel Prizes", "Physics goes to Hopfield and Hinton; chemistry, in part, to the AlphaFold team.", "nobelphys", "geoffrey-hinton"],
+  ["2024", "Model Context Protocol", "Anthropic releases an open standard for connecting AI to tools.", "mcpnews", "mcp"],
+  ["2025", "DeepSeek-R1", "An open-weight reasoning model from a Chinese lab draws worldwide attention.", "r1", "reasoning-models"],
+];
+
+// ---------- helpers ----------
+const $ = (s, el = document) => el.querySelector(s);
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const byId = Object.fromEntries(E.map((e) => [e.id, e]));
+const catById = Object.fromEntries(CATS.map((c) => [c.id, c]));
+const inCat = (id) => E.filter((e) => e.cat === id);
+const fmtDate = (d) => new Date(d + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
+function href(id) {
+  if (id === "t-timeline") return "#timeline";
+  return "#e-" + id;
+}
+
+function rich(text) {
+  return esc(text)
+    .replace(/\{\{([a-z0-9-]+)\|([^}]+)\}\}/g, (_, id, words) => `<a class="wl" href="${href(id)}">${words}</a>`)
+    .replace(/\[(\d+)\]/g, (_, n) => `<button type="button" class="cite" data-n="${n}" aria-label="Source ${n}">${n}</button>`);
+}
+
+function sourceItem(key, n) {
+  const s = S[key];
+  return `<li id="src-${n}"><a href="${s.url}" target="_blank" rel="noopener">${esc(s.t)}</a><span>${esc(s.pub)} · ${s.type}</span></li>`;
+}
+
+// ---------- views ----------
+function navHTML(current) {
+  const groups = [...new Set(CATS.map((c) => c.group))];
+  return `<h2>Site</h2><ul><li><a href="/"><span>Nathan's Daily front page</span><span class="n"></span></a></li></ul>` + groups.map((g) => `
+    <h2>${g}</h2>
+    <ul>${CATS.filter((c) => c.group === g).map((c) => {
+      const n = c.page ? (c.id === "glossary" ? GLOSSARY.length : c.id === "timeline" ? TIMELINE.length : c.id === "active" ? ACTIVE.length : "") : inCat(c.id).length;
+      const to = c.page ? "#" + c.id : "#c-" + c.id;
+      return `<li><a href="${to}"${current === c.id ? ' aria-current="page"' : ""}><span>${c.name}</span><span class="n">${n}</span></a></li>`;
+    }).join("")}</ul>`).join("");
+}
+
+function railFacts(rows) {
+  return `<section><h2>About this page</h2><dl class="facts">${rows.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join("")}</dl></section>`;
+}
+
+function viewHome() {
+  const counts = E.length, srcCount = Object.keys(S).length;
+  const recent = E.filter((e) => !e.stub).slice(0, 6);
+  return {
+    nav: "", title: "Nathan's AI Wiki",
+    main: `
+      <header class="home-head">
+        <p class="kicker">Updated ${fmtDate(UPDATED)}</p>
+        <h1 class="title">Everything about AI, explained plainly and sourced.</h1>
+        <p class="lede">${counts} entries across ${CATS.filter((c) => !c.page).length} topics, plus a glossary and timeline. Every claim links to where it came from. New material arrives every morning.</p>
+      </header>
+      <div class="home-grid">
+        <section class="panel">
+          <h2>Start here</h2>
+          <p>Five entries, in order. About ten minutes.</p>
+          <ol class="path">${byId["where-to-begin"].path.map((id) => `<li><a href="${href(id)}"><span>${esc(byId[id].title)}</span></a></li>`).join("")}</ol>
+        </section>
+        <section class="panel">
+          <h2>Where I'm active</h2>
+          <p>Brawn, Personal and TLC, side by side.</p>
+          <ol class="path">${LEARN.should.slice(0, 3).map(([name, id]) => `<li><a href="${id ? href(id) : "#active"}"><span>Should know: ${esc(name)}</span></a></li>`).join("")}</ol>
+          <p style="margin:12px 0 0"><a href="#active">See the full map</a></p>
+        </section>
+        <section class="panel">
+          <h2>Today in AI</h2>
+          <p>Each morning's new items will appear here, each with at least two sources.</p>
+          ${todayExamples()}
+          <p style="margin:12px 0 0"><a href="#today">See how the daily brief works</a></p>
+        </section>
+      </div>
+      <h2 class="shelf-title">Browse by topic</h2>
+      <ul class="shelf">${CATS.filter((c) => !c.page).map((c) => `
+        <li><a href="#c-${c.id}"><strong>${c.name}</strong><span>${c.blurb}</span><span class="n">${inCat(c.id).length} entries</span></a></li>`).join("")}
+        <li><a href="#glossary"><strong>Glossary</strong><span>${CATS.find((c) => c.id === "glossary").blurb}</span><span class="n">${GLOSSARY.length} terms</span></a></li>
+        <li><a href="#timeline"><strong>Timeline</strong><span>${CATS.find((c) => c.id === "timeline").blurb}</span><span class="n">${TIMELINE.length} moments</span></a></li>
+      </ul>
+      <h2 class="shelf-title">Recently updated</h2>
+      ${entryList(recent)}`,
+    rail: railFacts([["Entries", counts], ["Sources", srcCount], ["Topics", CATS.filter((c) => !c.page).length], ["Updated", fmtDate(UPDATED)]]) +
+      `<section><h2>Get around</h2><ul><li>Press <kbd>/</kbd> to search</li><li>Tap a blue number to see its source</li><li>Underlined words open related entries</li></ul></section>`,
+  };
+}
+
+function todayExamples() {
+  const ex = [
+    ["A new model release", "What it is, what it's better at, and what it costs, with the company's announcement and an independent write-up as sources."],
+    ["A court ruling or new law", "What changed and who it affects, linked to the ruling or the law itself."],
+  ];
+  return ex.map(([h, p]) => `<div class="today-item"><span class="ex">EXAMPLE · NOT REAL NEWS</span><h3>${h}</h3><p>${p}</p></div>`).join("");
+}
+
+function entryList(list) {
+  return `<ul class="entry-list">${list.map((e) => `
+    <li><a href="${href(e.id)}">
+      <strong>${esc(e.title)}</strong><p>${esc(e.one)}</p>
+      <span class="foot"><span>${catById[e.cat].name}</span><span>·</span><span>${e.src.length} source${e.src.length === 1 ? "" : "s"}</span>${e.stub ? '<span class="pill stub">Starter</span>' : ""}</span>
+    </a></li>`).join("")}</ul>`;
+}
+
+function viewCat(id) {
+  const c = catById[id];
+  if (!c || c.page) return null;
+  const list = inCat(id);
+  const srcs = new Set(list.flatMap((e) => e.src));
+  return {
+    nav: id, title: c.name,
+    main: `
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="#home">Home</a><span>/</span><span>${c.group}</span></nav>
+      <p class="kicker">${c.group}</p>
+      <h1 class="title">${c.name}</h1>
+      <p class="lede">${c.blurb}</p>
+      ${entryList(list)}`,
+    rail: railFacts([["Entries", list.length], ["Sources", srcs.size], ["Starter entries", list.filter((e) => e.stub).length], ["Updated", fmtDate(UPDATED)]]),
+  };
+}
+
+function tag(src) { return `<span class="src-tag" data-src="${src}">${src}</span>`; }
+
+function waysHTML(topic) {
+  const cards = CHOICES.filter((c) => c.topic === topic);
+  if (!cards.length) return "";
+  return `<h2 class="ways-title" id="s-nathans-way">Nathan's way</h2>
+    <p class="ways-note">From the shared rulebook both Macs work from. Each box says whether it's Brawn, Personal or TLC.</p>
+    ${cards.map((c) => `<div class="way" data-src="${c.source}">
+      <div class="way-head">${tag(c.source)}${c.status === "draft" ? '<span class="pill stub">Draft: waiting on your OK</span>' : ""}<span class="pill">Since ${fmtDate(c.since)}</span></div>
+      <p><b>Nathan's way:</b> ${esc(c.way)}</p><p><b>Why:</b> ${esc(c.why)}</p><p><b>Not chosen:</b> ${esc(c.not)}</p></div>`).join("")}`;
+}
+
+function compareHTML(key) {
+  const o = OPTIONS[key];
+  if (!o) return "";
+  return `<h2 id="s-the-options">The options</h2>
+    <div class="compare-wrap" tabindex="0" role="region" aria-label="Options compared"><table class="compare"><thead><tr><th scope="col">Option</th>${o.cols.map((c) => `<th scope="col">${c}</th>`).join("")}</tr></thead>
+    <tbody>${o.rows.map(([name, a, b, c, used]) => `<tr><th scope="row">${esc(name)}${used.length ? `<div class="used">${used.map(tag).join("")}</div>` : ""}</th><td>${esc(a)}</td><td>${esc(b)}</td><td>${esc(c)}</td></tr>`).join("")}</tbody></table></div>`;
+}
+
+function viewEntry(id) {
+  const e = byId[id];
+  if (!e) return null;
+  const c = catById[e.cat];
+  const sibs = inCat(e.cat), i = sibs.indexOf(e);
+  const prev = sibs[i - 1], next = sibs[i + 1];
+  const sections = e.body.map(([h, p]) => `<h2 id="s-${slug(h)}">${esc(h)}</h2><p>${rich(p)}</p>`).join("");
+  const path = e.path ? `<ol>${e.path.map((pid) => `<li><a class="wl" href="${href(pid)}">${esc(byId[pid].title)}</a>: ${esc(byId[pid].one)}</li>`).join("")}</ol>` : "";
+  return {
+    nav: e.cat, title: e.title, reading: true,
+    main: `
+      <article class="article">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="#home">Home</a><span>/</span><a href="#c-${c.id}">${c.name}</a></nav>
+        <h1 class="title">${esc(e.title)}</h1>
+        <div class="meta"><span>Updated <b>${fmtDate(UPDATED)}</b></span><span><b>${e.src.length}</b> source${e.src.length === 1 ? "" : "s"}</span>${e.stub ? '<span class="pill stub">Starter entry</span>' : ""}</div>
+        <div class="oneline"><strong>In one line</strong>${esc(e.one)}</div>
+        <div class="prose">${sections}${path}${e.compare ? compareHTML(e.compare) : ""}</div>
+        ${waysHTML(e.id)}
+        ${e.stub ? `<p class="stub-note">This is a starter entry. When daily updates are on, it will grow with new sources as they appear.</p>` : ""}
+      </article>
+      ${e.src.length ? `<section class="sources" aria-labelledby="h-src"><h2 id="h-src">Sources</h2><p>Numbers in the text match this list. Each link opens the original in a new tab.</p><ol>${e.src.map((k, n) => sourceItem(k, n + 1)).join("")}</ol></section>` : ""}
+      ${e.related.length ? `<section class="related"><h2>Related</h2><div class="chips">${e.related.map((r) => `<a href="${href(r)}">${esc(byId[r].title)}</a>`).join("")}</div></section>` : ""}
+      <nav class="pager" aria-label="More in ${c.name}">
+        ${prev ? `<a href="${href(prev.id)}"><small>Previous in ${c.name}</small><strong>${esc(prev.title)}</strong></a>` : ""}
+        ${next ? `<a class="next" href="${href(next.id)}"><small>Next in ${c.name}</small><strong>${esc(next.title)}</strong></a>` : ""}
+      </nav>`,
+    rail: `<section class="toc"><h2>On this page</h2><ol>${e.body.map(([h]) => `<li><a href="#e-${e.id}" data-jump="s-${slug(h)}">${esc(h)}</a></li>`).join("")}${e.compare ? `<li><a href="#e-${e.id}" data-jump="s-the-options">The options</a></li>` : ""}${CHOICES.some((c) => c.topic === e.id) ? `<li><a href="#e-${e.id}" data-jump="s-nathans-way">Nathan's way</a></li>` : ""}${e.src.length ? `<li><a href="#e-${e.id}" data-jump="h-src">Sources</a></li>` : ""}</ol></section>` +
+      railFacts([["Topic", c.name], ["Sources", e.src.length], ["Updated", fmtDate(UPDATED)]]),
+  };
+}
+
+function viewGlossary() {
+  const letters = [...new Set(GLOSSARY.map(([t]) => t[0].toUpperCase()))];
+  return {
+    nav: "glossary", title: "Glossary",
+    main: `
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="#home">Home</a><span>/</span><span>Basics</span></nav>
+      <h1 class="title">Glossary</h1>
+      <p class="lede">${GLOSSARY.length} terms in plain words. Each one links to the entry that explains it.</p>
+      <div class="letters" role="group" aria-label="Jump to letter">${letters.map((l) => `<button type="button" data-letter="${l}">${l}</button>`).join("")}</div>
+      <dl class="gloss">${GLOSSARY.map(([t, d, id]) => `<div id="g-${slug(t)}" data-l="${t[0].toUpperCase()}"><dt>${esc(t)}</dt><dd>${esc(d)} <a href="${href(id)}">Read more</a></dd></div>`).join("")}</dl>`,
+    rail: railFacts([["Terms", GLOSSARY.length], ["Updated", fmtDate(UPDATED)]]),
+  };
+}
+
+function viewTimeline() {
+  return {
+    nav: "timeline", title: "Timeline",
+    main: `
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="#home">Home</a><span>/</span><span>Daily</span></nav>
+      <h1 class="title">Timeline</h1>
+      <p class="lede">The moments that shaped AI, each with its source. Daily updates will add new moments as they happen.</p>
+      <ol class="timeline">${TIMELINE.map(([y, h, p, s, e]) => `
+        <li><span class="yr">${y}</span><h2>${e ? `<a class="wl" href="${href(e)}" style="color:inherit">${esc(h)}</a>` : esc(h)}</h2><p>${esc(p)}</p>
+        <p class="src">Source: <a href="${S[s].url}" target="_blank" rel="noopener">${esc(S[s].t)}</a></p></li>`).join("")}</ol>`,
+    rail: railFacts([["Moments", TIMELINE.length], ["From", TIMELINE[0][0]], ["To", TIMELINE[TIMELINE.length - 1][0]]]),
+  };
+}
+
+function viewActive() {
+  const srcs = ["Brawn", "Personal", "TLC"];
+  const cell = (v) => v ? esc(v) : "";
+  const learnList = (list) => `<ol>${list.map(([name, id, who, why]) => `<li><strong>${id ? `<a class="wl" href="${href(id)}">${esc(name)}</a>` : esc(name)}</strong><div class="tags">${who.map(tag).join("")}</div><p>${esc(why)}${id ? "" : " Article coming."}</p></li>`).join("")}</ol>`;
+  return {
+    nav: "active", title: "Where I'm active",
+    main: `
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="#home">Home</a><span>/</span><span>My building</span></nav>
+      <p class="kicker">My building</p>
+      <h1 class="title">Where I'm active</h1>
+      <p class="lede">What each side of my work uses today, side by side, and where knowing the options would help most.</p>
+      <div class="active-wrap" tabindex="0" role="region" aria-label="Tools in use by Brawn, Personal and TLC"><table class="active"><thead><tr><th scope="col">Area</th>${srcs.map((x) => `<th scope="col">${tag(x)}</th>`).join("")}</tr></thead>
+      <tbody>${ACTIVE.map(([area, id, by]) => `<tr><th scope="row">${id ? `<a href="${href(id)}">${esc(area)}</a>` : esc(area)}</th>${srcs.map((x) => by[x] ? `<td>${cell(by[x])}</td>` : `<td class="none">Not used</td>`).join("")}</tr>`).join("")}</tbody></table></div>
+      <div class="learn">
+        <section class="panel"><h2>Should know</h2><p>You use it or will choose soon, and it's hard to switch or touches money, sign-in or people's data.</p>${learnList(LEARN.should)}</section>
+        <section class="panel"><h2>Could know</h2><p>Close to what you do and would open options, but nothing depends on it yet.</p>${learnList(LEARN.could)}</section>
+      </div>
+      <p class="stub-note">Brawn and TLC come from the Mac Studio's project folders. The Mac mini hasn't added its list yet, so Brawn may be missing things. The "should" and "could" rule is a first draft for you to change.</p>`,
+    rail: railFacts([["Areas", ACTIVE.length], ["Should know", LEARN.should.length], ["Could know", LEARN.could.length], ["Updated", fmtDate(UPDATED)]]),
+  };
+}
+
+function viewToday() {
+  return {
+    nav: "today", title: "Today in AI",
+    main: `
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="#home">Home</a><span>/</span><span>Daily</span></nav>
+      <h1 class="title">Today in AI</h1>
+      <p class="lede">Once daily updates are on, each morning's brief lands here: the few things that mattered in the last day, each in two or three sentences, each with at least two sources. Entries across the wiki that are affected get updated too.</p>
+      <div class="panel" style="margin-top:28px;max-width:44rem">${todayExamples()}</div>
+      <p class="stub-note">These are examples of the format, not real news. Real items start when daily updates are turned on.</p>`,
+    rail: railFacts([["Status", "Not on yet"], ["Planned time", "6:30 AM ET"]]),
+  };
+}
+
+function route() {
+  const h = (location.hash || "#home").slice(1);
+  let v = null;
+  if (h === "home" || h === "") v = viewHome();
+  else if (h.startsWith("c-")) v = viewCat(h.slice(2));
+  else if (h.startsWith("e-")) v = viewEntry(h.slice(2));
+  else if (h === "glossary") v = viewGlossary();
+  else if (h === "timeline") v = viewTimeline();
+  else if (h === "today") v = viewToday();
+  else if (h === "active") v = viewActive();
+  if (!v) v = { nav: "", title: "Not found", main: `<h1 class="title">That page isn't here</h1><p class="lede">It may have moved. <a href="#home">Go to the front page</a> or press <kbd>/</kbd> to search.</p>`, rail: "" };
+  return v;
+}
+
+function render() {
+  const v = route();
+  const apply = () => {
+    $("#nav").innerHTML = navHTML(v.nav);
+    $("#main").innerHTML = v.main;
+    $("#rail").innerHTML = v.rail;
+    $("#shell").classList.toggle("reading", !!v.reading);
+    document.title = v.title === "Nathan's AI Wiki" ? v.title : v.title + " · Nathan's AI Wiki";
+    window.scrollTo(0, 0);
+    closeNav();
+  };
+  const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (document.startViewTransition && !calm && render.ran) document.startViewTransition(apply);
+  else apply();
+  render.ran = true;
+}
+
+// ---------- interactions ----------
+document.addEventListener("click", (ev) => {
+  const cite = ev.target.closest(".cite");
+  if (cite) {
+    const li = document.getElementById("src-" + cite.dataset.n);
+    if (li) {
+      li.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "center" });
+      li.classList.add("flash");
+      setTimeout(() => li.classList.remove("flash"), 900);
+      li.querySelector("a").focus({ preventScroll: true });
+    }
+    return;
+  }
+  const jump = ev.target.closest("[data-jump]");
+  if (jump) {
+    ev.preventDefault();
+    document.getElementById(jump.dataset.jump)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    return;
+  }
+  const letter = ev.target.closest("[data-letter]");
+  if (letter) {
+    document.querySelector(`.gloss [data-l="${letter.dataset.letter}"]`)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+});
+
+// mobile drawer
+const menuBtn = $("#menu-btn"), scrim = $("#scrim");
+function closeNav() { document.body.classList.remove("nav-open"); menuBtn.setAttribute("aria-expanded", "false"); scrim.hidden = true; }
+menuBtn.addEventListener("click", () => {
+  const open = !document.body.classList.contains("nav-open");
+  document.body.classList.toggle("nav-open", open);
+  menuBtn.setAttribute("aria-expanded", String(open));
+  scrim.hidden = !open;
+});
+scrim.addEventListener("click", closeNav);
+
+// search
+const INDEX = [
+  ...E.map((e) => ({ title: e.title, sub: catById[e.cat].name + " · " + e.one, hay: [e.title, e.one, catById[e.cat].name, ...e.body.flat()].join(" ").toLowerCase(), to: href(e.id) })),
+  ...CATS.map((c) => ({ title: c.name, sub: "Topic · " + c.blurb, hay: (c.name + " " + c.blurb).toLowerCase(), to: c.page ? "#" + c.id : "#c-" + c.id })),
+  ...GLOSSARY.map(([t, d]) => ({ title: t, sub: "Glossary · " + d, hay: (t + " " + d).toLowerCase(), to: "#glossary" })),
+  ...ACTIVE.map(([area, id, by]) => ({ title: area, sub: "Where I'm active · " + Object.entries(by).filter(([, v]) => v).map(([k, v]) => k + ": " + v).join(" · "), hay: (area + " " + Object.values(by).join(" ")).toLowerCase(), to: "#active" })),
+  ...TIMELINE.map(([y, h, p, , e]) => ({ title: `${y}: ${h}`, sub: "Timeline · " + p, hay: (y + " " + h + " " + p).toLowerCase(), to: "#timeline" })),
+];
+const pal = $("#palette"), q = $("#q"), results = $("#results");
+let hits = [], sel = 0, lastFocus = null;
+
+function search(text) {
+  const words = text.toLowerCase().split(/\s+/).filter(Boolean);
+  if (!words.length) return INDEX.filter((x) => x.to.startsWith("#e-")).slice(0, 8);
+  return INDEX
+    .map((x) => {
+      if (!words.every((w) => x.hay.includes(w))) return null;
+      const t = x.title.toLowerCase();
+      const score = words.reduce((s, w) => s + (t.startsWith(w) ? 6 : t.includes(w) ? 3 : 1), 0);
+      return { ...x, score };
+    })
+    .filter(Boolean).sort((a, b) => b.score - a.score).slice(0, 12);
+}
+function markUp(s, words) {
+  let out = esc(s);
+  words.forEach((w) => { if (w.length > 1) out = out.replace(new RegExp("(" + w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")", "ig"), "<mark>$1</mark>"); });
+  return out;
+}
+function drawResults() {
+  const words = q.value.toLowerCase().split(/\s+/).filter(Boolean);
+  hits = search(q.value);
+  sel = Math.min(sel, Math.max(hits.length - 1, 0));
+  results.innerHTML = hits.length
+    ? hits.map((h, i) => `<li role="option" id="r-${i}" aria-selected="${i === sel}"><a href="${h.to}" tabindex="-1"><span>${markUp(h.title, words)}</span><small>${markUp(h.sub.length > 110 ? h.sub.slice(0, 110) + "…" : h.sub, words)}</small></a></li>`).join("")
+    : `<li class="none">Nothing matches "${esc(q.value)}". Try fewer words, or browse the topics.</li>`;
+  q.setAttribute("aria-activedescendant", hits.length ? "r-" + sel : "");
+}
+function openSearch() {
+  lastFocus = document.activeElement;
+  pal.hidden = false; q.value = ""; sel = 0; drawResults(); q.focus();
+}
+function closeSearch() { pal.hidden = true; lastFocus?.focus?.(); }
+$("#search-btn").addEventListener("click", openSearch);
+q.addEventListener("input", () => { sel = 0; drawResults(); });
+q.addEventListener("keydown", (ev) => {
+  if (ev.key === "ArrowDown") { ev.preventDefault(); sel = Math.min(sel + 1, hits.length - 1); drawResults(); document.getElementById("r-" + sel)?.scrollIntoView({ block: "nearest" }); }
+  else if (ev.key === "ArrowUp") { ev.preventDefault(); sel = Math.max(sel - 1, 0); drawResults(); document.getElementById("r-" + sel)?.scrollIntoView({ block: "nearest" }); }
+  else if (ev.key === "Enter" && hits[sel]) { ev.preventDefault(); pal.hidden = true; location.hash = hits[sel].to; }
+  else if (ev.key === "Escape") closeSearch();
+});
+results.addEventListener("click", (ev) => { if (ev.target.closest("a")) pal.hidden = true; });
+pal.addEventListener("click", (ev) => { if (ev.target === pal) closeSearch(); });
+document.addEventListener("keydown", (ev) => {
+  const typing = /input|textarea/i.test(document.activeElement?.tagName || "");
+  if (!pal.hidden) { if (ev.key === "Escape") closeSearch(); return; }
+  if ((ev.key === "/" && !typing) || ((ev.metaKey || ev.ctrlKey) && ev.key.toLowerCase() === "k")) { ev.preventDefault(); openSearch(); }
+  if (ev.key === "Escape") closeNav();
+});
+
+window.addEventListener("hashchange", render);
+render();
+</script>
+</body>
+</html>

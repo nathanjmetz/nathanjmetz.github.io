@@ -137,6 +137,8 @@ def build(out=OUT, now=None, data_dir=DATA_DIR):
     out.mkdir(parents=True, exist_ok=True)
     shutil.copytree(ROOT / "static", out / "static", dirs_exist_ok=True,
                     ignore=shutil.ignore_patterns("._*", ".DS_Store"))
+    shutil.copytree(ROOT / "ai", out / "ai", dirs_exist_ok=True,
+                    ignore=shutil.ignore_patterns("._*", ".DS_Store"))
     (out / ".nojekyll").write_text("")
 
     def write(rel, template, **ctx):

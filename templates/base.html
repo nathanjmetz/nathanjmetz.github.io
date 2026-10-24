@@ -23,6 +23,7 @@
           {% for t in site.topics %}
           <li><a href="/{{ t.slug }}/" style="--team: {{ t.color }}; --team-dark: {{ t.color_dark }}"{% if page == t.slug %} aria-current="page"{% endif %}>{{ t.short }}</a></li>
           {% endfor %}
+          <li><a href="/ai/">AI wiki</a></li>
         </ul>
       </nav>
     </div>
