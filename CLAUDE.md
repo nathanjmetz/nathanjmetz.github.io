@@ -6,7 +6,7 @@ Read `START-HERE.md` first: it holds what's live, what's next, and what's waitin
 - Static site, no server, no database, no secrets. Keep it that way unless Nathan agrees otherwise.
 - Every story links to its original source. Curated pages (like schedules) cite their data source on the page.
 - Add a topic by adding a block to `sitegen/topics.py`. Don't copy logic per topic.
-- The AI wiki is one page, `ai/index.html` (served at /ai/). Its entries, sources and Nathan's-way boxes are data at the top of its script. Run `node tests/wikicheck.js ai/index.html` after any edit.
+- The AI wiki is one page, `ai/index.html` (served at /ai/), updated by hand when Nathan asks, never on a schedule. Its entries, sources and Nathan's-way boxes are data at the top of its script. Run `node tests/wikicheck.js ai/index.html` after any edit.
 - Nathan's tool choices may be public (Nathan, 2026-10-24: "There's nothing sensitive about me putting in a public place that I use Supabase"). Never personal data: no calendar, family, or TLC people and records.
 - Design values live in `DESIGN.md`. No one-off colors.
 - Before pushing: `pytest -q`, `python -m sitegen.build`, and look at the pages at 390, 768, 1280, 1920, 2560 and 3440 px, light and dark.
