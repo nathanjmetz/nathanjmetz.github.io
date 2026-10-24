@@ -6,6 +6,23 @@
   <p class="lede">Updated {{ site.built | time }} ET</p>
 </header>
 
+{% if site.health %}
+<section class="status" aria-labelledby="h-status">
+  <h2 id="h-status">Site status</h2>
+  <ul class="status-list">
+    {% for s in site.health.sites %}
+    <li>
+      <span class="status-name">{{ s.name }} <span class="src">{{ s.source }}</span></span>
+      <a class="status-url" href="{{ s.url }}">{{ s.url | replace("https://", "") }}</a>
+      <span class="pill-state is-{{ s.state }}">{{ {"up": "Up", "slow": "Slow", "down": "Down"}[s.state] }}</span>
+      <span class="status-detail">{% if s.ms is not none %}{{ s.ms }} ms{% else %}No answer{% endif %}</span>
+    </li>
+    {% endfor %}
+  </ul>
+  <p class="tile-note">Checked {{ site.health.checked | time }} ET. Checks every hour by loading the public home page.</p>
+</section>
+{% endif %}
+
 <section class="ai-tile" aria-labelledby="h-ai">
   <div>
     <p class="kicker" style="--team: var(--ink-2); --team-dark: var(--ink-2)">AI</p>

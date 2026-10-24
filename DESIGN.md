@@ -8,7 +8,8 @@ Defined once in `static/style.css` (`:root`). Change them here and there togethe
 | `--surface` | `#ffffff` | `#1c1c1a` | Cards sit one step above the page. |
 | `--ink` / `--ink-2` / `--ink-3` | `#1b1b1a` / `#4a4945` / `#66645e` | `#eceae4` / `#bdbab1` / `#9d9a91` | Headline, body, and small print. All pass WCAG AA on paper and surface. |
 | `--rule` | `#dedad0` | `#34322d` | Hairlines between stories. |
-| `--win` / `--loss` | `#1d6b40` / `#a3271c` | `#5cc28a` / `#f07a6e` | Game results, readable for color-blind users because W/L letters always show too. |
+| `--win` / `--loss` | `#1d6b40` / `#a3271c` | `#5cc28a` / `#f07a6e` | Game results and site status, readable for color-blind users because W/L letters and Up/Down words always show too. |
+| `--warn` | `#8a5a00` | `#e0b050` | A site that answered but slowly. |
 | Team color | set per topic in `sitegen/topics.py` (`color`, `color_dark`) | | Each topic keeps its own school color. ND navy turns gold in dark mode so it stays visible. |
 
 **Type:** Newsreader (headlines, a newspaper serif) and Public Sans (everything else, a plain public-service sans). Fluid sizes `--step--1` to `--step-3` scale with the screen.

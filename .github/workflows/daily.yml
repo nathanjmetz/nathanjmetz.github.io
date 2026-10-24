@@ -2,7 +2,8 @@ name: Daily update
 
 on:
   schedule:
-    - cron: "17 10 * * *"   # 6:17 AM Eastern in fall/summer, 5:17 AM in winter
+    - cron: "17 10 * * *"   # news: 6:17 AM Eastern in fall/summer, 5:17 AM in winter
+    - cron: "41 * * * *"    # site status only, every hour
   workflow_dispatch:         # "Run workflow" button on GitHub
   push:
     branches: [main]
@@ -34,13 +35,13 @@ jobs:
         run: pytest -q
 
       - name: Pull fresh news and schedules
-        if: github.event_name != 'pull_request'
+        if: github.event_name != 'pull_request' && github.event.schedule != '41 * * * *'
         run: python -m sitegen.fetch
 
       # Saving data keeps yesterday's stories if a source is down, and keeps
       # the repo active so GitHub never pauses the daily schedule.
       - name: Save today's data
-        if: github.event_name != 'pull_request'
+        if: github.event_name != 'pull_request' && github.event.schedule != '41 * * * *'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -50,6 +51,10 @@ jobs:
             git pull --rebase origin main
             git push
           fi
+
+      - name: Check that Nathan's sites are up
+        if: github.event_name != 'pull_request'
+        run: python -m sitegen.health
 
       - name: Build site
         run: python -m sitegen.build

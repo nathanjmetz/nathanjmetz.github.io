@@ -3,5 +3,6 @@
 .DS_Store
 # build output (GitHub builds it fresh)
 _site/
+.cache/
 __pycache__/
 .pytest_cache/

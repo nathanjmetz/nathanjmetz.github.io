@@ -10,6 +10,7 @@
   --focus: #1d5bd8;
   --win: #1d6b40;
   --loss: #a3271c;
+  --warn: #8a5a00;
 
   --serif: "Newsreader", Georgia, "Times New Roman", serif;
   --sans: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -40,6 +41,7 @@
     --focus: #7ea6ff;
     --win: #5cc28a;
     --loss: #f07a6e;
+    --warn: #e0b050;
   }
   :root, [style*="--team"] { --team-ink: var(--team-dark, var(--ink)); }
 }
@@ -128,6 +130,33 @@ a { color: inherit; }
 .front-head { padding-block: calc(var(--gap) * 1.25) 0; }
 .front-head h1 { margin: 0; font: 650 var(--step-3)/1.05 var(--serif); letter-spacing: -0.015em; }
 .front-head .lede { margin-top: 6px; font-size: var(--step-0); color: var(--ink-3); }
+
+.tile-note { margin: 0; font-size: var(--step--1); color: var(--ink-3); }
+.src { font: 600 .7rem/1 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); border: 1px solid var(--rule); border-radius: 4px; padding: 3px 6px; }
+
+.status {
+  margin-top: var(--gap);
+  border: 1px solid var(--rule); border-radius: var(--radius); background: var(--surface);
+  padding: clamp(14px, 1.6vw, 22px) clamp(16px, 2vw, 28px);
+}
+.status h2 { margin: 0 0 8px; font: 650 var(--step-2)/1.2 var(--serif); }
+.status-list { list-style: none; margin: 0 0 8px; padding: 0; }
+.status-list li {
+  display: grid; grid-template-columns: minmax(8rem, 12rem) minmax(0, 1fr) auto auto; gap: 6px 16px; align-items: center;
+  padding: 10px 0; border-top: 1px solid var(--rule);
+}
+.status-name { font: 600 var(--step-1)/1.3 var(--serif); display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.status-url { font-size: var(--step--1); color: var(--ink-2); overflow-wrap: anywhere; }
+.status-detail { font-size: var(--step--1); color: var(--ink-3); font-variant-numeric: tabular-nums; text-align: right; }
+.pill-state { font: 600 var(--step--1)/1 var(--sans); padding: 5px 10px; border-radius: 999px; border: 1.5px solid currentColor; }
+.pill-state.is-up { color: var(--win); }
+.pill-state.is-slow { color: var(--warn); }
+.pill-state.is-down { color: var(--loss); }
+@media (max-width: 560px) {
+  .status-list li { grid-template-columns: 1fr auto; }
+  .status-url { grid-column: 1; }
+  .status-detail { grid-column: 2; }
+}
 
 .ai-tile {
   margin-top: var(--gap);

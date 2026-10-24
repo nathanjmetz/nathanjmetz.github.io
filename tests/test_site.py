@@ -255,3 +255,41 @@ def test_empty_topic_says_so(tmp_path):
     assert "No stories in the last two weeks" in home
     sched = (out / "nd-football" / "schedule" / "index.html").read_text()
     assert "schedule isn't posted yet" in sched
+
+
+# ---------- site status ----------
+
+class FakeResp:
+    def __init__(self, code):
+        self.status_code = code
+
+
+def ticking(*times):
+    seq = iter(times)
+    return lambda: next(seq)
+
+
+def test_status_reads_up_slow_and_down():
+    from sitegen import health
+    site = {"name": "Brawn", "source": "Brawn", "url": "https://brawn.test"}
+    up = health.check(site, get=lambda u: FakeResp(200), clock=ticking(0.0, 0.25))
+    slow = health.check(site, get=lambda u: FakeResp(200), clock=ticking(0.0, 5.0))
+    broken = health.check(site, get=lambda u: FakeResp(503), clock=ticking(0.0, 0.1))
+
+    def offline(u):
+        raise health.requests.ConnectionError("no route")
+    gone = health.check(site, get=offline, clock=ticking(0.0, 0.1))
+    assert (up["state"], up["ms"]) == ("up", 250)
+    assert slow["state"] == "slow"
+    assert (broken["state"], broken["code"]) == ("down", 503)
+    assert (gone["state"], gone["code"]) == ("down", None)
+
+
+def test_front_page_shows_status_only_when_checked(tmp_path):
+    checked = tmp_path / "health.json"
+    checked.write_text(json.dumps({"checked": "2026-10-24T14:41:00+00:00", "sites": [
+        {"name": "Brawn", "source": "Brawn", "url": "https://gobrawn.com", "state": "down", "code": 503, "ms": 120}]}))
+    home = (build.build(out=tmp_path / "a", data_dir=tmp_path, health_path=checked) / "index.html").read_text()
+    assert "Site status" in home and 'class="pill-state is-down">Down' in home and "10:41 AM" in home
+    home = (build.build(out=tmp_path / "b", data_dir=tmp_path, health_path=tmp_path / "missing.json") / "index.html").read_text()
+    assert "Site status" not in home

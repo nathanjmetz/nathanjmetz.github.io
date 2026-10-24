@@ -13,6 +13,7 @@ from zoneinfo import ZoneInfo
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+from . import health as health_check
 from .topics import TOPICS
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -109,7 +110,7 @@ def prepare(topic, now, data_dir=DATA_DIR):
     }
 
 
-def build(out=OUT, now=None, data_dir=DATA_DIR):
+def build(out=OUT, now=None, data_dir=DATA_DIR, health_path=health_check.OUT):
     now = now or datetime.now(timezone.utc)
     env = Environment(
         loader=FileSystemLoader(ROOT / "templates"),
@@ -129,6 +130,7 @@ def build(out=OUT, now=None, data_dir=DATA_DIR):
         "updated": max(stamps) if stamps else None,
         "built": now.isoformat(),
         "today": fmt_day(now.isoformat()),
+        "health": health_check.load(health_path),
         "year": now.year,
     }
 
