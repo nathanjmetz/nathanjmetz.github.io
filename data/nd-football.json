@@ -1,6 +1,19 @@
 {
- "updated": "2026-10-24T14:16:15.742669+00:00",
+ "updated": "2026-10-24T15:35:47.931349+00:00",
  "news": [
+  {
+   "title": "Five-star Texas A&M LB commit Kaden Henderson breaks down Notre Dame’s continued pursuit",
+   "link": "https://on3.com/teams/notre-dame-fighting-irish/news/five-star-texas-am-lb-commit-kaden-henderson-breaks-down-notre-dames-continued-pursuit/",
+   "source": "Blue & Gold (On3)",
+   "outlet": null,
+   "published": "2026-10-24T15:23:04+00:00",
+   "summary": "",
+   "tags": [
+    "Blue and Gold",
+    "Blue and Gold Football Recruiting",
+    "Kaden Henderson (27 - Jesuit)"
+   ]
+  },
   {
    "title": "GAME THREAD: College Football Week 8 with the Irish on a bye",
    "link": "https://www.onefootdown.com/notre-dame-fighting-irish-football/86256/game-thread-college-football-week-8-with-the-irish-on-a-bye",
@@ -1515,7 +1528,7 @@
   },
   "Blue & Gold (On3)": {
    "ok": true,
-   "count": 17
+   "count": 18
   },
   "One Foot Down": {
    "ok": true,
@@ -1523,7 +1536,7 @@
   },
   "Slap the Sign": {
    "ok": true,
-   "count": 70
+   "count": 69
   },
   "ESPN": {
    "ok": true,
@@ -1531,7 +1544,7 @@
   },
   "Google News": {
    "ok": true,
-   "count": 97
+   "count": 96
   }
  }
 }
