@@ -1,6 +1,15 @@
 {
- "updated": "2026-10-24T19:09:24.609313+00:00",
+ "updated": "2026-10-25T02:31:15.831166+00:00",
  "news": [
+  {
+   "title": "Indiana men’s basketball to close preseason slate in Sunday matchup with Western Kentucky",
+   "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNelZxanAzc0dCR2JZS3JPZnZjeVE4aHg2dE91WFFobGludFd1Q2gtTVFCdTVRQ2hfRGlQRzh6eHRrWE96MTk0cUY1ZGJpSUp5SHZsT1NEQjNHQXphT2xUNHNuTEpkYVN1TDl4eXlnZWc2RXJPbUNrbnA5bjZBQ3d0QzRPVDM5d3NMTEg2bi0wa3g2eG9qbVE?oc=5",
+   "source": "Google News",
+   "outlet": "Indiana Daily Student",
+   "published": "2026-10-24T21:42:00+00:00",
+   "summary": "",
+   "tags": []
+  },
   {
    "title": "Bob Knight Memorial Way unveiled in Bloomington to honor IU coach",
    "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQbHFhdjBFX2xhNFYyWURQREZVbUl1enVsNDV4NC1SNzcyWEtPb2VZaWtPQjZtXzhmbTVIbkZqUExva2txTC1saGQxZTF3RDZOVEQ1TXZpRUxJaWU2V1hGSVVfN1FqNHNyMlg2M0pPdHdUc1B2VG50b1BwNTd4TFM0VkxhNjA4SUsxSVhKTVctMVJ1WTJpZXZGdkJZcTYxLUZIUFhqRVFJdXlWWmV6czRqd0pPR0xSX09nY1VUOGtlYV9mZ0Vu?oc=5",
@@ -669,15 +678,6 @@
    "source": "Google News",
    "outlet": "On3",
    "published": "2026-10-18T14:38:41+00:00",
-   "summary": "",
-   "tags": []
-  },
-  {
-   "title": "How To Watch UNC's Second Exhibition Game Against Indiana",
-   "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNTmk1X2R1WUNNLXp3eVozZFZsWEtnUjlvX05RUlVydXJUS0hWbk5wNmozMEFOS3d0UWh3cTdFYkhGellYajFmSHkyOGJOenR5WDF1RFhTaWE1YlM4NklFcmdZSkdsNDdldktaSG01YkVwN2xnSDhuUk11VzJxa203R0JaNkNVbXFhOWc?oc=5",
-   "source": "Google News",
-   "outlet": "Yahoo Sports",
-   "published": "2026-10-18T14:25:53+00:00",
    "summary": "",
    "tags": []
   },
@@ -1422,15 +1422,15 @@
   },
   "Inside the Hall": {
    "ok": true,
-   "count": 11
+   "count": 7
   },
   "The Daily Hoosier": {
    "ok": true,
-   "count": 2
+   "count": 1
   },
   "The Hoosier (On3)": {
    "ok": true,
-   "count": 1
+   "count": 0
   },
   "The Crimson Quarry": {
    "ok": true,
@@ -1446,7 +1446,7 @@
   },
   "Google News": {
    "ok": true,
-   "count": 56
+   "count": 53
   }
  }
 }
