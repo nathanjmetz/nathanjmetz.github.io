@@ -12,7 +12,7 @@ Read `START-HERE.md` first: it holds what's live, what's next, and what's waitin
 - Before pushing: `pytest -q`, `python -m sitegen.build`, and look at the pages at 390, 768, 1280, 1920, 2560 and 3440 px, light and dark.
 - `data/` is written by the daily job. Don't hand-edit it.
 - Site status (`sitegen/health.py`) loads each site's public home page every hour. Add a site to `SITES` there. Public checks only.
-- This folder is on an external (exFAT) drive, which makes `._*` shadow files. They're ignored by git; leave them.
+- This folder is on an external (exFAT) drive, which makes `._*` shadow files. They're ignored by git; leave them. Before a commit, delete `.git/**/._*`. To pick up the daily data commit, use `git fetch` then `git merge origin/main`, not rebase: rebase trips on this drive's timestamps.
 
 ## Known corners cut
 - ESPN's schedule feed is public but unofficial. If ESPN changes it, schedules stop updating (old ones stay) until `parse_schedule` is fixed.
