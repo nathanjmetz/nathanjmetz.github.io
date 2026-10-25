@@ -2,7 +2,7 @@
 
 ## What's live
 - https://nathanjmetz.github.io — front page with the date, Site status (is gobrawn.com up, checked hourly), an AI tile and a Sports section (Notre Dame football and IU basketball: news pages and season schedules).
-- https://nathanjmetz.github.io/ai/ — AI wiki: 97 full articles, 393 checked sources, glossary (34 terms), timeline, search, "Where I'm active", and 12 building-topic articles with options compared. Updated by hand, not daily (Nathan, 2026-10-24: "dont turn on any daily update. i can just manually have you or the other macs brawn do that occassionally").
+- https://nathanjmetz.github.io/ai/ — AI wiki: 133 full articles, 604 checked sources, glossary (42 terms), timeline, search, "Where I'm active", and 49 building articles in seven sections (How the web works, Data and accounts, Shipping, Running a platform, Apps and features, Design and quality, Builders and tools), most with options compared. Updated by hand, not daily (Nathan, 2026-10-24: "dont turn on any daily update. i can just manually have you or the other macs brawn do that occassionally").
 - Sports update every morning at 6:17 AM Eastern (GitHub Actions, free on a public repo).
 
 ## What's next
