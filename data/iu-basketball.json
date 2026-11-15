@@ -1,6 +1,26 @@
 {
- "updated": "2026-11-14T16:35:41.810875+00:00",
+ "updated": "2026-11-15T17:05:27.249987+00:00",
  "news": [
+  {
+   "title": "Five Banner Banter: Indiana men’s basketball wins first power conference matchup, stays undefeated",
+   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNbDJKWTFsWGxySGY0OWU1U0xGRG5aSkJrbk9GdDhzRkVtSllMVW1ycnFZR2FXYlRhaU81TFRRczZXaTh3WWZTcmVRRUFrWWRvSzZwVVladlRsZnJaVzRsbEVIbDFZN0o1NDhZbVlNdVZxMW9OLU5mdkNtRUNCZlJndUlsZ2JPUkFfMDBmSTZxUmw4RndkQkhQU0xGV3JkbGNPTm96aDItZw?oc=5",
+   "source": "Google News",
+   "outlet": "Indiana Daily Student",
+   "published": "2026-11-15T15:16:00+00:00",
+   "summary": "",
+   "tags": []
+  },
+  {
+   "title": "Indiana Basketball Game Notes – Game 5 vs. Arkansas",
+   "link": "https://iuhoosiers.com/news/2026/11/15/mens-basketball-indiana-basketball-game-notes-game-5-vs-arkansas",
+   "source": "IU Athletics",
+   "outlet": null,
+   "published": "2026-11-15T14:00:00+00:00",
+   "summary": "The Indiana Hoosiers will continue the 2026-27 season with a marquee non-conference tilt against Arkansas at 7:30 p.m. ET on Tuesday, Nov. 17, at Madison Square Garden in New York. Paul Burmeister (PxP), Robbie Hummel…",
+   "tags": [
+    "Men's Basketball"
+   ]
+  },
   {
    "title": "Key stats, quotes, takeaways from Indiana's 80-44 win over Samford",
    "link": "https://on3.com/teams/indiana-hoosiers/news/key-stats-quotes-takeaways-from-indianas-win-over-samford/",
@@ -1138,15 +1158,6 @@
    "tags": []
   },
   {
-   "title": "Syracuse Men's Basketball: Four Takeaways From High-Major Loss to Indiana",
-   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNQ3d2WjU1ekdYcl9oSjVDWW1yUDk5aVZRZFpFcEU0UUpRTmtQWWthaV9hV2tUZmJsZW5XYnFPa2M5SHJ1MVA5UGRuUjduVnMyOXZFRzEzRjMwZHFHRGM2WkZFSGx2dFhub2dOaF93WU5RNTFBNndrWlVxSElhb1pEbVVQeDc2NTFWbFFXRWJQT0x4aDJCZ3ptZGU2RFB4QXlzbm1UdUQ1X2k0djVtVjZuT3gwOVVVTGx5NVRn?oc=5",
-   "source": "Google News",
-   "outlet": "roundtable.io",
-   "published": "2026-11-10T02:33:14+00:00",
-   "summary": "",
-   "tags": []
-  },
-  {
    "title": "5 quick thoughts from Indiana men’s basketball’s 83-80 win over Syracuse",
    "link": "https://www.crimsonquarry.com/indiana-hoosiers-mens-basketball/31930/syracuse-recap-quick-thoughts-markus-burton",
    "source": "The Crimson Quarry",
@@ -1702,19 +1713,6 @@
    "tags": [
     "Commentary",
     "Bellarmine Knights"
-   ]
-  },
-  {
-   "title": "IU basketball: Indiana 92 Bellarmine 69 — Three keys, highlights, stats",
-   "link": "https://www.thedailyhoosier.com/iu-basketball-indiana-92-bellarmine-69-three-keys-highlights-stats/",
-   "source": "The Daily Hoosier",
-   "outlet": null,
-   "published": "2026-11-06T01:15:31+00:00",
-   "summary": "BLOOMINGTON — Indiana defeated Bellarmine Thursday evening at Simon Skjodt Assembly Hall by a final score of 92-69. The three keys to the game, highlights and final stats are below. Indiana led 50-26 at halftime. They…",
-   "tags": [
-    "IU Basketball",
-    "Bellarmine",
-    "Darren Harris"
    ]
   }
  ],
@@ -2405,19 +2403,19 @@
   },
   "Inside the Hall": {
    "ok": true,
-   "count": 14
+   "count": 10
   },
   "The Daily Hoosier": {
    "ok": true,
-   "count": 4
+   "count": 0
   },
   "The Hoosier (On3)": {
    "ok": true,
-   "count": 9
+   "count": 4
   },
   "The Crimson Quarry": {
    "ok": true,
-   "count": 4
+   "count": 0
   },
   "Hoosier State of Mind": {
    "ok": true,
@@ -2429,7 +2427,7 @@
   },
   "Google News": {
    "ok": true,
-   "count": 56
+   "count": 39
   }
  }
 }
