@@ -1,6 +1,493 @@
 {
- "updated": "2026-11-17T19:10:13.251739+00:00",
+ "updated": "2026-11-18T18:50:04.100144+00:00",
  "news": [
+  {
+   "title": "Podcast: Indiana Basketball Recap Hoosiers 84 Razorbacks 76",
+   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQS2ZkdnhaX1NBR3J1Vmt0MHdFNlA4ZUxNaERXb2ZwUTZrZkV3emFPbGNVRHJmazVxZ21TOHA2VEFoTG1FY0c0Z05sZGdudTVJRElGaGgyQUZiZXBPbTh4NzFFUFBpdDRNZTZKUGhpVTBpUUVDVUR5MzNyUi1ESTF3YTlnalYxcVlnemxHLWYzUTgtX1JIa202MHJza2s?oc=5",
+   "source": "Google News",
+   "outlet": "Hoosier Huddle",
+   "published": "2026-11-18T17:28:23+00:00",
+   "summary": "",
+   "tags": []
+  },
+  {
+   "title": "All the stats, news, analysis from Indiana men’s basketball’s win over Arkansas",
+   "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNdG01dWxJaC1yQ09GSHBOMTVRcVp4MmlyNWs1a0c1RERJUzJBbEt6Nm1RV0N6VkdiT0NuWGJlV2xrNEZDUW1CeVVSSzlnckNqVTVKd2IzUDhiTl9VWmpPNU42bmxPT2RSaDRJRnNhQVhqZF9FN0NEWWlHOGp2ckdXajhuMm5jUEE?oc=5",
+   "source": "Google News",
+   "outlet": "Yahoo Sports",
+   "published": "2026-11-18T17:26:58+00:00",
+   "summary": "",
+   "tags": []
+  },
+  {
+   "title": "3 key stats from Indiana men’s basketball’s 81-76 win over Arkansas",
+   "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFA2dURhbHdmOXZMd1JxZ09GZFlkWTVyVzFXajc4TWNJSlNaUTdNZ25kZnZ1bkMxZWJjMUxXQ3hTSEdxald1ajY0YWJVd1c4T1JPdHMxQmw1ZVN4UWtPRUZWQ3JNUFdOXzNNRVV5N1lSZlZPdENiRUw2eFZTdFM?oc=5",
+   "source": "Google News",
+   "outlet": "Yahoo Sports",
+   "published": "2026-11-18T17:04:24+00:00",
+   "summary": "",
+   "tags": []
+  },
+  {
+   "title": "Indiana has multiple ways to win and has shown as much this year. How Darian DeVries put together a team that is 'playing differently' and thriving",
+   "link": "https://on3.com/teams/indiana-hoosiers/news/indiana-has-multiple-ways-to-win-and-has-shown-as-much-this-year-how-darian-devries-put-together-a-team-that-is-playing-differently-and-thriving/",
+   "source": "The Hoosier (On3)",
+   "outlet": null,
+   "published": "2026-11-18T16:34:17+00:00",
+   "summary": "How Darian DeVries built an Indiana team that can beat opponents in many ways -- showing 'real coaching' and earning respect nationally.",
+   "tags": [
+    "The Hoosier",
+    "The Hoosier Basketball"
+   ]
+  },
+  {
+   "title": "Bryce Lindsay's biggest shot keeps Indiana basketball unbeaten: 'No hesitation'",
+   "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPZzFWeWNqdmhGV21rUC1oa1JtSExxb2Q1VktVanFpdkJ1dEFhR3g1amJhaHhrRy02LXJPVzlhMXdBQVNZLTJSdEJfdFJBOFBqNDhyUWdlWTg1RmpRUmowOWtrdG1xNGI1WHdVcG5vTkNhNldFRUdhbmd5bE1hdDFMWk9wQjZxM0hCeU9rRGZjTlFBa25XalhYYTF2V1BIMVdpSG9NQzZsazNRYUVhQnY3MzdQNWZydUtKdWs5dHRDcGd1S0Z1cFI2eXdxc0RvaHdYMG1Oc0VBbUFzQUxmTnhoSDM0Y29OeGxt?oc=5",
+   "source": "Google News",
+   "outlet": "IndyStar",
+   "published": "2026-11-18T16:01:00+00:00",
+   "summary": "",
+   "tags": []
+  },
+  {
+   "title": "IU basketball earns first neutral-court win against ranked opponent since 2022",
+   "link": "https://www.insidethehall.com/2026/11/18/iu-basketball-gets-first-neutral-court-win-against-ranked-opponent-since-2022/",
+   "source": "Inside the Hall",
+   "outlet": null,
+   "published": "2026-11-18T15:13:31+00:00",
+   "summary": "Tuesday’s 81-76 win against No. 20 Arkansas at Madison Square Garden was its first neutral-court win against a ranked opponent since 2022. The Hoosiers beat No. 16 Illinois 65-63 on March 11, 2022, in the Big Ten…",
+   "tags": [
+    "The Notebook"
+   ]
+  },
+  {
+   "title": "Arkansas basketball in real trouble after loss to Indiana",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPTXV3UWdETTh2MU5VbnlIdm9yWE1mQkJXS0hKZDlqZ3dKeE1QMzRGSTF0cU54VHM1aDh1dVM5RDJyYlBzNEFHUzFBUmdpUWdFc1NRMjlTdml0ZldaR1hYTlF0XzBLNlRLN2ZRa2J1M1hlLWE3ckNCZE1tMDBLSmhDYnB1TVRIMkd2b2FPRGYtSQ?oc=5",
+   "source": "Google News",
+   "outlet": "Yahoo Sports",
+   "published": "2026-11-18T15:00:27+00:00",
+   "summary": "",
+   "tags": []
+  },
+  {
+   "title": "What Darian DeVries Said After Indiana Basketball's Win Over Arkansas",
+   "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOcTJVN2VNQ3lSQnl4TDNlS0J0RHVHbVRhLU9NNDNOaThHdmg1RHBnN29jbW85dEtEdEpnTUZ2QlFDWlNyOFU2MTJ0ekdNZUVQUEwzak1iQWdyQ1FYZkdIeUxLbHo3bzVLWVAwLXM5bV9WWGZjeDBqaUZqSURSb2dweHF1QW9MS3hJcFJHUnhxZWs5Zw?oc=5",
+   "source": "Google News",
+   "outlet": "Yahoo Sports",
+   "published": "2026-11-18T14:04:00+00:00",
+   "summary": "",
+   "tags": []
+  },
+  {
+   "title": "Five takeaways from IU basketball’s win against Arkansas",
+   "link": "https://www.insidethehall.com/2026/11/18/five-takeaways-from-iu-basketballs-win-against-arkansas/",
+   "source": "Inside the Hall",
+   "outlet": null,
+   "published": "2026-11-18T14:00:32+00:00",
+   "summary": "IU basketball improved to 5-0 with an 81-76 win against Arkansas on Tuesday at Madison Square Garden in New York. Here are five takeaways from the win against the Razorbacks: Another dominant performance on the…",
+   "tags": [
+    "Five Takeaways",
+    "Aiden Sherrell",
+    "Arkansas Razorbacks",
+    "Darren Harris",
+    "Jaeden Mustaf",
+    "Samet Yigitoglu"
+   ]
+  },
+  {
+   "title": "Indiana coach Darian DeVries admits he almost ruined Bryce Lindsay’s game-winning 3-pointer",
+   "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNSDRIRkJTSDR1MEl1RV91X2JuV3JWZEF4a19yRkRJTDVpUFNnWVAzN3JrXzZwcUNaMzZiUkp0ZHEzbFNDSEJfVmFwQ1JMN0pGN3N2RGo0OGlTckpFMjAtRTR0Sk9uaXNaMWlaeWVuYUJuaXdlVGpWekprSHZudHlHZXBMYmxKRW51NDdBRg?oc=5",
+   "source": "Google News",
+   "outlet": "Yahoo Sports",
+   "published": "2026-11-18T13:50:37+00:00",
+   "summary": "",
+   "tags": []
+  },
+  {
+   "title": "IU basketball: Indiana vs. Arkansas — The report card",
+   "link": "https://www.thedailyhoosier.com/iu-basketball-indiana-vs-arkansas-the-report-card/",
+   "source": "The Daily Hoosier",
+   "outlet": null,
+   "published": "2026-11-18T13:30:32+00:00",
+   "summary": "NEW YORK — Indiana secured its first win over an AP top-25 opponent since January at Madison Square Garden Tuesday evening. The Hoosiers got off to a fast start. They led 12-4 just over four minutes into the game, but…",
+   "tags": [
+    "IU Basketball",
+    "arkansas"
+   ]
+  },
+  {
+   "title": "2 positives, 2 concerns for IU basketball after Arkansas, before Kentucky",
+   "link": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPZ25Eb0U1RFZlSHEtcEs3ZzNtdHJzWkV4QThwRjV4UzJ4b1FIb2ZyYk82QnBJc2ZBUlBIV1A4Z1hEamE0Q0lZYThyMW8xaUtPVENiZUEtejlmMDVFT3lKal9pT2h6RV9iVEMwRm0zcFdBak51Wm9mSEI2eUpVaXk4VE1pMVZNSk5SVmQ2SGZvbkszczFUZE1WdTRGX2hVdlJHX1FGT3hjYXRVeU1zMHNlM3hOdVI1VDNmWHA1cFdXSk9rWWpoXzJkLVFxRXVJdnFlMmZieUloUU81VS1jMnBjS2dQTUVfaVV0cDRheUtwZDFjSjVZZWNJVFJZUFUzM0hfQ2czbg?oc=5",
+   "source": "Google News",
+   "outlet": "Herald Bulletin",
+   "published": "2026-11-18T13:30:00+00:00",
+   "summary": "",
+   "tags": []
+  },
+  {
+   "title": "IU basketball’s offseason overhaul pays dividends in win against No. 20 Arkansas",
+   "link": "https://www.insidethehall.com/2026/11/18/iu-basketballs-offseason-overhaul-pays-dividends-in-win-against-no-20-arkansas/",
+   "source": "Inside the Hall",
+   "outlet": null,
+   "published": "2026-11-18T11:21:55+00:00",
+   "summary": "With two and a half minutes remaining Tuesday night at Madison Square Garden, Indiana trailed No. 20 Arkansas by four points, facing the kind of late-game adversity that has often troubled the Hoosiers in recent…",
+   "tags": [
+    "Media",
+    "Arkansas Razorbacks"
+   ]
+  },
+  {
+   "title": "Where to watch, how to follow the Kentucky men’s basketball game vs. Indiana",
+   "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOeDF2X0d0bHpiQWdvQjBUWW1oU1Y0bGhsdUNUTURqMnZPdC1DZTZqWlZpaGd6R3YtZERRTXRVSXBjMUVRcUpYa1VzRTNkeTk0cHpFdmhiaVV4SlZOSHNKZUxxWDNTMm8waVdLUWhRYVo3dEZ4cy1MTkp6TUlaMnFHdmJJNkdkemxyaXfSAYoBQVVfeXFMTUtSaU5SNko2Z1QzdGQxTmx2U3V3LTZSUGtXTkJ3amhPbWVrclNUXzR3X1c5ZWFEeXZZVTNpRzlvbGFDVF9LSk96cS1nTTJKdkMxUWpYdGdQTk9VYTVLLTZxeDJCSlNmV3JUX3E3RkZaQ3lOUFUxWlEtX2F0VWxsTllFSmtQcDdDY1FR?oc=5",
+   "source": "Google News",
+   "outlet": "Lexington Herald Leader",
+   "published": "2026-11-18T11:00:00+00:00",
+   "summary": "",
+   "tags": []
+  },
+  {
+   "title": "Watch: Arkansas Razorbacks vs. Indiana Hoosiers | COLLEGE BASKETBALL HIGHLIGHTS | 11/17/26",
+   "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPbXpXamMzdlRTUU5xYll0cWZJbFRzVDR0VE43VUlhUE9JUGR0bDI1ZHh1bHVUU3JNdjNUeW40R3JGNUVnTlUxNnByajFFX0JTQThwcWowVlV1QXpMZnFzN0dRN0Exa2ZrTzRJLUNYdnBxeUR6d2NJRi1lZ2tMQmpaOThwOGNWWmxTcFFubzBxaW1GeUhpZ3gyOFJCdTAyM1AxNWVWcTlIUWhUdXhoanJoTm1QQ1AtVHZOTWRYWnFidXBGU19yODFSck9kUm5POFZ5UE9PRWlaMWU3ek53NVVLNDJkWmtqdw?oc=5",
+   "source": "Google News",
+   "outlet": "Yardbarker",
+   "published": "2026-11-18T07:03:19+00:00",
+   "summary": "",
+   "tags": []
+  },
+  {
+   "title": "Frontcourt provides foundation as IU basketball scores top-20 win over Arkansas",
+   "link": "https://www.thedailyhoosier.com/frontcourt-provides-foundation-as-iu-basketball-scores-top-20-win-over-arkansas/",
+   "source": "The Daily Hoosier",
+   "outlet": null,
+   "published": "2026-11-18T06:29:27+00:00",
+   "summary": "After a tough first season in Bloomington, IU basketball coach Darian DeVries focused on revamping the size of his frontcourt. Early on in his second year, DeVries is already seeing the size overhaul pay off, as Indiana…",
+   "tags": [
+    "IU Basketball",
+    "Aiden Sherrell",
+    "Darian DeVries",
+    "Samet Yiğitoğlu"
+   ]
+  },
+  {
+   "title": "Why Arkansas basketball coach John Calipari stole from Indiana's Darian DeVries",
+   "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxORjFsU2ZCS3ZlT2ZMZFJCb19kangyZDV3eHlDc1dvRU0wUktyaEstVXprVm9tNlBkVWtTN0RKNHF5SmxuWHJBUWhOWFc4Q1l5cGpJVnpBeWVRaVM0ZXlhRlNsbFpIX3JzeEZ1blpDRi1KcVdZRDBweW9ZNmUzZU1JQWRMM2RYd2RpUEI0?oc=5",
+   "source": "Google News",
+   "outlet": "Yahoo Sports",
+   "published": "2026-11-18T05:46:00+00:00",
+   "summary": "",
+   "tags": []
+  },
+  {
+   "title": "IU men’s basketball sealed big win over Arkansas with clutch shooting",
+   "link": "https://www.thedailyhoosier.com/iu-mens-basketball-sealed-big-win-over-arkansas-with-clutch-shooting/",
+   "source": "The Daily Hoosier",
+   "outlet": null,
+   "published": "2026-11-18T05:45:22+00:00",
+   "summary": "On the play that decided Indiana men’s basketball’s tight game against Arkansas, IU head coach Darian DeVries looked for something entirely different. The Hoosiers ran their offense with less than a minute remaining at…",
+   "tags": [
+    "IU Basketball",
+    "Aiden Sherrell",
+    "Bryce Lindsay",
+    "Darian DeVries",
+    "Darren Harris",
+    "Jaeden Mustaf",
+    "Samet Yiğitoğlu"
+   ]
+  },
+  {
+   "title": "COLUMN: Indiana men's basketball can score from anywhere",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPSEozRVVCN3N5YklOX0FSWWxaTE9rSUhBdG1PdGlvOE8xVzM2bFdQMWZRcFdEWGp0Q25KZG1wWDRhRU9FR0ZPckZfMkFBODZ6UEktVHNRamxSc21DSlZhTjhza0pjZjBKbWRIRkM3dW1MZ1dhSVlLbUxGcEZkWVFFUWQwMVNzTktJLUxRM0xzNTgwOE56MDdZdw?oc=5",
+   "source": "Google News",
+   "outlet": "Indiana Daily Student",
+   "published": "2026-11-18T05:38:00+00:00",
+   "summary": "",
+   "tags": []
+  },
+  {
+   "title": "Indiana men’s basketball clutch down the stretch, defeats No. 20 Arkansas 81-76",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQZ1U5ajFrX0tkUEFJWm5MSE5NNUwtMk04cU80ajdVSlVxRW95NzZOaGVkbl9YV2YxTnF3WUswZW1VaGJJNGwyQi04RVlDdGtzc1dqTUl5V3NPeWF4d3phX2RVY09wUzA1UlNlay02eGJEcGtIRnpGRkxfUTM1SDQ5LXR2ZGhfMEEzWEVRWDBnbTFmWEdyWm45aQ?oc=5",
+   "source": "Google News",
+   "outlet": "Indiana Daily Student",
+   "published": "2026-11-18T05:23:00+00:00",
+   "summary": "",
+   "tags": []
+  },
+  {
+   "title": "Arkansas basketball can't close, falls to Indiana at Madison Square Garden",
+   "link": "https://news.google.com/rss/articles/CBMixAJBVV95cUxOc0JOd1VWSllwV3pfelpUdTUxYzMtTWRsUTBmald5b1V4c0lhVUdCMVlWemxndnVJa3l2NzZQQWc5ZE44NG5mSDNPM096eVhNQ0pyNmU1cHZ5UE8wR3NsU0tMTjc2c3IwV1BGNU5xUF94RWtvR2VzRFh0NXdEaERUWHRYUXlJYUhuek0yNUYtM3lvTE5USHVHUU1zdnBzRS1nRVlBcElObUg0X05Yd0RHWkxfcVl0ZlVIZzkyMjljbnN4UUZ6MFJvcGxCNTdaNUdvZWFPT1RBNEtSU2s3TzhxLXFzOW5WelZzYjBPekR6TmhyOVJoRnlodWlwMEd1M1BLOGlZMjVidnF2enRMckJjNTJsS1hpXzJmck1hZWZPdlVnMV9EaWphOWhaaTJGd1VWUmsxQ0dIejlQT01UakpwbGtYM3g?oc=5",
+   "source": "Google News",
+   "outlet": "Whole Hog Sports",
+   "published": "2026-11-18T05:14:11+00:00",
+   "summary": "",
+   "tags": []
+  },
+  {
+   "title": "Indiana men’s basketball’s guards come alive late, showcase ability to ‘win in any way’",
+   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQVHpFVWtPWmEtTUd2aG92YThaSzVaaHFjWFhncHlQb3hYWnQ1SWdXQjRVcW1zWlJTVXlSODJmVmhPSGxjVFBMUXRBZWtKWS1lS0JTYmhvMWEwWmhBU2xJc3N6RFlRNkJPMHZfS0E1OWhIQXJHbmFGWkZySUtPYk0ySzFXTmhEU1hrOUJDSkZ2dDkyRkhxOWp2Sko3SQ?oc=5",
+   "source": "Google News",
+   "outlet": "Indiana Daily Student",
+   "published": "2026-11-18T05:06:00+00:00",
+   "summary": "",
+   "tags": []
+  },
+  {
+   "title": "3 takeaways from Arkansas basketball's loss to Indiana at Madison Square Garden",
+   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPVksxU0l1S0EzLTA1REduT0JFWmJzbVgwd2dBeU5ucFNFWUVreFlrU1BzTV9kVldFbnFJU1BBR2dyNk5GMGVvTzBQaUdoaHlLMWpJelBxR2loZVZ6YTNKSEdzMThGRW01YkZyUkhPRnZMdTdtbmdKSjhqeWViOFBfOWhLVUlfQmVOaHhOVEdzSS1IUTVCV0MtZUpMb21jR3FHb19XMFJyZ283TU5wejBKZ0ZyV2h0WHZudXVERVJ1X2J1Y1pyZnc?oc=5",
+   "source": "Google News",
+   "outlet": "Whole Hog Sports",
+   "published": "2026-11-18T04:47:00+00:00",
+   "summary": "",
+   "tags": []
+  },
+  {
+   "title": "The Minute After: Arkansas",
+   "link": "https://www.insidethehall.com/2026/11/17/the-minute-after-arkansas-4/",
+   "source": "Inside the Hall",
+   "outlet": null,
+   "published": "2026-11-18T03:55:58+00:00",
+   "summary": "Thoughts on an 81-76 win against Arkansas: Indiana started big tonight. It was a clear emphasis from the jump, something the Hoosiers had game-planned for. And it worked. IU’s first possession featured Aiden Sherrell…",
+   "tags": [
+    "The Minute After",
+    "Arkansas Razorbacks"
+   ]
+  },
+  {
+   "title": "5 quick thoughts from Indiana men’s basketball’s 81-76 win over Arkansas",
+   "link": "https://www.crimsonquarry.com/indiana-hoosiers-mens-basketball/32386/arkansas-recap-bryce-lindsay-darren-harris",
+   "source": "The Crimson Quarry",
+   "outlet": null,
+   "published": "2026-11-18T03:52:11+00:00",
+   "summary": "Indiana men’s basketball earned its first signature win of the 2026 season on Tuesday evening at Madison Square Garden in New York City, downing Arkansas 81-76. That was a thriller that came down to the last two…",
+   "tags": [
+    "Indiana Hoosiers Basketball",
+    "Indiana men's basketball"
+   ]
+  },
+  {
+   "title": "Postgame Q&A: Darian DeVries, Bryce Lindsay discuss Indiana's win over Arkansas",
+   "link": "https://on3.com/teams/indiana-hoosiers/news/postgame-qa-darian-devries-bryce-lindsay-discuss-indianas-win-over-arkansas/",
+   "source": "The Hoosier (On3)",
+   "outlet": null,
+   "published": "2026-11-18T03:46:31+00:00",
+   "summary": "NEW YORK — After Indiana‘s thrilling 81-76 victory against Arkansas at Madison Square Garden, head coach Darian DeVries and guard Bryce Lindsay answered questions from the media. They discussed the frontcourt dominating…",
+   "tags": [
+    "indiana basketball",
+    "Indiana Hoosiers (Bloomington, IN)",
+    "Darian DeVries",
+    "The Hoosier",
+    "The Hoosier Basketball"
+   ]
+  },
+  {
+   "title": "Video: Darian DeVries, Bryce Lindsay react to win against Arkansas",
+   "link": "https://www.insidethehall.com/2026/11/17/video-darian-devries-bryce-lindsay-react-to-win-against-arkansas/",
+   "source": "Inside the Hall",
+   "outlet": null,
+   "published": "2026-11-18T03:44:57+00:00",
+   "summary": "NEW YORK – Darian DeVries and Bryce Lindsay addressed the media following IU basketball’s 81-76 win against Arkansas on Tuesday at Madison Square Garden. Watch their postgame comments below: The post Video: Darian…",
+   "tags": [
+    "Video",
+    "Arkansas Razorbacks",
+    "Bryce Lindsay",
+    "Darian DeVries"
+   ]
+  },
+  {
+   "title": "Opponent Q&A: John Calipari provides his take on Indiana after win over Arkansas",
+   "link": "https://on3.com/teams/indiana-hoosiers/news/opponent-qa-john-calipari-provides-his-take-on-indiana-after-win-over-arkansas/",
+   "source": "The Hoosier (On3)",
+   "outlet": null,
+   "published": "2026-11-18T03:44:08+00:00",
+   "summary": "NEW YORK — Following an exciting finish that allowed Indiana to secure an 81-76 win over Arkansas, Razorback head coach John Calipari answered questions from reporters. He provided his assessment of the Hoosiers’…",
+   "tags": [
+    "John Calipari (78 - Moon Area)",
+    "arkansas basketball",
+    "indiana basketball",
+    "Indiana Hoosiers (Bloomington, IN)",
+    "The Hoosier",
+    "The Hoosier Basketball"
+   ]
+  },
+  {
+   "title": "Watch: DeVries and Lindsay, Arkansas’ Calipari discuss IU basketball win",
+   "link": "https://www.thedailyhoosier.com/watch-devries-and-lindsay-arkansas-calipari-discuss-iu-basketball-win/",
+   "source": "The Daily Hoosier",
+   "outlet": null,
+   "published": "2026-11-18T03:39:57+00:00",
+   "summary": "Watch as IU basketball coach Darian DeVries and guard Bryce Lindsay met with the media following their 81-76 win over Arkansas. Further below, Arkansas coach John Calipari discusses the loss to the Hoosiers. For the…",
+   "tags": [
+    "IU Basketball",
+    "Bryce Lindsay",
+    "Darian DeVries",
+    "John Calipari"
+   ]
+  },
+  {
+   "title": "Late Surge Gives Indiana 81-76 Win Over No. 20/23 Arkansas",
+   "link": "https://iuhoosiers.com/news/2026/11/17/mens-basketball-late-surge-gives-indiana-81-76-win-over-no-20-23-arkansas",
+   "source": "IU Athletics",
+   "outlet": null,
+   "published": "2026-11-18T03:30:00+00:00",
+   "summary": "Sometimes, you have to be cold-blooded. Sometimes, if you're Indiana guard Darren Harris and the 3-point shot has been your enemy, who cares. Sometimes, if you're guard Bryce Lindsay, you show no perimeter fear…",
+   "tags": [
+    "Men's Basketball"
+   ]
+  },
+  {
+   "title": "3 Observations from Indiana men’s basketball’s win 81-76 over No. 20 Arkansas",
+   "link": "https://www.crimsonquarry.com/indiana-basketball/32374/3-observations-from-indiana-mens-basketballs-win-81-76-over-no-20-arkansas",
+   "source": "The Crimson Quarry",
+   "outlet": null,
+   "published": "2026-11-18T03:28:32+00:00",
+   "summary": "Indiana men’s basketball earned its best win of the young season tonight, beating John Calipari’s Arkansas 81-76 in front of a raucous Madison Square Garden crowd. If that’s a preview of postseason college basketball…",
+   "tags": [
+    "Indiana basketball"
+   ]
+  },
+  {
+   "title": "Indiana basketball holds off Arkansas for statement win at Madison Square Garden",
+   "link": "https://news.google.com/rss/articles/CBMilwJBVV95cUxQSWsxNDVyM1lIckVfRnYtLXRVU09Xb0pXOWlOUmJwUFJJa25mWkU5RVJMT0lPSFV2NDdNZkRQeG42dFhlNHRhNFBvRGFDUjRZWFhUTVBoZ3VudTAwYWFNODZXZ0N1UGxjVVhicW9feURmVkJBa2h0V1Q0X0xrS3hxNzJBQ1dTajBFX1pSNFhwYXhQYmRURjdLaUtSM2NJNk1GTmUtTUlpSzJMX2JhYWVxWmdsaG5qX29ZYS1ONGtIUDZtSS1HaUJWRUt0Y05TNzZyLXQtZW5CTnBfUlc1ZkJvd3lQNlFUX3puZW9GVlNhalR3RmZYdE94OEtWOVhPS0lhemNib3oxM3dJNHcxbHEzWWlTTy1LMjQ?oc=5",
+   "source": "Google News",
+   "outlet": "IndyStar",
+   "published": "2026-11-18T03:19:00+00:00",
+   "summary": "",
+   "tags": []
+  },
+  {
+   "title": "Takeaways: Instant reaction from Indiana's 81-76 win over Arkansas",
+   "link": "https://on3.com/teams/indiana-hoosiers/news/takeaways-instant-reaction-from-indianas-81-76-win-over-arkansas/",
+   "source": "The Hoosier (On3)",
+   "outlet": null,
+   "published": "2026-11-18T03:15:38+00:00",
+   "summary": "Instant reaction, takeaways, notes and observations from Indiana's win over No. 20 Arkansas on Tuesday night.",
+   "tags": [
+    "The Hoosier",
+    "The Hoosier Basketball"
+   ]
+  },
+  {
+   "title": "Indiana men’s basketball beats No. 20 Arkansas 81-76",
+   "link": "https://www.crimsonquarry.com/indiana-basketball/32371/indiana-mens-basketball-beats-no-20-arkansas-81-76",
+   "source": "The Crimson Quarry",
+   "outlet": null,
+   "published": "2026-11-18T03:05:51+00:00",
+   "summary": "Indiana men’s basketball got its first signature win of the season tonight, overpowering Arkansas inside to eke out a tough 86-71 win at Madison Square Garden. Early in the game, Indiana appeared to have the formula…",
+   "tags": [
+    "Indiana basketball"
+   ]
+  },
+  {
+   "title": "At the Buzzer: Indiana 81, Arkansas 76",
+   "link": "https://www.insidethehall.com/2026/11/17/at-the-buzzer-indiana-81-arkansas-76/",
+   "source": "Inside the Hall",
+   "outlet": null,
+   "published": "2026-11-18T03:00:06+00:00",
+   "summary": "Quick thoughts on an 81-76 win against Arkansas at Madison Square Garden: How it happened Indiana’s guards struggled in the first half of Tuesday’s matchup against Arkansas at Madison Square Garden. Fortunately, the…",
+   "tags": [
+    "Commentary",
+    "Arkansas Razorbacks"
+   ]
+  },
+  {
+   "title": "Indiana men’s basketball defeats No. 20 Arkansas at Madison Square Garden",
+   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPbllnSWpFV2VKZ2thSlpic29ySDFFOVRiaV9MNFZwMlZreEN6QVJiV3NmQkZtWGd5WnhnV3ZSeDZ0YjRIb25qTG9NY2c4bmhRZ09NdzVVN3NsbUNjTGU2WGMxbG1NQWJTS2R6WUVwSHpqaTJ0dTV6MVZ3cDM1bjYxOVpuN0NnUVcyZ3Z1MkRVczlmV3N3MExzWENaSEJTZGJZT2xr?oc=5",
+   "source": "Google News",
+   "outlet": "Indiana Daily Student",
+   "published": "2026-11-18T02:53:00+00:00",
+   "summary": "",
+   "tags": []
+  },
+  {
+   "title": "IU men’s basketball: Three quick reasons the Hoosiers beat Arkansas, highlights, stats",
+   "link": "https://www.thedailyhoosier.com/iu-mens-basketball-three-quick-reasons-the-hoosiers-beat-arkansas-highlights-stats/",
+   "source": "The Daily Hoosier",
+   "outlet": null,
+   "published": "2026-11-18T02:52:05+00:00",
+   "summary": "Indiana men’s basketball beat No. 20 Arkansas by a final of 81-76 Tuesday evening at Madison Square Garden in New York. Below are three quick reasons why IU won, along with highlights and final stats. Indiana led 36-34…",
+   "tags": [
+    "IU Basketball",
+    "Aiden Sherrell",
+    "Bryce Lindsay",
+    "Darian DeVries",
+    "Darren Harris",
+    "Samet Yiğitoğlu"
+   ]
+  },
+  {
+   "title": "Live updates and discussion: Indiana vs. Arkansas (FINAL)",
+   "link": "https://www.thedailyhoosier.com/live-updates-and-discussion-indiana-vs-arkansas/",
+   "source": "The Daily Hoosier",
+   "outlet": null,
+   "published": "2026-11-17T23:37:19+00:00",
+   "summary": "BLOOMINGTON — Follow along as IU basketball takes on Arkansas in its fifth game of the 2026-27 season. Updates from Madison Square Garden will be posted below. Refresh the page for the latest. Join us in the discussion…",
+   "tags": [
+    "IU Basketball",
+    "arkansas"
+   ]
+  },
+  {
+   "title": "Game Chat: Indiana Hoosiers men’s basketball vs Arkansas",
+   "link": "https://www.crimsonquarry.com/indiana-hoosiers-mens-basketball/32334/game-thread-indiana-arkansas-live-updates-discussion",
+   "source": "The Crimson Quarry",
+   "outlet": null,
+   "published": "2026-11-17T23:30:00+00:00",
+   "summary": "Indiana men’s basketball (4-0, 0-0 Big Ten) is set to take on Arkansas (3-1, 0-0 SEC) in a marquee early season non-conference matchup this evening at Madison Square Garden in New York City. The Hoosiers are looking for…",
+   "tags": [
+    "Indiana Hoosiers Basketball",
+    "Indiana men's basketball"
+   ]
+  },
+  {
+   "title": "How to watch Arkansas vs Indiana: Live stream NCAA College Basketball, TV channel",
+   "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQd290eWJDRF94c3NJZk4wUEZLaVJTMURTS2o1MFJZRV9ZVmcyQlF6dDFDRTZHaTViZDJXTC1fOExnN21lZUd2N1p2NFNHVk5xZ05xTUVPc0d3MXVSNUFWM0RpeEU0NXlabFROMkVNQlJQd3FpRW5EMzJ3WS1pOHJhRFBaMEt6UQ?oc=5",
+   "source": "Google News",
+   "outlet": "Yahoo Sports",
+   "published": "2026-11-17T23:30:00+00:00",
+   "summary": "",
+   "tags": []
+  },
+  {
+   "title": "Indiana basketball roster, schedule, tickets, radio: What to know about 2026-27 Hoosiers",
+   "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOR1FEbk9FV0FMajBKZ2FSXzVOWVJ0ckFTaVNMcG91RWdHNl9NZ3RpRjFsY1VwNks5dzJpWXh1Q1JHQ3JTUjdVSDY4MzlMdVl1S182NXVVU0dKa2xNNkNzVzZNTEN3ZENLeE41RmI4VWV0TU5IYzBDZ29faFUtRHRnaktIaFEta1lncV9LZTN2SS1jLXJYV2JVU0tVN21HS0N3SklCUGxDdnZ4NGhEM09lYjVaUENsSTU2RFVBOHVFdTc3TkE4Z3ZWbGJ0dGl1S1NrYWowY0RNaw?oc=5",
+   "source": "Google News",
+   "outlet": "IndyStar",
+   "published": "2026-11-17T22:56:00+00:00",
+   "summary": "",
+   "tags": []
+  },
+  {
+   "title": "Indiana men’s basketball vs Arkansas: How to watch, odds, predictions, more",
+   "link": "https://www.crimsonquarry.com/indiana-hoosiers-mens-basketball/32332/vs-arkansas-tv-channel-streaming-info-odds",
+   "source": "The Crimson Quarry",
+   "outlet": null,
+   "published": "2026-11-17T22:00:00+00:00",
+   "summary": "Indiana men’s basketball (4-0, 0-0 Big Ten) is set for another big non-conference test in taking on Arkansas (3-1, 0-0 SEC) this evening. The Hoosiers remain undefeated with three victories in buy games and an 83-80 win…",
+   "tags": [
+    "Indiana Hoosiers Basketball",
+    "Indiana men's basketball"
+   ]
+  },
+  {
+   "title": "Open Thread: Discuss IU basketball’s matchup against Arkansas at MSG",
+   "link": "https://www.insidethehall.com/2026/11/17/open-thread-discuss-iu-basketballs-matchup-against-arkansas-at-msg/",
+   "source": "Inside the Hall",
+   "outlet": null,
+   "published": "2026-11-17T20:44:54+00:00",
+   "summary": "IU basketball begins an intriguing week tonight in the Big Apple. The Hoosiers will tip off against Arkansas at 7:30 p.m. ET on Peacock and NBC Sports Network. Whether you’re in attendance or watching from home, join…",
+   "tags": [
+    "Media",
+    "Arkansas Razorbacks"
+   ]
+  },
+  {
+   "title": "Arkansas basketball vs Indiana latest updates, score, how to watch",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOa0d1eTAyNENwSE1DV0JEYjdXZjJBZUFEc2VWeTk5X2F1SVZvcUF6T2J6MFZ0SjZqVDlxOVhoYVJQb3NZeU1pT09pZF90OEtCTkQxOWpmSWtQZ0o4ZzNSMUJZMzZBM05FMW1Ed2ZqVW9MYkpya3Fma1RnRHJvNm5uSDZmTEZHenJmbVBDUXh6aw?oc=5",
+   "source": "Google News",
+   "outlet": "Yahoo Sports",
+   "published": "2026-11-17T19:30:24+00:00",
+   "summary": "",
+   "tags": []
+  },
   {
    "title": "Arkansas vs Indiana Prediction, Picks & Odds for Tonight's College Basketball Game",
    "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPdnJhcl8zc0Y4SmRheHlWMzBxZHVRT01lejdWeERYSC11cjFaZVVLVnNqblFaNmxGVWhGMFdnbC02RHItcTI5blFMMThSX2J1d0hqTnJtTVVzN0Rwbk9oY0xrX2l4MnlQSUN5X0NnRlRoMjYwREIybTVkTzdQRDYxTGhYaXZzN3R1Z0E?oc=5",
@@ -103,6 +590,15 @@
    "source": "Google News",
    "outlet": "Action Network",
    "published": "2026-11-17T12:36:00+00:00",
+   "summary": "",
+   "tags": []
+  },
+  {
+   "title": "‘Goosebumps.’ Indiana basketball returns to Madison Square Garden for matchup against Arkansas",
+   "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOM1Z0bVB4UWJjTnVSbERQb1Z2aFNxbV8wRjFndjBKVjdUMmd1ZlVLeW9uOVZ2NEFyUjMxX3RLQ21yeEQya1IydHdWNmZMcHdZNkFYSmx6YVZCX0R0ZU4yZkRNQ2Q5LW9XYWwtejdRbWpIOEhIZDl1MTRRSG44QVJ3NmRUbk5PZkNJelNQVmotd1RIY2N0Q0pFMEN3ckItSzhjRDItbDVmNF9zZXVybDFtc2pZUUJib1JHNHNNZlUxQ1ZNV3Q5LUhUV3ZuaGhyTUhuVlRnLTg4Q3Q2d1J5V0JHRTV3STRBVlNs?oc=5",
+   "source": "Google News",
+   "outlet": "The Herald-Times",
+   "published": "2026-11-17T12:22:00+00:00",
    "summary": "",
    "tags": []
   },
@@ -235,6 +731,15 @@
    "tags": [
     "Former Hoosiers"
    ]
+  },
+  {
+   "title": "Where to watch Indiana basketball vs Arkansas: Start time, Peacock stream, IU basketball radio",
+   "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPbFFlMGktRTdMNUNBbUVwYmNwV2VjYVljRmFqblJCRjd2ZU80UXczQTE0bF92UzlpUzdmZGpwelc0X3d1X1YzLWdabGlLMzF6eGd4SmFLaTZYMFJUREhCaWpUcHpQbDlXNHZwVUhWODZDcUdJVEtIQ1V3TU5hcERRSUpnWlA0UHFzaEE?oc=5",
+   "source": "Google News",
+   "outlet": "Yahoo Sports",
+   "published": "2026-11-16T11:47:19+00:00",
+   "summary": "",
+   "tags": []
   },
   {
    "title": "Indiana soccer reinforces championship identity with B1G Tournament title over Washington",
@@ -401,15 +906,6 @@
    ]
   },
   {
-   "title": "Peegs' Take: Reacting to Indiana basketball's 90-66 win over Tennessee Tech",
-   "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPUXBESHlJUW1qbUhWSU54Q29NR21wR2FYXzd3STVtZTdFMGFjQkRrazRNVDlWWlRNSWlNZHRMSTVwUEdiTnRocVVPUGtRRVFjaTZEcmZNdlA3NndrTUJwSDlvbi1KeGpTSkMtUXNmUXlILS1xa01rUkRUU2NPc1drdUlfOWR1QkVYZDdUQWsxbUs3ZFFiWlBXajVkVnA5S1VmWWNxQUxhNXYtNm1mN3FNTWU1LUE3WWxOMXVzZHNYemFPRnRXMWFDbg?oc=5",
-   "source": "Google News",
-   "outlet": "247Sports",
-   "published": "2026-11-13T13:18:34+00:00",
-   "summary": "",
-   "tags": []
-  },
-  {
    "title": "IU basketball pulls away from Tennessee Tech with dominant second half",
    "link": "https://www.insidethehall.com/2026/11/13/iu-basketball-pulls-away-from-tennessee-tech-with-dominant-second-half/",
    "source": "Inside the Hall",
@@ -420,15 +916,6 @@
     "Media",
     "Tennessee Tech Golden Eagles"
    ]
-  },
-  {
-   "title": "Indiana basketball’s Markus Burton off to ‘terrific’ start. This area in his game still needs work",
-   "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQcmJ3QVpwcUxzOVVVTFI3UV9ZdHNVRGRnWHkzNmpHY3YteFNyYjhWMjJLNEV5NzNEYzhNdFIxeWN2dHUzN0RJRVJvTFNyXzlsaTVBT2thVXlyck5UZDM1WVktdUc4b3JwUHdqOXNiLXZEc3ZCWUFKYVVmeGRFR0hreGRxLUMyQm5DOTVxNHEtZGxNelA1QkxqNlZkUzVoWld4bHE3djE3SnZ0bFFZTktudzRUUWw3ZERRY1VheVNXcXJsVkdpX1FfSzlBb2FZbkVyZjQ3UVZPNjVUNUV6X3NoZ3ZtWG4?oc=5",
-   "source": "Google News",
-   "outlet": "The Herald-Times",
-   "published": "2026-11-13T11:36:00+00:00",
-   "summary": "",
-   "tags": []
   },
   {
    "title": "‘A force’: Samet Yigitolu can positively impact IU basketball in a multitude of ways",
@@ -455,33 +942,6 @@
    ]
   },
   {
-   "title": "Indiana basketball shows defensive ‘focus’ in win vs Tennessee Tech to stay unbeaten",
-   "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOSENKeGZGMWdWamJrRTdPQjNVUFJFQWc5c2dZVmhwaVdEQlFBaEtBM0x0ZVlFR1ZydXVBMjlESzBpa1h6YkJaaWJReTRWWHozT0Y5S0hxZDg4VnhDZXNjdXItQ1VQWHN3YUV0N2NtNmlZU0dCUzV0dkhsaHNPQ2ttOEIwZFA4TVBxZ2E4bmk4cURPcXc?oc=5",
-   "source": "Google News",
-   "outlet": "Yahoo Sports",
-   "published": "2026-11-13T05:11:31+00:00",
-   "summary": "",
-   "tags": []
-  },
-  {
-   "title": "Indiana men’s basketball’s big men dominate paint in victory over Tennessee Tech",
-   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQbV9JTzdUMEpPcWROalU4UUFrSExXaHlpS1NuNVFlZEc2b2ZOWFRYUUtaRlY3TGN6MEt5aDZlWW54eURHUjdmZUZYMDhVdUVkZFozOHR6OHVpeG9hZ3dxRHluRkxFbndpaXRCdmRDbkFEYlBYa2N5N3lTaFBHTVVlSkxEZWo3ZXBjdEM4NEtIb1o1UVVhODZoamdqUQ?oc=5",
-   "source": "Google News",
-   "outlet": "Indiana Daily Student",
-   "published": "2026-11-13T05:11:00+00:00",
-   "summary": "",
-   "tags": []
-  },
-  {
-   "title": "Indiana men’s basketball improved defense leads to 90-66 victory over Tennessee Tech",
-   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPbjVQTk1OcVB6Z3AzRXRtdExrTlYwWUplSnZzaXFHWldGLTluV25BdVRDWGt5bTYyU0VaWFhTVEcxUVNTZF9CLWIwZ3BWTGFFSkNBR3NOekZ4WkM0SGNsWVdkZEZZZUFsM0FCSFJiOUJDSFJVLWhUbS1ZS3FIel9mQVlXVnBnWDUxcGlveFkyX2xpVndDZk5ZYQ?oc=5",
-   "source": "Google News",
-   "outlet": "Indiana Daily Student",
-   "published": "2026-11-13T04:45:00+00:00",
-   "summary": "",
-   "tags": []
-  },
-  {
    "title": "Indiana Shakes Off Sluggish First Half to Bury Tennessee Tech, 90-66",
    "link": "https://www.thedailyhoosier.com/indiana-shakes-off-sluggish-first-half-to-bury-tennessee-tech-90-66/",
    "source": "The Daily Hoosier",
@@ -492,24 +952,6 @@
     "IU Basketball",
     "tennessee tech"
    ]
-  },
-  {
-   "title": "Video: Postgame Q&A IU vs. Tennessee Tech – IU Men’s Basketball Board",
-   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNeGVpb2Myb18xQXZVR1NpUTVnWjFNdjFsaEhsd1NGT2Q5OGtjX0pZbWZVZjMwTnF3dFducm5HSHFQeE1XaEhkVFZPUVZxekRxUUN1XzJyWUxFYk5RNlBZR085aGdJM0ViS3p2aFlJRi1NWWpRYXF4RUNnckk2bTVacHZUVHJxcUV2cEVhR2ZETGVfa3k2NHNaMFl0REx0cVlwX252NTRLMUo?oc=5",
-   "source": "Google News",
-   "outlet": "Hoosier Huddle",
-   "published": "2026-11-13T03:26:40+00:00",
-   "summary": "",
-   "tags": []
-  },
-  {
-   "title": "Indiana basketball 7-footers detail win over Tennessee Tech",
-   "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOTnU3UVdmOTQzOWlyY0M3MjJXU05wMlN3MnJhVV92U1R5WXFXa0RsaC1YSF9SMGVXX2xsU0dMdWVES3N6REFJUTRLeDg3azRkOW5FLTZsUnJ4RXBDZU5GN2ViMGJpYUR0M25rWnRlZzVPM2YyQUpScGpUaktPZnJFQXd2RjdZY1BMcHNYcw?oc=5",
-   "source": "Google News",
-   "outlet": "Yahoo Sports",
-   "published": "2026-11-13T03:06:00+00:00",
-   "summary": "",
-   "tags": []
   },
   {
    "title": "Postgame Quotes: Tennessee Tech",
@@ -622,24 +1064,6 @@
    ]
   },
   {
-   "title": "Big Ten's Indiana Hoosiers vs Tennessee Tech basketball, best photos",
-   "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOajBtRmh5dWo2MXdadm5UQjVjVnhGMUVnc2JpUEwwWWFMUS00VllOSHRlOVJjTnpTbmp0V1NMb1l2Uzk1aUgyTGpHOXNEeklFNXJ1WGdsbXZMYW54ZENTSVljMC1LQThKSHNnZWpzbGNlbEZybTF1aFNyN0JuQU1jZERaUkVEb1RLOGNleGw1VlBiZmNFN3h2Um94WDA1eHM3WEd3NUhYWkVfX0c5cVhMNHp3RXhOeFU1WU9rMXZacC1haS1TQUg4Q29rY25Hc2NJc2wzZWNFYzdGV2c?oc=5",
-   "source": "Google News",
-   "outlet": "The Herald-Times",
-   "published": "2026-11-13T02:04:00+00:00",
-   "summary": "",
-   "tags": []
-  },
-  {
-   "title": "Instant Observations From Indiana Basketball's Win Over Tennessee Tech",
-   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQVVpMS0ZBYmUwNUNXZkItbWV4MEhVTVdkYmV6akl4clJhSVNHUXdxaWhVaVo3Z2dqU1lLSUhQVTFmR2kwN0tsUnB3eHJDN3BYWG84ZUVrc2NxdzFHTDR3MElPMkxJZW44M0NvNXNUM2w1XzFoTmJqVWpVWjI0anhYelFhOGhOdUZDZ0o0XzVBWHVHMUI5WFRPRHJxdVZlLUhWOHd1LTlCeC1YMUFHWHg4UDB2Y2FBS2c?oc=5",
-   "source": "Google News",
-   "outlet": "Sports Illustrated",
-   "published": "2026-11-13T02:03:40+00:00",
-   "summary": "",
-   "tags": []
-  },
-  {
    "title": "At the Buzzer: Indiana 90, Tennessee Tech 66",
    "link": "https://www.insidethehall.com/2026/11/12/at-the-buzzer-indiana-90-tennessee-tech-66/",
    "source": "Inside the Hall",
@@ -664,15 +1088,6 @@
    ]
   },
   {
-   "title": "Indiana men’s basketball runs away late against Tennessee Tech, notches 90-66 victory",
-   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNa2FEcnBrdmIyQ1lCTldXcHhRQW9lVS11ZmhIWnBqdGNkOHYtZjIzV0NQNExlMGl4TzVBNDBlblcwV284Yk5qSFNIT01JY005b0EzQUdOU2lMbVNsMWRYa2otZDRwblJ3TnJLaHhMUVVyazNGZ0RScGxYblZBQmlGYUhid25ILUFtX1JDZEZQcWI0X21NcE5ZNTlYMU5pQQ?oc=5",
-   "source": "Google News",
-   "outlet": "Indiana Daily Student",
-   "published": "2026-11-13T01:50:00+00:00",
-   "summary": "",
-   "tags": []
-  },
-  {
    "title": "Takeaways: Instant reaction from Indiana's 90-66 win over Tennessee Tech",
    "link": "https://on3.com/teams/indiana-hoosiers/news/takeaways-instant-reaction-from-indianas-win-over-tennessee-tech/",
    "source": "The Hoosier (On3)",
@@ -694,24 +1109,6 @@
    "tags": [
     "Men's Basketball"
    ]
-  },
-  {
-   "title": "Indiana basketball center exits game vs Tennessee Tech with bloodied face. What we know",
-   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPNzczdk9Wdkc3a0sxU1JaZG8tRDZWLTdtZkV6WVN0YkwxbjJtNHBzcjI4NzlmMkt3V1VzRG14YnV3RE5HZTVDaWVvNnd0R1oyc2Z3WjhJTzh2VWVlV2wweFZvMThUdlpmU05QamhOZU04NXJqTjBab19oY09KMXRlYjVnWFJFdmcwczVHZzB3?oc=5",
-   "source": "Google News",
-   "outlet": "Yahoo Sports",
-   "published": "2026-11-12T23:55:04+00:00",
-   "summary": "",
-   "tags": []
-  },
-  {
-   "title": "Indiana basketball's starting center gets stitches around eye, makes return vs. Tennessee Tech",
-   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPdG9wMGpsVGxzU1ZNV3V2bElIcl8wbTVYWGl5SnBWVnJKU0tmRktiZjZzM1UxQUI5aUNWdl9aekV4NmRIWHE4U3lBbG1rOUNFSGI1T1Vlc1RRMm80dDVUZzFENjY5X0NpM1pJV1hVdml6RU9oTzRhQlB6S0I0eVdBYXRLWG5Dc2ZQakFnbUhyOE80TXR5?oc=5",
-   "source": "Google News",
-   "outlet": "Yahoo Sports",
-   "published": "2026-11-12T23:53:34+00:00",
-   "summary": "",
-   "tags": []
   },
   {
    "title": "2027 center commit Darius Wabbington signs with Indiana men’s basketball",
@@ -763,24 +1160,6 @@
    ]
   },
   {
-   "title": "Indiana women’s basketball signs talented trio of 2027 prospects",
-   "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQMjVjRmdyTWxuV0VnWDZtdmJzSjNOckhvT2JBVVVOaW5xNjRFd1hGUmpvb0U5Z0p4bXpqbDZWM1FkanZNVkRnRG1mWkNEMGNva280ZFZmcml6dWZObGxRMHRVZ21ycmtrZW1nY1hYS2FRMWZQOENOVWVxeVJFblB4VEE4UXpPT3NaQ3U1RkplX2ZlQQ?oc=5",
-   "source": "Google News",
-   "outlet": "Yahoo Sports",
-   "published": "2026-11-12T20:30:00+00:00",
-   "summary": "",
-   "tags": []
-  },
-  {
-   "title": "Indiana vs Tennessee Tech: College basketball betting odds, prediction",
-   "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQMTQybUZESUhmNTBzd0xQNjhtY3FFU3NCVkJkeXR4WVNfN0pXOWpoWDhjYzh2b0xuRGhmaEFZZm5OcGRZU2pCbzdIU19GRG1fclNPbWVQT0JETGp6dm8yWHh5amdRSWRqSklBZnpWeWQwQnA4YU1WeGNtN2tUMVl3bnI1eFUzSHkycDltZXJiMEtaSk0xSm4yUGVsWkJWWGNYUEgtMXVlZUVYYk9kOUhPck9DN2FmZ2tEZGVNVzdIOTRYdjNiS3ppa3NZTWJzRld3bi1wMjluOGRwVVU0QkoxT0llaDJyTWhTZEREUDBkVkxvVnloZWw2WFVLbXQ?oc=5",
-   "source": "Google News",
-   "outlet": "College Sports Wire",
-   "published": "2026-11-12T20:02:00+00:00",
-   "summary": "",
-   "tags": []
-  },
-  {
    "title": "Putting In Extra Time Benefits Yigitoglu, All the Hoosiers",
    "link": "https://iuhoosiers.com/news/2026/11/12/mens-basketball-putting-in-extra-time-benefits-yigitoglu-all-the-hoosiers",
    "source": "IU Athletics",
@@ -790,15 +1169,6 @@
    "tags": [
     "Men's Basketball"
    ]
-  },
-  {
-   "title": "Indiana basketball vs Tennessee Tech start time, where to watch, stream tonight, Nov. 12",
-   "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPWVZTWU9YR3ZaTmRfenk0Wllub2Y4SGJsdFF5c0o1b1hRTXdHLW1XeXI4NG1fSzRIQ1FlQi1feVJvTVZvTlZ2SXVPTjZlWHFxa3JfRnRZbjNJSDRyc1RMMGttMV92OHhhSUZRNXhjMllZTWlMUWJOQTd6cjlTRlU5SlY5ZlJsRHlpLW5IbDJxV0tyTzd6RzR3YjVROU43Y0hIdHhEMUZoVHo4d2pmODVuRkhkYVBxcFhVU2lYbE5fNGVsY1Y2WjlrLWVNQWJUWnlBcGpxQmVwMWotM3ByMFk0SnRyeS1XSE81M0NUeE5nYm1zUQ?oc=5",
-   "source": "Google News",
-   "outlet": "IndyStar",
-   "published": "2026-11-12T13:39:00+00:00",
-   "summary": "",
-   "tags": []
   },
   {
    "title": "Scouting Notes: Tennessee Tech",
@@ -847,24 +1217,6 @@
     "IU Basketball",
     "Darius Wabbington"
    ]
-  },
-  {
-   "title": "College basketball signing period begins: Hoosiers, Boilers ink elite recruits",
-   "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxQYmh5ZWNrMktqeEljWlphLWpPQ1NoSE5ka1JVM2F2VFNEbmhtSDNJMnpxVy1SOVhZWHVXOFhvTUYxLUNJVXJEUkRaNzVEWFlncU1jT2Y0Y0JrWWJBdGJxbzV0SjljeXp0V1pDX3NYQWYtZWpzQ2o4Y0VuOFVQTkMyVjdiSDV1a1B6d3RjMF9za2M1ZHdIUzRsRHVOMVQ2ZHVNUC1OQkZIOHItSFd6b2oxdG5VLXNja2Z4alZpSmV6ZTVOSzdkZFhJU01leHpBa2NZNjFUV0lsWGMtXzJycjVjRno4VHVtVFhUMm1PdWNzbEdCTXZNeE12ZmJ1ZGxtdDRJVTBv?oc=5",
-   "source": "Google News",
-   "outlet": "The Journal Gazette",
-   "published": "2026-11-12T02:00:00+00:00",
-   "summary": "",
-   "tags": []
-  },
-  {
-   "title": "Indiana men’s basketball returns home to host Tennessee Tech",
-   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQaU5RVXJQRlE5TnhyLXlKa05pTVRrbEJwN3hyTW5hVTdqRkw2VXZPNF96M0R3SjhRU0YzS0pZemtvamhBNFBDQ2E3T2tMVFhnMHEzT3BRR1BIUUFiUk1sbFZWMlQwanVuUjBQWm81SWNYajlpbi1iOXFVcnlRbEZzU1M0U0ZaWVN3dFViUl9uZVlCcUJpMTVN?oc=5",
-   "source": "Google News",
-   "outlet": "Indiana Daily Student",
-   "published": "2026-11-12T00:32:00+00:00",
-   "summary": "",
-   "tags": []
   },
   {
    "title": "Top-20 center Darius Wabbington signs with Indiana: 'True definition of a connector on the floor'",
@@ -1013,15 +1365,6 @@
    ]
   },
   {
-   "title": "IU basketball announces signing of class of 2027 guard Chase Branham",
-   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNZ09GZUFXcjlPaDBPT0NYVms5aGNCREtUNVRqcHlaSHhLUWM0ZnpQS1FjbHE1UVR0NzBueGhqeEJCdzM0ZmdlbXBHUXR2WXo2TXZCc24wWnlQNlQ1dnZqOVQzRGxnMkxHSEgzTmw3Mm5RLUk3U1I2VDJsV01SZ0FIU0xlY3RIQXA2bmNFNFBiMWVGTkFIdlFocEdrQWJVeWZpN1JIUmhqVXA0Z01OSFlN?oc=5",
-   "source": "Google News",
-   "outlet": "Inside the Hall",
-   "published": "2026-11-11T16:08:50+00:00",
-   "summary": "",
-   "tags": []
-  },
-  {
    "title": "Chase Branham Pledges Commitment to Indiana Men’s Basketball",
    "link": "https://iuhoosiers.com/news/2026/11/11/mens-basketball-chase-branham-pledges-commitment-to-indiana-mens-basketball",
    "source": "IU Athletics",
@@ -1056,42 +1399,6 @@
    ]
   },
   {
-   "title": "NCAAM Highlights: Syracuse at Indiana (11/9) Stream of NCAA Basketball",
-   "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPZktaUXJZQ2JsV3M3THA3UlZIVlMzOTRqWWJaallsWEI1SWhUTnp6cDZPY0E2Y2E2LUNRVzJJamY3a1BIeGR4UjhxNEd4bzFjXzQ1QjFHVzNSVWpjRFQzZXJkbk1yQnI2dWQtajRHM21GMFZXcG8yT1A0VEVVbHVPSDhxZEVhRHowV1NOTEI4U1UzZTdKbVE?oc=5",
-   "source": "Google News",
-   "outlet": "CBS Sports",
-   "published": "2026-11-11T14:45:00+00:00",
-   "summary": "",
-   "tags": []
-  },
-  {
-   "title": "Indiana-Syracuse basketball draws just 5K fans. 'Depressing'",
-   "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNVVJtRFFWcF9MMk5hMmxycUpmUi05NFdLSzFFZmtjdDFNbENFMFY1YlNqZlZra3FWMFNkVzZYeTJhQXExelhXSndySTVaVkI3VDJjWEMzZDB6WEcwRl9fcDdJTklpWE1OWjYwY1BMcmZxX0J1RkRQMWo2QlRmeUFoa0t3WGpjWnNyX0xfVHQ4Z2xhSGRjSjY0TFJoZVVNSi1ORG5ISng2WXIxaWNlR0E5UVVFeXc3WG5zNzlhcDUtcURxNmxQWnMzZl9MVzBpQkZFWGJiZC0xcXhEWkJDYW1ZQTlqb01Idm9CU2JxLVEtVQ?oc=5",
-   "source": "Google News",
-   "outlet": "USA Today",
-   "published": "2026-11-11T12:46:00+00:00",
-   "summary": "",
-   "tags": []
-  },
-  {
-   "title": "Scrutinized Syracuse-Indiana basketball attendance shows college sports misses most valuable point",
-   "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPX2tTemxUN3I4SHZWV2JuS3hSQUtaNmZmMGxqTWtqQWg2bWlWVmdHRTNLdkZCVThFVzdrQ1F4S3c4YWdfV01NZ1RGOXk2WjZLMDVZYlA1Tm5UYUVmdk1PdkJkcFM4WFhNUmE3cTE1b24zWWxjUDV6RkpNNmZBQmRudlFVc3Bwa2ZiM1JNUTlOTFBXckU0TU1vY2MxUnF0c24zTGNJUHozb0JzeFpzWUk5NmhySFZOR2xQanpnMHNnTWcyek81Y3FJOHR4c1hjd29pZW90ZERLbi1IbEtHdm5XY082ck5LXzRYek5NYQ?oc=5",
-   "source": "Google News",
-   "outlet": "IndyStar",
-   "published": "2026-11-11T09:50:00+00:00",
-   "summary": "",
-   "tags": []
-  },
-  {
-   "title": "Hoosier Hierarchy: Where each Indiana men's basketball player ranks after Week 1",
-   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPblp4dVVVQ2JZWlhPQTdHSXI3QWVtMkJGSXhpR2NrZmZLNmx6azZNaEtwYWJwV1dWcHJlOV8xOEFkam5DMWFGc05OcGppSmFtak40OFNLRENVM1BTbC1xRWFnX2VMenZUbEdBT0Y0QjhtQ3JaZXY2VVdLWFAzMl9EbnJjQ0ZPQm5GdVpEbXUtY3U5SGVuSFluN1hjanVnMXVXd2xhYw?oc=5",
-   "source": "Google News",
-   "outlet": "Indiana Daily Student",
-   "published": "2026-11-11T00:40:00+00:00",
-   "summary": "",
-   "tags": []
-  },
-  {
    "title": "After making his way back to Indiana, Jaeden Mustaf shows his impact in win over Syracuse",
    "link": "https://on3.com/teams/indiana-hoosiers/news/after-making-his-way-back-to-indiana-jaeden-mustaf-shows-his-impact-in-win-over-syracuse/",
    "source": "The Hoosier (On3)",
@@ -1104,15 +1411,6 @@
     "The Hoosier",
     "The Hoosier Basketball"
    ]
-  },
-  {
-   "title": "PHOTOS: Indiana men's basketball defeats Syracuse 83-80",
-   "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNMHpTdDd4bER1YWtOdXk0c19VZGo3MHczOGRMVkdHMmZhQy1TODVhdkhBbFIwS1hfRzdCTXJqdlhCbGsxMWUzV0IyOWE3bWxPaHYtODM2R2ZLa1l3dEp2c3g3VXQ3QW4wVm1rSVY4bU1KcGl1UG55cVAwNmd1NHFKNzR4aUlVUQ?oc=5",
-   "source": "Google News",
-   "outlet": "Indiana Daily Student",
-   "published": "2026-11-10T18:29:00+00:00",
-   "summary": "",
-   "tags": []
   },
   {
    "title": "Indiana's first notable opponent turned in mix bag of results. It wasn't pretty, but the response was all that was needed: 'Wasn’t a lot of panic'",
@@ -1422,290 +1720,11 @@
     "Media",
     "Syracuse Orange"
    ]
-  },
-  {
-   "title": "3 bold predictions for Indiana men’s basketball vs Syracuse",
-   "link": "https://www.crimsonquarry.com/indiana-hoosiers-mens-basketball/31854/syracuse-predictions-aiden-sherell-markus-burton",
-   "source": "The Crimson Quarry",
-   "outlet": null,
-   "published": "2026-11-09T18:22:40+00:00",
-   "summary": "Indiana men’s basketball is set for its first high-major test of the 2026-27 season today, taking on Syracuse at Gainbridge Fieldhouse in Indianapolis, a semi-home environment for the Hoosiers. The theme of this matchup…",
-   "tags": [
-    "Indiana Hoosiers Basketball",
-    "Indiana men's basketball"
-   ]
-  },
-  {
-   "title": "Annual Sale: Join TheHoosier For 50% Off",
-   "link": "https://on3.com/teams/indiana-hoosiers/news/annual-sale-join-thehoosier-for-50-off/",
-   "source": "The Hoosier (On3)",
-   "outlet": null,
-   "published": "2026-11-09T17:42:58+00:00",
-   "summary": "Join TheHoosier for a 50% off deal to celebrate the start of Indiana's season and become part of the best IU community.",
-   "tags": [
-    "The Hoosier",
-    "The Hoosier Football",
-    "The Hoosier Basketball"
-   ]
-  },
-  {
-   "title": "Video, Quotes: Curt Cignetti previews matchup against USC",
-   "link": "https://www.insidethehall.com/2026/11/09/video-quotes-curt-cignetti-previews-matchup-against-usc/",
-   "source": "Inside the Hall",
-   "outlet": null,
-   "published": "2026-11-09T17:21:26+00:00",
-   "summary": "Curt Cignetti spoke to the media on Monday at his weekly press conference. The Hoosiers had a bye in Week 10 and are preparing to play USC this Saturday at Memorial Stadium. Watch Cignetti’s full media availability…",
-   "tags": [
-    "Video"
-   ]
-  },
-  {
-   "title": "Aiden Sherrell's versatility on full display for Indiana with one goal in mind: 'He's all about the team'",
-   "link": "https://on3.com/teams/indiana-hoosiers/news/aiden-sherrells-versatility-on-full-display-for-indiana-with-one-goal-in-mind-hes-all-about-the-team/",
-   "source": "The Hoosier (On3)",
-   "outlet": null,
-   "published": "2026-11-09T14:28:16+00:00",
-   "summary": "Aiden Sherrell is doing all the little things for Indiana to start his career in Bloomington, and just wants to win at the end of the day.",
-   "tags": [
-    "Aiden Sherrell (24 - Prolific Prep)",
-    "The Hoosier",
-    "The Hoosier Basketball"
-   ]
-  },
-  {
-   "title": "Fighting Back – Manhertz Plays Like a ‘Pro’ Despite Freshman Status",
-   "link": "https://iuhoosiers.com/news/2026/11/9/mens-basketball-fighting-back-manhertz-plays-like-a-pro-despite-freshman-status",
-   "source": "IU Athletics",
-   "outlet": null,
-   "published": "2026-11-09T14:00:00+00:00",
-   "summary": "Trevor Manhertz does not impose his physical will on a basketball court in the manner of, say, Indiana teammate Aiden Sherrell. For one thing, Manhertz is 6-foot-9 and 185 pounds to Sherrell's 7-foot and 250. For…",
-   "tags": [
-    "Men's Basketball"
-   ]
-  },
-  {
-   "title": "3 things to watch for Indiana men’s basketball vs Syracuse",
-   "link": "https://www.crimsonquarry.com/indiana-hoosiers-mens-basketball/31849/syracuse-preview-what-to-watch-kiyan-anthony",
-   "source": "The Crimson Quarry",
-   "outlet": null,
-   "published": "2026-11-09T13:28:05+00:00",
-   "summary": "Indiana men’s basketball sees its first high major opponent of the 2026-27 season, squaring off with Syracuse in Gainbridge Fieldhouse, an scenario KenPom dubs a “semi-home” game for the Hoosiers. Indiana has not beat…",
-   "tags": [
-    "Indiana Hoosiers Basketball",
-    "Indiana men's basketball"
-   ]
-  },
-  {
-   "title": "Scouting Notes: Syracuse",
-   "link": "https://on3.com/teams/indiana-hoosiers/news/scouting-notes-syracuse/",
-   "source": "The Hoosier (On3)",
-   "outlet": null,
-   "published": "2026-11-09T13:05:50+00:00",
-   "summary": "Taking a look at key players, stats, trends and matchups to watch with Indiana's game against Syracuse.",
-   "tags": [
-    "The Hoosier",
-    "The Hoosier Basketball"
-   ]
-  },
-  {
-   "title": "IU basketball game day essentials: Hoosiers face Syracuse in Indianapolis",
-   "link": "https://www.thedailyhoosier.com/iu-basketball-game-day-essentials-hoosiers-face-syracuse-in-indianapolis/",
-   "source": "The Daily Hoosier",
-   "outlet": null,
-   "published": "2026-11-09T00:04:25+00:00",
-   "summary": "Game Day Essentials: Indiana (2-0) vs. Syracuse (2-0) Tip Time: 6:30 p.m. Eastern, Monday Location: Gainbridge Fieldhouse (20,000), Indianapolis, Ind. Television: FS1 — Connor Onion (PxP), Bill Raftery (Analyst) Radio…",
-   "tags": [
-    "IU Basketball",
-    "syracuse"
-   ]
-  },
-  {
-   "title": "Game 3: IU basketball vs. Syracuse preview",
-   "link": "https://www.insidethehall.com/2026/11/08/game-3-iu-basketball-vs-syracuse-preview/",
-   "source": "Inside the Hall",
-   "outlet": null,
-   "published": "2026-11-08T20:47:39+00:00",
-   "summary": "The 2026-27 season continues Monday evening as IU basketball takes on Syracuse at Gainbridge Fieldhouse. The Orange, led by coach Gerry McNamara, are 2-0 with wins against New Haven and Central Connecticut. Tipoff is…",
-   "tags": [
-    "Commentary",
-    "Syracuse Orange"
-   ]
-  },
-  {
-   "title": "6-Banner Sunday: IU basketball opens the season with a pair of wins",
-   "link": "https://www.insidethehall.com/2026/11/08/6-banner-sunday-iu-basketball-opens-the-season-with-a-pair-of-wins/",
-   "source": "Inside the Hall",
-   "outlet": null,
-   "published": "2026-11-08T13:44:18+00:00",
-   "summary": "Welcome to another edition of 6-Banner Sunday, a joint production between The Assembly Call and Inside the Hall, where we highlight the five most essential IU sports stories of the past week. 6-Banner Sunday is written…",
-   "tags": [
-    "6-Banner Sunday"
-   ]
-  },
-  {
-   "title": "IU basketball: Bold predictions for the 2026-27 season",
-   "link": "https://www.thedailyhoosier.com/iu-basketball-bold-predictions-for-the-2026-27-season/",
-   "source": "The Daily Hoosier",
-   "outlet": null,
-   "published": "2026-11-08T05:34:45+00:00",
-   "summary": "Okay, we’re already two games into the season, so this is cheating a bit. But truth be told, we’ve been watching this IU basketball team play games going back to the summer. Those first two games against low-majors…",
-   "tags": [
-    "IU Basketball"
-   ]
-  },
-  {
-   "title": "IU basketball does not appear to have a go-to-guy through two games and that’s a good thing",
-   "link": "https://www.insidethehall.com/2026/11/07/iu-basketball-does-not-appear-to-have-a-go-to-guy-through-two-games-and-thats-a-good-thing/",
-   "source": "Inside the Hall",
-   "outlet": null,
-   "published": "2026-11-07T16:07:01+00:00",
-   "summary": "In IU basketball’s first two games, no player has consistently and significantly stood out above his teammates. There has not been a primary star who has put together two stellar games. There has not been a player who…",
-   "tags": [
-    "Commentary"
-   ]
-  },
-  {
-   "title": "Indiana Basketball Game Notes – Game 3 vs. Syracuse",
-   "link": "https://iuhoosiers.com/news/2026/11/7/mens-basketball-indiana-basketball-game-notes-game-3-vs-syracuse",
-   "source": "IU Athletics",
-   "outlet": null,
-   "published": "2026-11-07T14:00:00+00:00",
-   "summary": "The Indiana Hoosiers will play away from home for the first time in the 2026-27 season with a neutral site clash against Syracuse at 6:30 p.m. ET on Monday, Nov. 9, at Gainbridge Fieldhouse in Indianapolis. Connor Onion…",
-   "tags": [
-    "Men's Basketball"
-   ]
-  },
-  {
-   "title": "A look at how 14 former IU basketball players performed in the opening week of the 2026-27 season",
-   "link": "https://www.insidethehall.com/2026/11/07/a-look-at-how-14-former-iu-basketball-players-performed-in-the-opening-week-of-the-2026-27-season/",
-   "source": "Inside the Hall",
-   "outlet": null,
-   "published": "2026-11-07T12:22:20+00:00",
-   "summary": "Fourteen former scholarship IU basketball players are playing across the country in the 2026-27 season. Seven of those players were on IU’s roster in the 2025-26 season. While the season is only five days young, here’s…",
-   "tags": [
-    "Former Hoosiers"
-   ]
-  },
-  {
-   "title": "Key stats, quotes, takeaways from Indiana's 96-55 win over Southern Illinois",
-   "link": "https://on3.com/teams/indiana-hoosiers/news/key-stats-quotes-takeaways-from-indianas-win-over-southern-illinois/",
-   "source": "The Hoosier (On3)",
-   "outlet": null,
-   "published": "2026-11-07T02:49:08+00:00",
-   "summary": "A breakdown of the key stats, players, quotes and more that led Indiana women’s basketball to a won Friday night.",
-   "tags": [
-    "The Hoosier",
-    "The Hoosier Basketball"
-   ]
-  },
-  {
-   "title": "IU basketball floating head posters return for 2026-27",
-   "link": "https://www.thedailyhoosier.com/iu-basketball-floating-head-posters-return-for-2026-27/",
-   "source": "The Daily Hoosier",
-   "outlet": null,
-   "published": "2026-11-06T21:59:21+00:00",
-   "summary": "The NIL Store, in collaboration with Indiana Athletics, today announced the release of the 2026-27 Indiana University men’s and women’s basketball floating head schedule posters. Use code TDH15 to save 15% on your…",
-   "tags": [
-    "IU Basketball",
-    "Floating Heads"
-   ]
-  },
-  {
-   "title": "All the stats, news, analysis from Indiana men’s basketball’s win over Bellarmine",
-   "link": "https://www.crimsonquarry.com/indiana-hoosiers-mens-basketball/31803/bellarmine-recap-stats-analysis-news",
-   "source": "The Crimson Quarry",
-   "outlet": null,
-   "published": "2026-11-06T18:40:18+00:00",
-   "summary": "Indiana men’s basketball moved to 2-0 early in the 2026-27 season with Thursday evening’s 92-69 win over Bellarmine at Assembly Hall in Bloomington. Couldn’t catch the game? Wanna relive the action? Maybe just refresh…",
-   "tags": [
-    "Indiana Hoosiers Basketball",
-    "Indiana men's basketball"
-   ]
-  },
-  {
-   "title": "'Wouldn’t be able to tell he’s a freshman': Trevor Manhertz showing potential upside, importance as season begins",
-   "link": "https://on3.com/teams/indiana-hoosiers/news/wouldnt-be-able-to-tell-hes-a-freshman-trevor-manhertz-showing-potential-upside-importance-as-season-begins/",
-   "source": "The Hoosier (On3)",
-   "outlet": null,
-   "published": "2026-11-06T18:31:13+00:00",
-   "summary": "Indiana freshman wing Trevor Manhertz is turning heads with his play early in the season, showing his potential upside for this group.",
-   "tags": [
-    "The Hoosier",
-    "The Hoosier Basketball",
-    "Trevor Manhertz (26 - Christ School)"
-   ]
-  },
-  {
-   "title": "POTB 582: Thoughts on IU basketball’s opening week with Ryan Corazza",
-   "link": "https://www.insidethehall.com/2026/11/06/potb-582-thoughts-on-iu-basketballs-opening-week-with-ryan-corazza/",
-   "source": "Inside the Hall",
-   "outlet": null,
-   "published": "2026-11-06T18:12:08+00:00",
-   "summary": "Podcast on the Brink is back for a new episode with host Alex Bozich of Inside the Hall. In this episode, Bozich is joined by Ryan Corazza to discuss IU basketball’s opening-week performances against Eastern Illinois…",
-   "tags": [
-    "Podcast on the Brink"
-   ]
-  },
-  {
-   "title": "With fresh start at Indiana, Darren Harris turned expanded role into breakout performance against Bellarmine",
-   "link": "https://on3.com/teams/indiana-hoosiers/news/darren-harris-sought-a-fresh-start-with-expanded-role-coming-to-fruition-in-breakout-against-bellarmine/",
-   "source": "The Hoosier (On3)",
-   "outlet": null,
-   "published": "2026-11-06T15:20:01+00:00",
-   "summary": "This is premium content.",
-   "tags": [
-    "Darren Harris (24 - Paul VI Catholic)",
-    "indiana basketball",
-    "Indiana Hoosiers (Bloomington, IN)",
-    "The Hoosier",
-    "The Hoosier Basketball"
-   ]
-  },
-  {
-   "title": "Five takeaways from IU basketball’s win against Bellarmine",
-   "link": "https://www.insidethehall.com/2026/11/06/five-takeaways-from-iu-basketballs-win-against-bellarmine/",
-   "source": "Inside the Hall",
-   "outlet": null,
-   "published": "2026-11-06T13:48:59+00:00",
-   "summary": "IU basketball improved to 2-0 with a 92-69 win against ASUN opponent Bellarmine on Thursday night at Simon Skjodt Assembly Hall. Here are five takeaways from the victory against the Knights: Rebounding dominance…",
-   "tags": [
-    "Five Takeaways",
-    "Aiden Sherrell",
-    "Bellarmine Knights",
-    "Markus Burton"
-   ]
-  },
-  {
-   "title": "Darren Harris’ breakout performance fuels IU basketball’s win against Bellarmine",
-   "link": "https://www.insidethehall.com/2026/11/06/darren-harris-breakout-performance-fuels-iu-basketballs-win-against-bellarmine/",
-   "source": "Inside the Hall",
-   "outlet": null,
-   "published": "2026-11-06T11:24:29+00:00",
-   "summary": "Darren Harris needed just 16 seconds to make his presence felt Thursday night. On Indiana’s opening possession against Bellarmine, the Duke transfer knocked down a 3-pointer from the right wing, setting the tone for…",
-   "tags": [
-    "Media",
-    "Bellarmine Knights",
-    "Darren Harris"
-   ]
-  },
-  {
-   "title": "IU basketball: Bellarmine at Indiana — The report card",
-   "link": "https://www.thedailyhoosier.com/iu-basketball-bellarmine-at-indiana-the-report-card/",
-   "source": "The Daily Hoosier",
-   "outlet": null,
-   "published": "2026-11-06T06:28:54+00:00",
-   "summary": "Indiana took care of business against Bellarmine in a final tune up before the high level competition begins. IU got out to an early 24-9 lead, and then closed the first half on a 10-2 run to cruise comfortably into…",
-   "tags": [
-    "IU Basketball",
-    "Bellarmine",
-    "Darren Harris",
-    "Trevor Manhertz"
-   ]
   }
  ],
  "schedule": {
   "season": "2026-27",
-  "record": "4-0",
+  "record": "5-0",
   "games": [
    {
     "id": "401916286",
@@ -1804,12 +1823,12 @@
     "tv": [
      "Peacock"
     ],
-    "state": "scheduled",
-    "status_text": "11/17 - 7:30 PM EST",
+    "state": "final",
+    "status_text": "Final",
     "season_type": "Regular Season",
-    "our_score": null,
-    "their_score": null,
-    "won": null,
+    "our_score": "81",
+    "their_score": "76",
+    "won": true,
     "link": "https://www.espn.com/mens-college-basketball/game/_/gameId/401916289/arkansas-indiana"
    },
    {
@@ -2390,23 +2409,23 @@
   },
   "Inside the Hall": {
    "ok": true,
-   "count": 7
+   "count": 11
   },
   "The Daily Hoosier": {
    "ok": true,
-   "count": 1
+   "count": 6
   },
   "The Hoosier (On3)": {
    "ok": true,
-   "count": 1
+   "count": 5
   },
   "The Crimson Quarry": {
    "ok": true,
-   "count": 2
+   "count": 6
   },
   "Hoosier State of Mind": {
    "ok": true,
-   "count": 11
+   "count": 10
   },
   "ESPN": {
    "ok": true,
@@ -2414,7 +2433,7 @@
   },
   "Google News": {
    "ok": true,
-   "count": 32
+   "count": 51
   }
  }
 }
